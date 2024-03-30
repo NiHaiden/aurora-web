@@ -9,6 +9,7 @@ export function useIsVisible(ref: React.ElementRef<any>) {
             }
         );
 
+        // @ts-ignore
         observer.observe(ref.current);
         return () => {
             observer.disconnect();
