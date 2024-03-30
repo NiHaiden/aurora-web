@@ -1,14 +1,14 @@
 "use client";
 import {CloudDownload, ComputerIcon, Gauge, SparklesIcon} from "lucide-react";
-import {useRef} from "react";
+import {RefObject, useRef} from "react";
 import {useIsVisible} from "@/utils/scroll";
 
-export default function AboutAurora() {
+export default function AboutAurora({aboutRef}: {aboutRef: RefObject<any>}) {
     const ref1 = useRef<HTMLDivElement>(null);
     const isVisible1 = useIsVisible(ref1)
 
     return (
-        <div className={"min-h-screen w-full flex items-center justify-center"}>
+        <div ref={aboutRef} className={"min-h-screen w-full flex items-center justify-center"}>
             <div className={"w-3/4 h-3/4 flex flex-col gap-5 mt-5"}>
                 <h1 className={"text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>What's Aurora?</h1>
                 <p className={"text-xl"}>Aurora is the image for people who want a reliable, safe and smooth computing experience for everyday

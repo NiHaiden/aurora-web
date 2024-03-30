@@ -13,7 +13,7 @@ export default function AboutAuroraDx() {
                         <h1 className={"text-7xl font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Aurora
                             Developer Edition</h1>
                         <p className={"text-2xl text-white"}>The developer experience edition takes the great foundation
-                            and cranks it up to eleven with it's additions.</p>
+                            and cranks it up to eleven.</p>
                     </div>
                     <div className={"grid grid-cols-2 grid-rows-2 gap-5 "}>
                         <div

@@ -1,6 +1,7 @@
 import {CircleArrowDown} from "lucide-react";
+import {RefObject} from "react";
 
-export default function Introduction() {
+export default function Introduction({aboutRef}: {aboutRef: RefObject<any>}) {
     return (
         <div className={"bgimg flex flex-col gap-4 justify-center text-white w-1/4 text-wrap animate-fade-up animate-ease-linear"}>
             <div className={"flex flex-col items-center "}>
@@ -13,10 +14,15 @@ export default function Introduction() {
                     Or configure your dev environment.
                 </p>
             </div>
-            <div className={"mt-5 flex flex-row items-center gap-5 justify-center items-end animate-bounce"}>
+            <button className={"mt-5 flex flex-row items-center gap-5 justify-center items-end animate-bounce"} onClick={() => {
+                aboutRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: "start"
+                })
+            }}>
                 <CircleArrowDown className={"w-10 h-10"}/>
                 Learn More
-            </div>
+            </button>
         </div>
     )
 }
