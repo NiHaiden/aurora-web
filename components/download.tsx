@@ -21,7 +21,7 @@ export default function DownloadAurora() {
                 </div>
                 <div className={"w-3/4 grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2"}>
                     <div className={"flex flex-col justify-center items-center lg:items-start lg:justify-start gap-5"}>
-                        <div>
+                        <div className={"animate-fade-up"}>
                             <p className={"text-xl"}>Hardware</p>
                             <Select onValueChange={(e) => {
                                 setSystemBase(e);
@@ -40,7 +40,7 @@ export default function DownloadAurora() {
                                 </SelectContent>
                             </Select>
                         </div>
-                        {systemBase !== "" && <div>
+                        {systemBase !== "" && <div className={"animate-fade-up"}>
                             <p className={"text-xl"}>Primary GPU</p>
                             <Select onValueChange={(e) => {
                                 setPrimaryGPU(e);
@@ -58,7 +58,7 @@ export default function DownloadAurora() {
                                 </SelectContent>
                             </Select></div>}
 
-                        {primaryGPU !== "" && <div>
+                        {primaryGPU !== "" && <div className={"animate-fade-up"}>
                             <p className={"text-xl"}>Developer Version</p>
                             <Select onValueChange={(e) => {
                                 setDeveloperVersion(e);
@@ -76,9 +76,13 @@ export default function DownloadAurora() {
                             </Select></div>}
                     </div>
                     <div className={"flex flex-col justify-center items-center gap-2"}>
-                        <h1 className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text animate-bounce"}>Get your ISO here:</h1>
-                        {developerVersion !== "" && <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
-                                                                       developerEdition={developerVersion}/>}
+
+                        {developerVersion !== "" && <div className={"flex flex-col items-center justify-center gap-2 animate-fade-up"}>
+                            <h1 className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
+                                Get your ISO here:
+                            </h1>
+                            <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
+                                               developerEdition={developerVersion}/></div>}
                     </div>
                 </div>
             </div>
