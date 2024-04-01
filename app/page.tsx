@@ -11,13 +11,14 @@ import DownloadAurora from "@/components/download";
 
 export default function Home() {
     const aboutRef = useRef(null);
+    const aboutDXRef = useRef(null);
     return (
         <div>
             <Navbar/>
         <main className="w-full min-h-screen">
             <Introduction aboutRef={aboutRef}/>
-            <AboutAurora aboutRef={aboutRef}/>
-            <AboutAuroraDx/>
+            <AboutAurora aboutRef={aboutRef} aboutDxRef={aboutDXRef}/>
+            <AboutAuroraDx aboutDxRef={aboutDXRef}/>
             <DownloadAurora/>
             <Footer/>
         </main>
