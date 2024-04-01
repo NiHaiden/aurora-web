@@ -10,12 +10,12 @@ export default function AboutAuroraDx() {
             <div className={"min-h-screen w-full flex flex-col items-center justify-center bg-gray-800"}>
                 <div className={"w-3/4 h-3/4 flex flex-col gap-5 mt-5"}>
                     <div className={"flex flex-col items-left gap-4"}>
-                        <h1 className={"text-7xl font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Aurora
-                            Developer Edition</h1>
-                        <p className={"text-2xl text-white"}>The developer experience edition takes the great foundation
+                        <h1 className={"text-7xl font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Aurora for developers
+                           </h1>
+                        <p className={"text-2xl text-white"}>Are you a pro at stargazing? The developer experience edition takes the great foundation
                             and cranks it up to eleven.</p>
                     </div>
-                    <div className={"grid grid-cols-2 grid-rows-2 gap-5 "}>
+                    <div className={"grid grid-cols-1 grid-rows-4  lg:grid-cols-2 lg:grid-rows-1 gap-5 w-full "}>
                         <div
                             className={`border bg-gray-700 rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full animate-delay-0`}>
                             <BeerIcon className={"w-14 h-14 stroke-aurora-orangina"}/>

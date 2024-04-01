@@ -1,7 +1,7 @@
 "use client";
 import {CloudDownload, ComputerIcon, Gauge, SparklesIcon} from "lucide-react";
 import {RefObject, useRef} from "react";
-import {useIsVisible} from "@/utils/scroll";
+import {useIsVisible} from "@/lib/utils/scroll";
 
 export default function AboutAurora({aboutRef}: {aboutRef: RefObject<any>}) {
     const ref1 = useRef<HTMLDivElement>(null);
@@ -10,10 +10,10 @@ export default function AboutAurora({aboutRef}: {aboutRef: RefObject<any>}) {
     return (
         <div ref={aboutRef} className={"min-h-screen w-full flex items-center justify-center"}>
             <div className={"w-3/4 h-3/4 flex flex-col gap-5 mt-5"}>
-                <h1 className={"text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>What's Aurora?</h1>
+                <h1 className={"text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Aurora for end-users</h1>
                 <p className={"text-xl"}>Aurora is the image for people who want a reliable, safe and smooth computing experience for everyday
-                    tasks and beyond.</p>
-                <section className={"grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 gap-5 w-full"}>
+                    tasks and beyond. The OS for hobby-stargazers.</p>
+                <section className={"grid grid-cols-1 grid-rows-4  lg:grid-cols-2 lg:grid-rows-1 gap-5 w-full"}>
                     <div ref={ref1}
                          className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full  animate-delay-0 ${isVisible1 ? "animate-fade-up" : "animate-fade-down"}`}>
                         <SparklesIcon className={"w-14 h-14 stroke-aurora-darkblue"}/>
