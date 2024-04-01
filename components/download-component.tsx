@@ -8,7 +8,7 @@ export default function DownloadComponent({baseSystem, primaryGPU, developerEdit
     return (
         <>
             <div className={"flex flex-col gap-5"}>
-                <a href={downloadLink} className={"w-[300px] text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
+                <a href={downloadLink} className={"w-fit text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
                   <CloudDownload/> {imageName}
                 </a>
             </div>
