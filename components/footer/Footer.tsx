@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <>
             <footer
-                className={"min-h-[25vh] w-full bg-gray-800 flex flex-col justify-center gap-4 text-center text-white items-center"}>
+                className={"min-h-[25vh] w-full bg-gray-800 flex flex-col justify-center gap-4 p-10 lg:p-0 text-center text-white items-center"}>
                 <div className={"text-xl"}>
                     Aurora is proudly built with technology from the <a className={"text-underline font-bold"}
                                                                         href={"https://universal-blue.org"}>Universal-Blue</a> Project.

@@ -6,6 +6,7 @@ export default function Introduction({aboutRef}: {aboutRef: RefObject<any>}) {
         <div className={"bgimg flex flex-col gap-4 justify-center text-white w-1/4 text-wrap animate-fade-up animate-ease-linear"}>
             <div className={"flex flex-col items-center justify-center lg:m-0"}>
                 <div className={" m-6 p-4 flex flex-col justify-center items-center gap-5"}>
+                    <img src={"/aurora_v2_logo.svg"} width={350} height={450}/>
                 <h1 className={"text-4xl lg:text-6xl font-black text-center"}>Next-gen Linux Desktop is here.</h1>
                     <h1 className={"text-2xl text-center"}>Powered by you, made for you.</h1>
                     <p className={"text-xl text-center"}>Aurora is a clean and reliable desktop operating system, with so much stuff built-in you'll never get configuration fatigue again.</p>

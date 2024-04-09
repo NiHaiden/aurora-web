@@ -2,7 +2,7 @@
 
 import React, {useEffect, useState} from 'react';
 import {Transition} from '@headlessui/react';
-import {HammerIcon} from "lucide-react";
+import {HammerIcon, MenuIcon} from "lucide-react";
 
 function Navbar2() {
     const [scroll, setScroll] = useState(false);
@@ -40,9 +40,10 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out ${isTop ? 'bg-transparent' : 'bg-green-500'}`}>
+            className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out ${isTop ? 'bg-transparent' : 'bg-aurora-darkblue'}`}>
             <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
-                <a className='title-font font-medium text-white mb-4 md:mb-0'>
+                <a className='title-font font-medium text-white mb-4 md:mb-0 flex flex-row items-center gap-4'>
+                    <img src={"/aurora_v2_logo.svg"} width={50} height={50} className={`${isTop ? 'hidden' : 'block'}`}/>
                     Aurora
                 </a>
                 <button
@@ -50,7 +51,7 @@ const Navbar = () => {
                     type='button'
                     onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                    <HammerIcon/>
+                    <MenuIcon/>
                 </button>
                 <Transition
                     show={navbarOpen}
