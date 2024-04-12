@@ -1,9 +1,9 @@
 import {CircleArrowDown} from "lucide-react";
-import {RefObject} from "react";
+import {Ref, RefObject} from "react";
 
-export default function Introduction({aboutRef}: {aboutRef: RefObject<any>}) {
+export default function Introduction({introRef, aboutRef}: {introRef: RefObject<any>; aboutRef: RefObject<any>}) {
     return (
-        <div className={"bgimg flex flex-col gap-4 justify-center text-white w-1/4 text-wrap animate-fade-up animate-ease-linear"}>
+        <div ref={introRef} className={"bgimg flex flex-col gap-4 justify-center text-white w-1/4 text-wrap animate-fade-up animate-ease-linear"}>
             <div className={"flex flex-col items-center justify-center lg:m-0"}>
                 <div className={" m-6 p-4 flex flex-col justify-center items-center gap-5"}>
                     <img src={"/aurora_v2_logo.svg"} width={350} height={450}/>

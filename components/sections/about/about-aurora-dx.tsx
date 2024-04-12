@@ -46,7 +46,7 @@ export default function AboutAuroraDx({aboutDxRef}: {aboutDxRef: RefObject<any>}
                             <h1 className={"text-2xl text-center font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Containers,
                                 how you want it.</h1>
                             <p className={"text-white text-xl"}>The container ships are here. Docker and Podman come
-                                preconfigured to suit every type of workflow, including containerized CLI experience.
+                                preconfigured to suit every type of workflow, including containerized a CLI experience.
                                 And with Ptyxis, the container-focused terminal, your distrobox is only one click
                                 away.</p>
                         </div>

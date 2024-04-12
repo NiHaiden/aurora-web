@@ -1,7 +1,8 @@
 import {Code, Download, Laptop, Monitor} from "lucide-react";
 import {useState} from "react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import DownloadComponent from "@/components/download-component";
+import DownloadComponent from "@/components/sections/download/download-component";
+import RebaseComponent from "@/components/sections/download/rebase-component";
 
 export default function DownloadAurora() {
     const [systemBase, setSystemBase] = useState("");
@@ -33,7 +34,7 @@ export default function DownloadAurora() {
                                             <Laptop className={"stroke-aurora-purple"}/>Select your hardware</div>}/>
                                 </SelectTrigger>
                                 <SelectContent>
-                                    <SelectItem value="desktop">Desktop</SelectItem>
+                                    <SelectItem value="desktop">Desktop / Laptop</SelectItem>
                                     <SelectItem value="asus">ASUS</SelectItem>
                                     <SelectItem value="framework">Framework</SelectItem>
                                     <SelectItem value="surface">Surface</SelectItem>
@@ -78,11 +79,24 @@ export default function DownloadAurora() {
                     <div className={"flex flex-col justify-center items-center gap-2"}>
 
                         {developerVersion !== "" && <div className={"flex flex-col items-center justify-center gap-2 animate-fade-up"}>
+                            <div
+                                className={"w-full p-10 rounded-3xl flex flex-col justify-center items-center gap-2"}>
                             <h1 className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
-                                Get your ISO here:
+                                Grab the ISO here for a fresh install:
                             </h1>
                             <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
-                                               developerEdition={developerVersion}/></div>}
+                                               developerEdition={developerVersion}/>
+                            </div>
+                            <div
+                                className={"w-full p-10 rounded-3xl flex flex-col justify-center items-center gap-2"}>
+                                <h1 className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
+                                    Already on atomic Fedora? Rebase with:
+                                </h1>
+                                <RebaseComponent baseSystem={systemBase} primaryGPU={primaryGPU}
+                                                 developerEdition={developerVersion}/>
+                            </div>
+                        </div>}
+
                     </div>
                 </div>
             </div>
