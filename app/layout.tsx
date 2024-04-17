@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aurora",
   description: "The ultimate developer workstation",
+  icons: {
+    icon: '/favicon.ico'
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}<Toaster/></body>
+
+    <body className={inter.className}>
+    <link rel="icon" href="/favicon.ico" sizes="any"/>
+    {children}
+    <Toaster/>
+    </body>
     </html>
   );
 }
