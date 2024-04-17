@@ -21,8 +21,8 @@ export default function AboutAuroraDx({aboutDxRef}: {aboutDxRef: RefObject<any>}
 
     return (
         <div ref={aboutDxRef}>
-            <div className={"min-h-screen w-full flex flex-col items-center justify-center bg-gray-800"}>
-                <div className={"w-3/4 h-3/4 flex flex-col gap-5 mt-10"}>
+            <div className={"min-h-fit w-full flex flex-col items-center justify-center bg-gray-800"}>
+                <div className={"w-3/4 h-full flex flex-col gap-5 mt-5 py-32 lg:p-32"}>
                     <div className={"flex flex-col items-left gap-4"}>
                         <h1 className={"text-6xl lg:text-7xl font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Aurora for developers
                            </h1>

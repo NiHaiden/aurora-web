@@ -17,8 +17,8 @@ export default function AboutAurora({aboutRef, aboutDxRef}: {aboutRef: RefObject
     const isVisible4 = useIsVisible(ref4)
 
     return (
-        <div ref={aboutRef} className={"min-h-screen w-full flex items-center justify-center flex-col"}>
-            <div className={"w-3/4 h-3/4 flex flex-col gap-5 mt-5"}>
+        <div ref={aboutRef} className={"min-h-fit w-full flex items-center justify-center flex-col"}>
+            <div className={"w-3/4 h-full flex flex-col gap-5 mt-5 py-32 lg:p-32"}>
                 <h1 className={"text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Aurora
                     for end-users</h1>
                 <p className={"text-xl"}>Aurora is the image for people who want a reliable, safe and smooth computing
@@ -62,14 +62,7 @@ export default function AboutAurora({aboutRef, aboutDxRef}: {aboutRef: RefObject
                             built-in Nvidia GPU Drivers, support for Surface Devices and ASUS devices.</p>
                     </div>
                 </section>
-                <button className={"mt-10 mb-10 lg:mt-52 flex text-xl lg:text-3xl text-aurora-orangina aflex-row items-center justify-center gap-5 animate-bounce "} onClick={() => {
-                    aboutDxRef.current.scrollIntoView({
-                        behavior: 'smooth',
-                        block: "start"
-                    })
-                }}>
-                    <CircleArrowDown className={"w-10 h-10 stroke-aurora-orangina"}/>Are you a developer? Learn more by clicking
-                </button>
+
             </div>
 
 

@@ -8,13 +8,13 @@ export default function DownloadComponent({baseSystem, primaryGPU, developerEdit
     //https://dl.getaurora.dev/aurora-dx-latest.iso
     return (
         <>
-            <div className={"flex flex-row gap-5"}>
+            <div className={"w-full flex flex-col gap-5"}>
                 <a href={downloadLink}
-                   className={"w-fit text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
+                   className={"w-full  text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
                     <CloudDownload/> Download ISO ({imageName})
                 </a>
                 <a href={checksumLink}
-                   className={"w-fit text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
+                   className={"w-full text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
                     <Package/> Get Checksum to verify
                 </a>
             </div>
