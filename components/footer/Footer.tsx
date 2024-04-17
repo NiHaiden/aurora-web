@@ -1,5 +1,5 @@
 import {RefObject} from "react";
-import {CircleArrowDown, CircleArrowUp} from "lucide-react";
+import {CircleArrowDown, CircleArrowUp, Github, GithubIcon, GitMerge, GlobeIcon} from "lucide-react";
 
 export default function Footer({introRef}: {introRef: RefObject<any>}) {
     return (
@@ -30,6 +30,22 @@ export default function Footer({introRef}: {introRef: RefObject<any>}) {
                 </div>
                 <div>
                     © Copyright {new Date().getFullYear()} Niklas Haiden and the Project Aurora authors.
+                </div>
+
+                <div className={"w-1/5 flex flex-row gap-5 underline"}>
+                    <a className={"flex flex-row gap-1"} href={"https://github.com/ublue-os/bluefin"}>
+                        <Github/> GitHub Repository
+                    </a>
+
+                    <a className={"flex flex-row gap-1"} href={"https://universal-blue.org"}>
+                        <GitMerge/>
+                        Universal Blue Website
+                    </a>
+
+                    <a className={"flex flex-row gap-1"} href={"https://github.com/NiHaiden/aurora-web"}>
+                        <GlobeIcon/>
+                        Website Source Code
+                    </a>
                 </div>
             </footer>
         </>
