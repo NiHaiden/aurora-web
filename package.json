@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-toast": "^1.1.5",
@@ -34,5 +35,6 @@
     "tailwindcss": "^3.3.0",
     "tailwindcss-animated": "^1.0.1",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
