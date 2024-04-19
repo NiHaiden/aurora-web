@@ -7,7 +7,7 @@ export default function Introduction({introRef, aboutRef}: { introRef: RefObject
              className={"bgimg flex flex-col gap-4 justify-center text-white w-1/4 text-wrap animate-fade-up animate-ease-linear"}>
             <div className={"flex flex-col items-center justify-center lg:m-0"}>
                 <div className={" m-6 p-4 flex flex-col justify-center items-center gap-5"}>
-                    <img  src={"/aurora_v2_logo.svg"} width={350} height={375}/>
+                    <img className={"w-[250px] h-[250px] lg:w-[350px] lg:h-[375px]"} src={"/aurora_v2_logo.svg"}/>
                     <h1 className={"text-5xl lg:text-6xl font-black text-center bg-aurora-blue drop-shadow-md from-aurora-blue text-transparent bg-clip-text"}>Your
                         next-gen Linux Desktop is here.</h1>
                     <h1 className={"text-2xl text-center"}>Powered by KDE, Universal-Blue and you, made for you.</h1>
