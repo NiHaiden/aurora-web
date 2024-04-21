@@ -30,7 +30,7 @@ export default function AboutAurora({aboutRef, aboutDxRef}: {aboutRef: RefObject
                         <SparklesIcon className={"w-14 h-14 stroke-aurora-darkblue"}/>
                         <h1 className={"text-2xl text-center font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Simply
                             delightful.</h1>
-                        <p className={"text-xl"}>Aurora features Vanilla KDE Plasma for a super smooth and delightful
+                        <p className={"text-xl"}>Aurora features a vanilla KDE Plasma for a super smooth and delightful
                             desktop experience that can be customized indefinitely.</p>
                     </div>
                     <div ref={ref2}

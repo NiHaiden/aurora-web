@@ -17,8 +17,8 @@ export default function Footer({introRef}: {introRef: RefObject<any>}) {
                     Go up
                 </button>
                 <div className={"text-xl"}>
-                    Aurora is proudly built with technology from the <a className={"text-underline font-bold"}
-                                                                        href={"https://universal-blue.org"}>Universal-Blue</a> Project, a toolkit to reshape the landscape of the Linux Desktop.
+                    Aurora is proudly built with technology from <a className={"text-underline font-bold"}
+                                                                        href={"https://universal-blue.org"}>Universal Blue</a> a community toolkit designed to reboot the Linux desktop. Built for the love of the game. Welcome to indie Cloud Native.
                 </div>
 
                 <div>

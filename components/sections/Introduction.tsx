@@ -10,7 +10,7 @@ export default function Introduction({introRef, aboutRef}: { introRef: RefObject
                     <img className={"w-[250px] h-[250px] lg:w-[350px] lg:h-[375px]"} src={"/aurora_v2_logo.svg"}/>
                     <h1 className={"text-5xl lg:text-6xl font-black text-center bg-aurora-blue drop-shadow-md from-aurora-blue text-transparent bg-clip-text"}>Your
                         next-gen Linux Desktop is here.</h1>
-                    <h1 className={"text-2xl text-center"}>Powered by KDE, Universal-Blue and you, made for you.</h1>
+                    <h1 className={"text-2xl text-center"}>Powered by KDE, Universal Blue, and you, made for you.</h1>
                     <p className={"text-xl text-center"}>Aurora is the ultimate OS for every type of user, from normal
                         people to pro developers.
                         <br/>
