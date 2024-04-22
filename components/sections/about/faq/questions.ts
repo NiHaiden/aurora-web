@@ -6,7 +6,7 @@ export const questions: Question[] = [
     },
     {
         question: "What is Aurora Developer Edition? (Aurora-DX)",
-        answer: "Aurora Developer Edition is a special edition of Aurora featuring various additional packages that cater to a development audience. These included preinstalled VS-Code with DevContainer capabilities, Docker and Podman as container runtimes, tools for creating and managing virtual machines, tools to create a containerized development environment with DevPod and much more. The developer experience also includes various tools for cloud-native developers. You can always install more via brew! If you want the raw package list, click the link.",
+        answer: "Aurora Developer Edition is a special edition of Aurora featuring various additional packages that cater to a development audience. These included preinstalled VS Code with DevContainer capabilities, Docker and Podman as container runtimes, tools for creating and managing virtual machines, tools to create a containerized development environment with DevPod and much more. The developer experience also includes various tools for cloud-native developers. You can always install more via brew! If you want the raw package list, click the link.",
         optionalLink: "https://github.com/ublue-os/bluefin/blob/main/packages.json"
     },
     {
