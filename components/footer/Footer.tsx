@@ -5,7 +5,7 @@ export default function Footer({introRef}: {introRef: RefObject<any>}) {
     return (
         <>
             <footer
-                className={"min-h-[30vh] w-full bg-gray-800 flex flex-col justify-center gap-4 p-10 lg:p-0 text-center text-white items-center"}>
+                className={"min-h-[30vh] w-full bg-gray-800 flex flex-col justify-center gap-4 p-12 lg:p-0 text-center text-white items-center"}>
                 <button className={"mt-5 flex flex-row items-center gap-5 justify-center"}
                         onClick={() => {
                             introRef.current.scrollIntoView({
@@ -29,21 +29,21 @@ export default function Footer({introRef}: {introRef: RefObject<any>}) {
                     Built with ❤️ in Austria.
                 </div>
                 <div>
-                    © Copyright {new Date().getFullYear()} Niklas Haiden and the Project Aurora authors.
+                    © Copyright {new Date().getFullYear()} Project Aurora authors.
                 </div>
 
                 <div className={"w-3/5 flex flex-row gap-5 underline justify-center mb-5"}>
                     <a className={"flex flex-row gap-1"} href={"https://github.com/ublue-os/bluefin"}>
-                        <Github/> GitHub Repository
+                        <Github/> Aurora GitHub Repository
                     </a>
 
                     <a className={"flex flex-row gap-1"} href={"https://universal-blue.org"}>
-                        <GitMerge/>
+                        <GlobeIcon/>
                         Universal Blue Website
                     </a>
 
                     <a className={"flex flex-row gap-1"} href={"https://github.com/NiHaiden/aurora-web"}>
-                        <GlobeIcon/>
+                    <GitMerge/>
                         Website Source Code
                     </a>
                 </div>
