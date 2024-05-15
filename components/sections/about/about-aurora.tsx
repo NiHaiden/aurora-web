@@ -23,14 +23,14 @@ export default function AboutAurora({aboutRef, aboutDxRef}: {aboutRef: RefObject
                     for end-users</h1>
                 <p className={"text-xl"}>Aurora is the image for people who want a reliable, safe and smooth computing
                     experience for everyday
-                    tasks and beyond. The OS for hobby-stargazers.</p>
+                    tasks and beyond. The OS for everyone, including those hobby stargazers.</p>
                 <section className={"grid grid-cols-1 grid-rows-4  lg:grid-cols-2 lg:grid-rows-1 gap-5 w-full"}>
                     <div ref={ref1}
                          className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full  animate-delay-0 ${isVisible1 ? "animate-fade-up" : "animate-fade-down"}`}>
                         <SparklesIcon className={"w-14 h-14 stroke-aurora-darkblue"}/>
                         <h1 className={"text-2xl text-center font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Simply
                             delightful.</h1>
-                        <p className={"text-xl"}>Aurora features a vanilla KDE Plasma for a super smooth and delightful
+                        <p className={"text-xl"}>Aurora features a lightly customized KDE Plasma for a super smooth and delightful
                             desktop experience that can be customized indefinitely.</p>
                     </div>
                     <div ref={ref2}
