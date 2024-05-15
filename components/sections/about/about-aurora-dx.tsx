@@ -46,8 +46,8 @@ export default function AboutAuroraDx({aboutDxRef}: {aboutDxRef: RefObject<any>}
                             <h1 className={"text-2xl text-center font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Containers,
                                 how you want it.</h1>
                             <p className={"text-white text-xl"}>The container ships are here. Docker and Podman come
-                                preconfigured to suit every type of workflow, including containerized a CLI experience.
-                                And with Ptyxis, the container-focused terminal, your distrobox is only one click
+                                preconfigured to suit every type of workflow, including a containerized CLI experience.
+                                And with Ptyxis, your distrobox is only one click
                                 away.</p>
                         </div>
                         <div ref={ref3}
@@ -61,7 +61,7 @@ export default function AboutAuroraDx({aboutDxRef}: {aboutDxRef: RefObject<any>}
                             className={`border bg-gray-700 rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full animate-delay-0 ${isVisible4 ? "animate-fade-up" : "animate-fade-down"}`}>
                             <BotIcon className={"w-14 h-14 stroke-aurora-orangina"}/>
                             <h1 className={"text-2xl text-center font-bold bg-gradient-to-tr drop-shadow-md from-aurora-lightorange to-aurora-lightred text-transparent bg-clip-text"}>Let the robots take over.</h1>
-                            <p className={"text-white text-xl"}>If you fancy local LLMs or do any kind of machine learning work, Aurora has you covered there too. Run private LLMs with preinstalled OLLama or spin up a pytorch distrobox for some serious AI work.</p>
+                            <p className={"text-white text-xl"}>If you fancy local LLMs or do any kind of machine learning work, Aurora has you covered there too. Run private LLMs with preinstalled Ollama (<code className={"font-bold"}>ujust ollama</code>) or spin up a pytorch distrobox for some serious AI work.</p>
                         </div>
                     </div>
                 </div>
