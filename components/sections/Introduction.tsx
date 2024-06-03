@@ -1,5 +1,5 @@
-import {CircleArrowDown} from "lucide-react";
-import {Ref, RefObject} from "react";
+import { CircleArrowDown } from "lucide-react";
+import { RefObject } from "react";
 
 export default function Introduction({introRef, aboutRef}: { introRef: RefObject<any>; aboutRef: RefObject<any> }) {
     return (
