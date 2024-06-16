@@ -3,6 +3,7 @@ import {RefObject, useState} from "react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import DownloadComponent from "@/components/sections/download/download-component";
 import RebaseComponent from "@/components/sections/download/rebase-component";
+import CheckDocs from "@/components/sections/download/check-docs";
 
 export default function DownloadAurora({downloadRef}: { downloadRef: RefObject<any> }) {
     const [systemBase, setSystemBase] = useState("");
@@ -90,6 +91,7 @@ export default function DownloadAurora({downloadRef}: { downloadRef: RefObject<a
                                     </h1>
                                     <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
                                                        developerEdition={developerVersion}/>
+                                    <CheckDocs/>
                                 </div>
                             </div>}
 
