@@ -15,9 +15,9 @@ export const questions: Question[] = [
     optionalLink: ""
   },
   {
-    question: "Where can I learn more or get documentation about Aurora and Aurora-DX?",
-    answer: "Checkout our docs site on the Discourse, you can find lot's of helpful material there.",
-    optionalLink: "https://universal-blue.discourse.group/docs?category=6"
+    question: "Where can I get the latest news and discussions about Aurora?",
+    answer: "Check out our Discourse forums for the latest updates and discussions on Aurora.",
+    optionalLink: "https://universal-blue.discourse.group/c/bluefin/6"
   }
 ];
 
