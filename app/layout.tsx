@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
+import { DiscourseScript } from "@/app/discourse-script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <head>
 
+    </head>
     <body className={inter.className}>
+    <DiscourseScript/>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     {children}
     <Toaster />

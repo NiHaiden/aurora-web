@@ -8,6 +8,7 @@ import AboutAuroraDx from "@/components/sections/about/about-aurora-dx";
 import { useRef } from "react";
 import DownloadAurora from "@/components/sections/download/download";
 import FAQ from "@/components/sections/about/faq/faq";
+import News from "@/components/sections/news";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <AboutAuroraDx aboutDxRef={aboutDXRef} />
         <DownloadAurora downloadRef={downloadRef} />
         <FAQ faqRef={faqRef} />
+        <News/>
         <Footer introRef={introRef} />
 
       </main>
