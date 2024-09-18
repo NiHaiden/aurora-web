@@ -107,3 +107,7 @@
         @apply bg-background text-foreground;
     }
 }
+
+d-topics-list iframe {
+    width: 100%!important;
+}
