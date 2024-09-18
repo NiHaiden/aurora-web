@@ -4,35 +4,13 @@ import React, { RefObject, useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 
-function Navbar2() {
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 10);
-    });
-  });
-
-  return (
-    <header
-      className={`z-40 bg-blue-900 top-0 w-full animate-fadeInDown ${scroll ? "sticky bg-white" : "bg-none"} `}>
-      <nav className={"flex flex-row gap-16 text-xl text-black justify-center"}>
-        <div><a href={"#about"}>About</a></div>
-        <div><a href={"#features"}>Features</a></div>
-        <div><a href={"#downloads"}>Community</a></div>
-      </nav>
-      <div className={"items-end text-white"}>
-        Download
-      </div>
-    </header>
-  );
-}
-
-const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef }: {
+const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsRef }: {
   introRef: RefObject<any>;
   endUserRef: RefObject<any>;
   developerRef: RefObject<any>;
   faqRef: RefObject<any>;
   downloadRef: RefObject<any>;
+  newsRef: RefObject<any>;
 }) => {
   const [isTop, setIsTop] = useState(true);
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -90,6 +68,14 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef }: {
               });
               closeNavbar();
             }}>FAQ
+            </button>
+            <button onClick={() => {
+              newsRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+              closeNavbar();
+            }}>News
             </button>
           </div>
           <div className={"flex flex-row text-lg items-center justify-center"}>
@@ -167,7 +153,6 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef }: {
                 </button>
                 <button onClick={() => {
                   developerRef.current.scrollIntoView({
-
                     behavior: "smooth",
                     block: "start"
                   });
@@ -181,6 +166,14 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef }: {
                   });
                   closeNavbar();
                 }}>FAQ
+                </button>
+                <button onClick={() => {
+                  newsRef.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                  });
+                  closeNavbar();
+                }}>News
                 </button>
               </div>
             </div>
