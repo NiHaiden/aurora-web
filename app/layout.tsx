@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 import { DiscourseScript } from "@/app/discourse-script";
+import UmamiScript from "@/umami-script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-
+      <UmamiScript/>
     </head>
     <body className={inter.className}>
     <DiscourseScript/>
