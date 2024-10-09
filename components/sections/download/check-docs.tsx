@@ -6,7 +6,7 @@ export default function CheckDocs() {
         here.</a> Most of it applies besides anything that is GNOME specific.
       </div>
       <div className={"italic text-aurora-darkblue"}>
-        Check out the <a className={"underline"} href={"https://universal-blue.discourse.group/docs?topic=1235"}>Introduction
+        Check out the <a className={"underline"} href={"https://docs.getaurora.dev/guides/intro/"}>Introduction
         to Aurora.</a>
       </div>
     </div>
