@@ -1,6 +1,5 @@
 import { RefObject } from "react";
-import { ArrowUpDown, CircleHelp } from "lucide-react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { CircleHelp } from "lucide-react";
 import { Question, questions } from "@/components/sections/about/faq/questions";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
