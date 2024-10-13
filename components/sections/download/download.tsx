@@ -2,7 +2,6 @@ import { Code, Download, Laptop, Monitor } from "lucide-react";
 import { RefObject, useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import DownloadComponent from "@/components/sections/download/download-component";
-import RebaseComponent from "@/components/sections/download/rebase-component";
 import CheckDocs from "@/components/sections/download/check-docs";
 
 export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject<any> }) {

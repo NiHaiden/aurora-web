@@ -35,7 +35,8 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
 	}, []);
 
 	return (
-		<div ref={newsRef}
+		<div
+			ref={newsRef}
 			className={
 				"bg-white w-full flex flex-col justify-center items-center p-40"
 			}

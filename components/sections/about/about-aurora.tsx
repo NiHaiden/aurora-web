@@ -1,5 +1,5 @@
 "use client";
-import { BrainCircuit, CircleArrowDown, CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
+import { CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
 import React, { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
 
