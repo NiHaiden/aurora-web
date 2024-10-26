@@ -1,5 +1,5 @@
 "use client";
-import { BrainCircuit, CircleArrowDown, CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
+import { CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
 import React, { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
 
@@ -30,50 +30,55 @@ export default function AboutAurora({ aboutRef, aboutDxRef }: {
           tasks and beyond. The OS for everyone, including those hobby stargazers.</p>
         <section className={"grid grid-cols-1 grid-rows-4  lg:grid-cols-2 lg:grid-rows-1 gap-5 w-full"}>
           <div ref={ref1}
-               className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full  animate-delay-0 ${isVisible1 ? "animate-fade-up" : "animate-fade-down"}`}>
+               className={`border rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full  animate-delay-0 ${isVisible1 ? "animate-fade-up" : "animate-fade-down"}`}>
             <SparklesIcon className={"w-14 h-14 stroke-aurora-darkblue"} />
             <h1
               className={"text-2xl text-center font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Simply
               delightful.</h1>
             <p className={"text-xl"}>Aurora features a lightly customized KDE Plasma for a super smooth and delightful
-              desktop experience that can be customized indefinitely.</p>
+              desktop experience that can be customized indefinitely. <br /><span
+                className={"font-bold bg-clip-text text-transparent bg-gradient-to-r from-aurora-purple to-aurora-darkblue"}>You can even move the taskbar.</span>
+            </p>
           </div>
           <div ref={ref2}
 
-               className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full animate-delay-0 ${isVisible2 ? "animate-fade-up" : "animate-fade-down"}`}>
+               className={`border rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full animate-delay-0 ${isVisible2 ? "animate-fade-up" : "animate-fade-down"}`}>
             <Gauge className={"w-14 h-14 stroke-aurora-darkblue"} />
             <h1
               className={"text-2xl text-center font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Speed
               and Reliability</h1>
             <p className={"text-xl"}>Perfectly tuned and optimized, for maximum efficiency and reliability
-              like a heavy rock. Smooth af.</p>
+              like a 100 year old machine. <br /><span
+                className={"font-bold bg-clip-text text-transparent bg-gradient-to-r from-aurora-purple to-aurora-darkblue"}>Your computer will never feel the same again.</span>
+            </p>
           </div>
           <div ref={ref3}
-               className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full animate-delay-0 animate-once animate-ease-in-out ${isVisible3 ? "animate-fade-up" : "animate-fade-down"}`}>
+               className={`border rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full animate-delay-0 animate-once animate-ease-in-out ${isVisible3 ? "animate-fade-up" : "animate-fade-down"}`}>
 
             <CloudDownload className={"w-14 h-14 stroke-aurora-darkblue"} />
             <h1
               className={"text-2xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Zero
               Maintenance</h1>
-            <p className={"text-xl"}>Install the systems once and forget about maintenance. Updates are
-              automatic. Upgrade your
-              system in one-click, including all your apps.</p>
+            <p className={"text-xl"}>The system only has to be installed <span className={"font-bold"}>once</span>.
+              Updates of your apps and the system is handled in the background for you.
+              <br /><span
+                className={"font-bold text-left bg-clip-text text-transparent bg-gradient-to-r from-aurora-purple to-aurora-darkblue"}>Set and forget, like a dream.</span>
+            </p>
           </div>
 
           <div ref={ref4}
-               className={`border rounded-2xl shadow-md flex flex-col text-center justify-center gap-2 p-8 items-center w-full animate-delay-0 ${isVisible4 ? "animate-fade-up" : "animate-fade-down"}`}>
+               className={`border rounded-2xl shadow-md flex flex-col text-left justify-center gap-2 p-8 items-center w-full animate-delay-0 ${isVisible4 ? "animate-fade-up" : "animate-fade-down"}`}>
             <ComputerIcon className={"w-14 h-14 stroke-aurora-darkblue"} />
             <h1
               className={"text-2xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text"}>Hardware
               Support</h1>
-            <p className={"text-xl"}>An image for everyone. Hardware support includes
-              built-in Nvidia GPU Drivers, support for Surface Devices and ASUS devices.</p>
+            <p className={"text-xl"}>We have individual editions for Surface and ASUS users and all include expanded
+              hardware support for game controllers, printer hardware and much more. <br /><span
+                className={"font-bold bg-clip-text text-transparent bg-gradient-to-r from-aurora-purple to-aurora-darkblue"}>Don't forget to print the starship bills.</span>
+            </p>
           </div>
         </section>
-
       </div>
-
-
     </div>
   );
 }
