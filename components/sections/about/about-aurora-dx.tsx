@@ -6,18 +6,20 @@ import { BeerIcon, BotIcon, CodeIcon, ContainerIcon } from "lucide-react";
 import { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
 
-export default function AboutAuroraDx({ aboutDxRef }: { aboutDxRef: RefObject<any> }) {
-  const ref1 = useRef<HTMLDivElement>(null);
-  const isVisible1 = useIsVisible(ref1);
+export default function AboutAuroraDx({
+	aboutDxRef,
+}: { aboutDxRef: RefObject<any> }) {
+	const ref1 = useRef<HTMLDivElement>(null);
+	const isVisible1 = useIsVisible(ref1);
 
-  const ref2 = useRef<HTMLDivElement>(null);
-  const isVisible2 = useIsVisible(ref2);
+	const ref2 = useRef<HTMLDivElement>(null);
+	const isVisible2 = useIsVisible(ref2);
 
-  const ref3 = useRef<HTMLDivElement>(null);
-  const isVisible3 = useIsVisible(ref3);
+	const ref3 = useRef<HTMLDivElement>(null);
+	const isVisible3 = useIsVisible(ref3);
 
-  const ref4 = useRef<HTMLDivElement>(null);
-  const isVisible4 = useIsVisible(ref4);
+	const ref4 = useRef<HTMLDivElement>(null);
+	const isVisible4 = useIsVisible(ref4);
 
   return (
     <div ref={aboutDxRef}>

@@ -1,11 +1,16 @@
 import { CloudDownload, Package } from "lucide-react";
 import { getImageName } from "@/lib/utils/download";
 
-export default function DownloadComponent({ baseSystem, primaryGPU, developerEdition }: {
-  baseSystem: string;
-  primaryGPU: string;
-  developerEdition: string
+export default function DownloadComponent({
+	baseSystem,
+	primaryGPU,
+	developerEdition,
+}: {
+	baseSystem: string;
+	primaryGPU: string;
+	developerEdition: string;
 }) {
+
   const imageName = getImageName(baseSystem, primaryGPU, developerEdition);
   const downloadLink: string = `https://dl.getaurora.dev/${imageName}.iso`;
   const checksumLink: string = `https://dl.getaurora.dev/${imageName}.iso-CHECKSUM`;
