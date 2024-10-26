@@ -16,7 +16,7 @@ export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject
         <div className={"w-3/4  max-w-[900px] h-full flex flex-col gap-5 mt-5"}>
           <div className={"flex flex-col items-left gap-4"}>
             <h1
-              className={"text-5xl lg:text-7xl flex flex-row items-center justify-center lg:justify-start gap-4 font-bold bg-gradient-to-br drop-shadow-md from-aurora-lightorange via-aurora-darkblue to-aurora-lightorange text-transparent bg-clip-text"}>
+              className={"text-5xl lg:text-7xl flex flex-row items-center justify-center lg:justify-start gap-4 font-bold drop-shadow-md bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% text-transparent bg-clip-text"}>
               <Download className={"w-12 h-12 lg:w-24 lg:h-24 animate-fade-up stroke-aurora-darkblue"} />Get
               Aurora
             </h1>

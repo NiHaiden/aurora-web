@@ -14,11 +14,11 @@ export default function DownloadComponent({ baseSystem, primaryGPU, developerEdi
     <>
       <div className={"w-full flex flex-col gap-5"}>
         <a href={downloadLink}
-           className={"w-full  text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
+           className={"w-full  text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-2xl shadow-lg bg-gradient-to-r from-aurora-purple to-aurora-blue"}>
           <CloudDownload /> Download ISO ({imageName})
         </a>
         <a href={checksumLink}
-           className={"w-full text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-br from-aurora-darkblue to-aurora-purple"}>
+           className={"w-full text-[18px] h-fit flex flex-row justify-center items-center gap-2 p-5 text-white rounded-xl shadow-lg bg-gradient-to-r from-aurora-purple to-aurora-blue"}>
           <Package /> Get Checksum to verify
         </a>
       </div>
