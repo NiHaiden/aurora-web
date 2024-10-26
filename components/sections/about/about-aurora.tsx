@@ -23,7 +23,7 @@ export default function AboutAurora({ aboutRef, aboutDxRef }: {
     <div ref={aboutRef} className={"min-h-fit w-full flex items-center justify-center flex-col"}>
       <div className={"w-3/4 h-full flex flex-col gap-5 mb-32 mt-32"}>
         <h1
-          className={"text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text drop-shadow-lg"}>Aurora
+          className={"text-6xl lg:text-7xl font-bold bg-gradient-to-br from-aurora-blue to-aurora-purple text-transparent bg-clip-text drop-shadow-lg"}>Aurora
           for end-users</h1>
         <p className={"text-xl"}>Aurora is the image for people who want a reliable, safe and smooth computing
           experience for everyday
