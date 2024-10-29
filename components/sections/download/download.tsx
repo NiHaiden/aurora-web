@@ -10,13 +10,14 @@ export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject
   const [developerVersion, setDeveloperVersion] = useState("");
   return (
     <>
-      <div ref={downloadRef} className={"min-h-[900px] w-full flex gap-5 flex-col items-center justify-center"}
+      <div ref={downloadRef}
+           className={"animate-fade-up min-h-[900px] w-full flex gap-5 flex-col items-center justify-center"}
            id={"downloads"}>
         <div className={"w-3/4  max-w-[900px] h-full flex flex-col gap-5 mt-5"}>
           <div className={"flex flex-col items-left gap-4"}>
             <h1
-              className={"text-5xl lg:text-7xl flex flex-row items-center justify-center lg:justify-start gap-4 font-bold bg-gradient-to-br drop-shadow-md from-aurora-lightorange via-aurora-darkblue to-aurora-lightorange text-transparent bg-clip-text"}>
-              <Download className={"w-12 h-12 lg:w-24 lg:h-24 animate-fade-up stroke-aurora-darkblue"} />Get
+              className={"text-5xl lg:text-7xl flex flex-row items-center justify-center lg:justify-start gap-4 font-bold drop-shadow-md bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% text-transparent bg-clip-text"}>
+              <Download className={"w-12 h-12 lg:w-24 lg:h-24  stroke-aurora-darkblue"} />Get
               Aurora
             </h1>
             <p className={"text-xl lg:text-2xl text-black text-center lg:text-left"}>🚀 Ready to ride the
@@ -24,7 +25,8 @@ export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject
               configuration and download the ISO.</p>
           </div>
         </div>
-        <div className={"w-3/4  max-w-[900px] grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2"}>
+        <div
+          className={"w-3/4 max-w-[900px] grid grid-rows-2 grid-cols-1 lg:gap-0 gap-10 lg:grid-rows-1 lg:grid-cols-2"}>
           <div className={"flex flex-col justify-center items-center lg:items-start lg:justify-start gap-5"}>
             <div className={"animate-fade-up"}>
               <p className={"text-xl"}>Hardware</p>
@@ -80,20 +82,18 @@ export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject
                 </SelectContent>
               </Select></div>}
           </div>
-          <div className={"flex flex-col justify-center items-center gap-2"}>
+          <div className={"flex flex-col gap-2"}>
 
             {developerVersion !== "" &&
-              <div className={"flex flex-col items-center justify-center gap-2 animate-fade-up"}>
-                <div
-                  className={"w-full p-10 rounded-3xl flex flex-col justify-center items-center gap-2"}>
-                  <h1
-                    className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
-                    Grab the ISO here for a fresh install:
-                  </h1>
-                  <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
-                                     developerEdition={developerVersion} />
-                  <CheckDocs />
-                </div>
+              <div
+                className={"w-full rounded-3xl flex flex-col gap-2"}>
+                <h1
+                  className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
+                  Grab the ISO here for a fresh install:
+                </h1>
+                <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
+                                   developerEdition={developerVersion} />
+                <CheckDocs />
               </div>}
 
           </div>

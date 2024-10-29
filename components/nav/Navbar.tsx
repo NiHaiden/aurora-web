@@ -3,6 +3,7 @@
 import React, { RefObject, useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
+import DownloadBtn from "@/components/download-btn";
 
 const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsRef }: {
   introRef: RefObject<any>;
@@ -28,7 +29,7 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
 
   return (
     <nav
-      className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out  ${isTop ? "bg-transparent" : "bg-aurora-purple shadow-xl"}`}>
+      className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out  ${isTop ? "bg-transparent" : "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue shadow-xl"}`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <div
           className="hidden lg:flex w-full font-medium text-white mb-4 md:mb-0 flex-row items-center justify-between gap-4">
@@ -39,9 +40,9 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
             });
             closeNavbar();
           }}>
-            <img src={"/aurora_v2_logo.svg"} width={60} height={60}
+            <img src={"/aurora-v3-white.svg"} width={60} height={60}
                  className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora_text_logo.svg"} width={100} height={100}
+            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
                  className={`${isTop ? "block" : "hidden"}`} />
           </div>
           <div className="flex flex-row gap-14 text-lg items-center justify-center">
@@ -78,17 +79,15 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
             }}>News
             </button>
           </div>
-          <div className={"flex flex-row text-lg items-center justify-center"}>
-            <button
-              className={"hidden lg:inline-flex gap-2 bg-gradient-to-br from-aurora-lightorange to-aurora-orangina p-3 rounded-xl shadow-xl"}
+          <div className={"flex max-h-fit flex-row text-lg items-center justify-center"}>
+            <DownloadBtn
               onClick={() => {
                 downloadRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start"
                 });
                 closeNavbar();
-              }}><DownloadIcon /> Get Aurora
-            </button>
+              }}/>
           </div>
         </div>
         <div className={"w-full flex flex-row justify-between items-center lg:hidden"}>
@@ -99,9 +98,9 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
             });
             closeNavbar();
           }}>
-            <img src={"/aurora_v2_logo.svg"} width={60} height={60}
+            <img src={"/aurora-v3-white.svg"} width={60} height={60}
                  className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora_text_logo.svg"} width={100} height={100}
+            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
                  className={`${isTop ? "block" : "hidden"}`} />
           </div>
           <div className={"flex flex-row gap-3"}>
@@ -139,7 +138,7 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div ref={ref} className="lg:flex flex-grow items-center rounded-2xl mt-5 bg-aurora-purple "
+            <div ref={ref} className={`lg:flex flex-grow items-center rounded-2xl mt-5  ${isTop ? "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue": "bg-transparent"}`}
                  id="example-navbar-warning">
               <div className="w-full flex flex-col gap-14 p-10 text-lg items-center justify-center">
 

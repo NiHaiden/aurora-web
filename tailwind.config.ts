@@ -57,7 +57,9 @@ const config = {
         "aurora-darkblue": "#4E67B2",
         "aurora-lightorange": "#EC92A1",
         "aurora-orangina": "#D95C7F",
-        "aurora-lightred": "#AA507A"
+        "aurora-lightred": "#AA507A",
+        "ublue-darkblue": "#252B4B",
+        "ublue-lightblue": "#3650EC"
       },
       borderRadius: {
         lg: "var(--radius)",
