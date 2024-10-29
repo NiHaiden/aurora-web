@@ -62,6 +62,7 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
       </div>
     </div>
   );
+}
 
 function discourseTopics() {
   return {
