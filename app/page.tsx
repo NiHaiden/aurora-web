@@ -23,7 +23,7 @@ export default function Home() {
     <div>
       <Navbar introRef={introRef} endUserRef={aboutRef} developerRef={aboutDXRef} faqRef={faqRef}
               downloadRef={downloadRef} newsRef={newsRef}/>
-      <main className="w-full min-h-screen">
+      <main className="w-full min-h-[100dvh]">
         <Introduction introRef={introRef} aboutRef={aboutRef} />
         <AboutAurora aboutRef={aboutRef} aboutDxRef={aboutDXRef} />
         <AboutAuroraDx aboutDxRef={aboutDXRef} />

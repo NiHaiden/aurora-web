@@ -42,7 +42,7 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
           }}>
             <img src={"/aurora-v3-white.svg"} width={60} height={60}
                  className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora-v3_logo.svg"} width={70} height={70}
+            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
                  className={`${isTop ? "block" : "hidden"}`} />
           </div>
           <div className="flex flex-row gap-14 text-lg items-center justify-center">
@@ -100,7 +100,7 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
           }}>
             <img src={"/aurora-v3-white.svg"} width={60} height={60}
                  className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora-v3-white.svg"} width={70} height={70}
+            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
                  className={`${isTop ? "block" : "hidden"}`} />
           </div>
           <div className={"flex flex-row gap-3"}>

@@ -28,7 +28,7 @@ export default function DownloadBtn({onClick}: {onClick: React.MouseEventHandler
     </span>
         </div>
         <span
-          className="absolute inset-0 bg-gradient-to-r from-aurora-purple to-aurora-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
+          className="absolute inset-0 bg-gradient-to-r from-aurora-orangina to-aurora-lightorange opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
       </button>
       <style jsx>{`
           @keyframes downloadArrow {

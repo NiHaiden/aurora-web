@@ -13,28 +13,39 @@ export default function Introduction({ introRef, aboutRef }: { introRef: RefObje
             stargazer, a new experience awaits.</h1>
           <h1 className={"text-2xl text-center"}>Powered by the awesomeness of KDE and Universal Blue, crafted for
             you.</h1>
-          <p className={"text-xl text-center"}>Get onboard. Aurora is the ultimate desktop OS for your developer workstation or the perfect maintenance-free OS for your grandma.
-          <br/>Let's gaze at the stars together, fellow traveller.</p>
+          <p className={"text-xl text-center"}>Get onboard. Aurora is the ultimate desktop OS for your developer
+            workstation or the perfect maintenance-free OS for your grandma.
+            <br />Let's gaze at the stars together, fellow traveller.</p>
         </div>
 
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-smooth-bounce">
-        <ChevronDown className="w-14 h-14 text-white" />
-      </div>
+      <div className="flex justify-center items-center p-4">
+        <div className="animate-smooth-bounce cursor-pointer flex flex-row gap-2 items-center" onClick={() => {
+          aboutRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }}>
+          <ChevronDown className="w-16 h-16 text-white" />
+          <span className={"text-2xl"}>Learn more</span>
 
-      <style jsx>{`
-          @keyframes smooth-bounce {
-              0%, 100% {
-                  transform: translate(-50%, 0);
-              }
-              50% {
-                  transform: translate(-50%, 20px);
-              }
-          }
-          .animate-smooth-bounce {
-              animation: smooth-bounce 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-          }
-      `}</style>
+        </div>
+
+        <style jsx>{`
+            @keyframes smooth-bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(20px);
+                }
+            }
+
+            .animate-smooth-bounce {
+                animation: smooth-bounce 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            }
+        `}</style>
+      </div>
     </div>
   );
 }

@@ -73,7 +73,7 @@
 
 	.bgimg {
 		background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-			url("/bgimg.jpg");
+			url("/aurora_wallpaper.jpg");
 		width: 100%;
 		min-height: 100vh;
 		background-attachment: fixed;
