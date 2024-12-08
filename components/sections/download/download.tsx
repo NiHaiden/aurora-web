@@ -1,43 +1,90 @@
-import { Code, Download, Laptop, Monitor } from "lucide-react";
+import { Code, Laptop, Monitor, Rocket } from "lucide-react";
 import { RefObject, useState } from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import DownloadComponent from "@/components/sections/download/download-component";
 import CheckDocs from "@/components/sections/download/check-docs";
+import { DownloadIcon } from "@/components/download-icon";
 
-export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject<any> }) {
+export default function DownloadAurora({
+  downloadRef,
+}: {
+  downloadRef: RefObject<any>;
+}) {
   const [systemBase, setSystemBase] = useState("");
   const [primaryGPU, setPrimaryGPU] = useState("");
   const [developerVersion, setDeveloperVersion] = useState("");
   return (
     <>
-      <div ref={downloadRef}
-           className={"animate-fade-up min-h-[900px] w-full flex gap-5 flex-col items-center justify-center"}
-           id={"downloads"}>
-        <div className={"w-3/4  max-w-[900px] h-full flex flex-col gap-5 mt-5"}>
-          <div className={"flex flex-col items-left gap-4"}>
-            <h1
-              className={"text-5xl lg:text-7xl flex flex-row items-center justify-center lg:justify-start gap-4 font-bold drop-shadow-md bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% text-transparent bg-clip-text"}>
-              <Download className={"w-12 h-12 lg:w-24 lg:h-24  stroke-aurora-darkblue"} />Get
-              Aurora
-            </h1>
-            <p className={"text-xl lg:text-2xl text-black text-center lg:text-left"}>🚀 Ready to ride the
-              rocketship? Pick your hardware
-              configuration and download the ISO.</p>
+      <div
+        ref={downloadRef}
+        className={
+          "flex min-h-[900px] w-full animate-fade-up flex-col items-center justify-center gap-5"
+        }
+        id={"downloads"}
+      >
+        <div className={"mt-5 flex h-full w-3/4 max-w-[900px] flex-col gap-5"}>
+          <div className={"items-left flex flex-col gap-4"}>
+            <div className={"flex flex-row items-center justify-start gap-5"}>
+              <div className={"h-12 w-12 text-aurora-darkblue lg:h-24 lg:w-24"}>
+                <DownloadIcon size={96} />
+              </div>
+              <h1
+                className={
+                  "flex flex-row items-center justify-center gap-4 bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% bg-clip-text text-5xl font-bold text-transparent drop-shadow-md lg:justify-start lg:text-7xl"
+                }
+              >
+                Get Aurora
+              </h1>
+            </div>
+
+            <p
+              className={
+                "flex flex-col items-center gap-5 text-center text-xl text-black lg:flex-row lg:text-left lg:text-2xl"
+              }
+            >
+              <Rocket className={"stroke-aurora-darkblue"} size={48} /> Ready to
+              ride the rocketship? Pick your hardware configuration and download
+              the ISO.
+            </p>
           </div>
         </div>
         <div
-          className={"w-3/4 max-w-[900px] grid grid-rows-2 grid-cols-1 lg:gap-0 gap-10 lg:grid-rows-1 lg:grid-cols-2"}>
-          <div className={"flex flex-col justify-center items-center lg:items-start lg:justify-start gap-5"}>
+          className={
+            "grid w-3/4 max-w-[900px] grid-cols-1 grid-rows-2 gap-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-0"
+          }
+        >
+          <div
+            className={
+              "flex flex-col items-center justify-center gap-5 lg:items-start lg:justify-start"
+            }
+          >
             <div className={"animate-fade-up"}>
               <p className={"text-xl"}>Hardware</p>
-              <Select onValueChange={(e) => {
-                setSystemBase(e);
-                console.log(systemBase);
-              }}>
-                <SelectTrigger className="w-[300px] h-[60px] text-lg border-aurora-darkblue">
+              <Select
+                onValueChange={(e) => {
+                  setSystemBase(e);
+                  console.log(systemBase);
+                }}
+              >
+                <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
                   <SelectValue
-                    placeholder={<div className={"flex flex-row gap-1 items-center justify-center"}>
-                      <Laptop className={"stroke-aurora-purple"} />Select your hardware</div>} />
+                    placeholder={
+                      <div
+                        className={
+                          "flex flex-row items-center justify-center gap-1"
+                        }
+                      >
+                        <Laptop className={"stroke-aurora-purple"} />
+                        Select your hardware
+                      </div>
+                    }
+                  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="desktop">Desktop / Laptop</SelectItem>
@@ -47,55 +94,87 @@ export default function DownloadAurora({ downloadRef }: { downloadRef: RefObject
                 </SelectContent>
               </Select>
             </div>
-            {systemBase !== "" && <div className={"animate-fade-up"}>
-              <p className={"text-xl"}>Primary GPU</p>
-              <Select onValueChange={(e) => {
-                setPrimaryGPU(e);
-                console.log(systemBase);
-              }}>
-                <SelectTrigger className=" w-[300px] h-[60px] text-lg border-aurora-darkblue">
-                  <SelectValue
-                    placeholder={<div className={"flex flex-row gap-2 items-center justify-center"}>
-                      <Monitor className={"stroke-aurora-purple"} />Pick your primary GPU</div>} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="intel">Intel</SelectItem>
-                  <SelectItem value="amd">AMD</SelectItem>
-                  <SelectItem value="nvidia">Nvidia</SelectItem>
-                </SelectContent>
-              </Select></div>}
+            {systemBase !== "" && (
+              <div className={"animate-fade-up"}>
+                <p className={"text-xl"}>Primary GPU</p>
+                <Select
+                  onValueChange={(e) => {
+                    setPrimaryGPU(e);
+                    console.log(systemBase);
+                  }}
+                >
+                  <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
+                    <SelectValue
+                      placeholder={
+                        <div
+                          className={
+                            "flex flex-row items-center justify-center gap-2"
+                          }
+                        >
+                          <Monitor className={"stroke-aurora-purple"} />
+                          Pick your primary GPU
+                        </div>
+                      }
+                    />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="intel">Intel</SelectItem>
+                    <SelectItem value="amd">AMD</SelectItem>
+                    <SelectItem value="nvidia">Nvidia</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
 
-            {primaryGPU !== "" && <div className={"animate-fade-up"}>
-              <p className={"text-xl"}>Developer Version</p>
-              <Select onValueChange={(e) => {
-                setDeveloperVersion(e);
-                console.log(systemBase);
-              }}>
-                <SelectTrigger className=" w-[300px] h-[60px] text-lg border-aurora-darkblue">
-                  <SelectValue
-                    placeholder={<div className={"flex flex-row gap-2 items-center justify-center"}>
-                      <Code className={"stroke-aurora-purple"} />Are you a dev?</div>} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="yes">Yes</SelectItem>
-                  <SelectItem value="no">No</SelectItem>
-                </SelectContent>
-              </Select></div>}
+            {primaryGPU !== "" && (
+              <div className={"animate-fade-up"}>
+                <p className={"text-xl"}>Developer Version</p>
+                <Select
+                  onValueChange={(e) => {
+                    setDeveloperVersion(e);
+                    console.log(systemBase);
+                  }}
+                >
+                  <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
+                    <SelectValue
+                      placeholder={
+                        <div
+                          className={
+                            "flex flex-row items-center justify-center gap-2"
+                          }
+                        >
+                          <Code className={"stroke-aurora-purple"} />
+                          Are you a dev?
+                        </div>
+                      }
+                    />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="yes">Yes</SelectItem>
+                    <SelectItem value="no">No</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
           </div>
           <div className={"flex flex-col gap-2"}>
-
-            {developerVersion !== "" &&
-              <div
-                className={"w-full rounded-3xl flex flex-col gap-2"}>
+            {developerVersion !== "" && (
+              <div className={"flex w-full flex-col gap-2 rounded-3xl"}>
                 <h1
-                  className={"text-3xl font-bold bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple text-transparent bg-clip-text "}>
+                  className={
+                    "bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple bg-clip-text text-3xl font-bold text-transparent"
+                  }
+                >
                   Grab the ISO here for a fresh install:
                 </h1>
-                <DownloadComponent baseSystem={systemBase} primaryGPU={primaryGPU}
-                                   developerEdition={developerVersion} />
+                <DownloadComponent
+                  baseSystem={systemBase}
+                  primaryGPU={primaryGPU}
+                  developerEdition={developerVersion}
+                />
                 <CheckDocs />
-              </div>}
-
+              </div>
+            )}
           </div>
         </div>
       </div>

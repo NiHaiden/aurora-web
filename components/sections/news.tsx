@@ -1,7 +1,6 @@
 "use client";
 import React, { RefObject, useEffect } from "react";
-import { NewspaperIcon } from "lucide-react";
-import { BorderTrail } from "@/components/ui/border-trail";
+import { EarthIcon } from "@/components/earth";
 
 export default function News({ newsRef }: { newsRef: RefObject<any> }) {
   const [discourseHtml, setDiscourseHtml] = React.useState({ __html: "" });
@@ -27,7 +26,8 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
 
       const iframe = document.createElement("iframe");
       iframe.src = `${url}/embed/topics?${params.join("&")}`;
-      iframe.className = "rounded-2xl w-[850px] border border-aurora-darkblue overflow-y-scroll";
+      iframe.className =
+        "rounded-2xl w-[850px] border border-aurora-darkblue overflow-y-scroll";
       iframe.id = frameId;
       iframe.frameBorder = String(0);
       iframe.scrolling = "no";
@@ -36,29 +36,31 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
   }, []);
 
   return (
-    <div ref={newsRef}
-         className={
-           "bg-white w-full flex flex-col justify-center items-center p-40"
-         }
+    <div
+      ref={newsRef}
+      className={
+        "flex w-full flex-col items-center justify-center bg-white p-40"
+      }
     >
       <div className={"animate-fade-up"}>
-        <h1
-          className={
-            "w-fit p-4 text-7xl font-bold bg-gradient-to-br drop-shadow-md from-aurora-lightorange via-aurora-darkblue to-aurora-lightorange bg-clip-text text-transparent leading-tight flex flex-row items-center gap-3"
-          }
-        >
-          <NewspaperIcon
-            className={"w-12 h-12 lg:w-24 lg:h-24 stroke-aurora-darkblue"}
-          />
-          News
-        </h1>
+        <div className={"flex flex-row items-center justify-center gap-5"}>
+          <div className={"h-12 w-12 stroke-aurora-darkblue lg:h-24 lg:w-24"}>
+            <EarthIcon />
+          </div>
+          <h1
+            className={
+              "flex w-fit flex-row items-center gap-3 bg-gradient-to-br from-aurora-lightorange via-aurora-darkblue to-aurora-lightorange bg-clip-text p-4 text-7xl font-bold leading-tight text-transparent drop-shadow-md"
+            }
+          >
+            News
+          </h1>
+        </div>
         <div
           className={
-            "min-w-[350px] w-full lg:w-[850px] h-[350px] p-6  rounded-2xl"
+            "h-[350px] w-full min-w-[350px] rounded-2xl p-6 lg:w-[850px]"
           }
           dangerouslySetInnerHTML={discourseTopics()}
         />
-
       </div>
     </div>
   );
@@ -67,6 +69,6 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
 function discourseTopics() {
   return {
     __html:
-      " <d-topics-list discourse-url=\"https://universal-blue.discourse.group\" per-page=\"5\" tags=\"bluefin-news\" template=\"complete\"></d-topics-list> "
+      ' <d-topics-list discourse-url="https://universal-blue.discourse.group" per-page="5" tags="bluefin-news" template="complete"></d-topics-list> ',
   };
 }

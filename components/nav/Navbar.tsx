@@ -5,7 +5,14 @@ import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import DownloadBtn from "@/components/download-btn";
 
-const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsRef }: {
+const Navbar = ({
+  introRef,
+  endUserRef,
+  developerRef,
+  faqRef,
+  downloadRef,
+  newsRef,
+}: {
   introRef: RefObject<any>;
   endUserRef: RefObject<any>;
   developerRef: RefObject<any>;
@@ -29,89 +36,131 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
 
   return (
     <nav
-      className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out  ${isTop ? "bg-transparent" : "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue shadow-xl"}`}>
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <div
-          className="hidden lg:flex w-full font-medium text-white mb-4 md:mb-0 flex-row items-center justify-between gap-4">
-          <div className={"cursor-pointer"} onClick={() => {
-            introRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            closeNavbar();
-          }}>
-            <img src={"/aurora-v3-white.svg"} width={60} height={60}
-                 className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
-                 className={`${isTop ? "block" : "hidden"}`} />
+      className={`fixed top-0 z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-transparent" : "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue shadow-xl"}`}
+    >
+      <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
+        <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
+          <div
+            className={"cursor-pointer"}
+            onClick={() => {
+              introRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+              closeNavbar();
+            }}
+          >
+            <img
+              src={"/aurora-v3-white.svg"}
+              width={60}
+              height={60}
+              className={`${isTop ? "hidden" : "block"}`}
+            />
+            <img
+              src={"/aurora-v3_logo.svg"}
+              width={60}
+              height={60}
+              className={`${isTop ? "block" : "hidden"}`}
+            />
           </div>
-          <div className="flex flex-row gap-14 text-lg items-center justify-center">
-            <button onClick={() => {
-              endUserRef.current.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-              closeNavbar();
-            }}>For end-users
+          <div className="flex flex-row items-center justify-center gap-14 text-lg">
+            <button
+              onClick={() => {
+                endUserRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+                closeNavbar();
+              }}
+            >
+              For end-users
             </button>
-            <button onClick={() => {
-              developerRef.current.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-              closeNavbar();
-            }}>For developers
+            <button
+              onClick={() => {
+                developerRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+                closeNavbar();
+              }}
+            >
+              For developers
             </button>
-            <button onClick={() => {
-              faqRef.current.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-              closeNavbar();
-            }}>FAQ
+            <button
+              onClick={() => {
+                faqRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+                closeNavbar();
+              }}
+            >
+              FAQ
             </button>
-            <button onClick={() => {
-              newsRef.current.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-              closeNavbar();
-            }}>News
+            <button
+              onClick={() => {
+                newsRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+                closeNavbar();
+              }}
+            >
+              News
             </button>
           </div>
-          <div className={"flex max-h-fit flex-row text-lg items-center justify-center"}>
+          <div
+            className={
+              "flex max-h-fit flex-row items-center justify-center text-lg"
+            }
+          >
             <DownloadBtn
               onClick={() => {
                 downloadRef.current.scrollIntoView({
                   behavior: "smooth",
-                  block: "start"
+                  block: "start",
                 });
                 closeNavbar();
-              }}/>
+              }}
+            />
           </div>
         </div>
-        <div className={"w-full flex flex-row justify-between items-center lg:hidden"}>
-          <div className={"cursor-pointer"} onClick={() => {
-            introRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            closeNavbar();
-          }}>
-            <img src={"/aurora-v3-white.svg"} width={60} height={60}
-                 className={`${isTop ? "hidden" : "block"}`} />
-            <img src={"/aurora-v3_logo.svg"} width={60} height={60}
-                 className={`${isTop ? "block" : "hidden"}`} />
+        <div
+          className={
+            "flex w-full flex-row items-center justify-between lg:hidden"
+          }
+        >
+          <div
+            className={"cursor-pointer"}
+            onClick={() => {
+              introRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+              closeNavbar();
+            }}
+          >
+            <img
+              src={"/aurora-v3-white.svg"}
+              width={60}
+              height={60}
+              className={`${isTop ? "hidden" : "block"}`}
+            />
+            <img
+              src={"/aurora-v3_logo.svg"}
+              width={60}
+              height={60}
+              className={`${isTop ? "block" : "hidden"}`}
+            />
           </div>
           <div className={"flex flex-row gap-3"}>
-
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
               type="button"
               onClick={() => {
                 downloadRef.current.scrollIntoView({
                   behavior: "smooth",
-                  block: "start"
+                  block: "start",
                 });
                 closeNavbar();
               }}
@@ -119,7 +168,7 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
               <DownloadIcon width={30} height={30} />
             </button>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -138,41 +187,55 @@ const Navbar = ({ introRef, endUserRef, developerRef, faqRef, downloadRef, newsR
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div ref={ref} className={`lg:flex flex-grow items-center rounded-2xl mt-5  ${isTop ? "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue": "bg-transparent"}`}
-                 id="example-navbar-warning">
-              <div className="w-full flex flex-col gap-14 p-10 text-lg items-center justify-center">
-
-                <button onClick={() => {
-                  endUserRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                  });
-                  closeNavbar();
-                }}>For end-users
+            <div
+              ref={ref}
+              className={`mt-5 flex-grow items-center rounded-2xl lg:flex ${isTop ? "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue" : "bg-transparent"}`}
+              id="example-navbar-warning"
+            >
+              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
+                <button
+                  onClick={() => {
+                    endUserRef.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                    closeNavbar();
+                  }}
+                >
+                  For end-users
                 </button>
-                <button onClick={() => {
-                  developerRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                  });
-                  closeNavbar();
-                }}>For developers
+                <button
+                  onClick={() => {
+                    developerRef.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                    closeNavbar();
+                  }}
+                >
+                  For developers
                 </button>
-                <button onClick={() => {
-                  faqRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                  });
-                  closeNavbar();
-                }}>FAQ
+                <button
+                  onClick={() => {
+                    faqRef.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                    closeNavbar();
+                  }}
+                >
+                  FAQ
                 </button>
-                <button onClick={() => {
-                  newsRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                  });
-                  closeNavbar();
-                }}>News
+                <button
+                  onClick={() => {
+                    newsRef.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                    closeNavbar();
+                  }}
+                >
+                  News
                 </button>
               </div>
             </div>
