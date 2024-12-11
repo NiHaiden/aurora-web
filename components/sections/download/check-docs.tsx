@@ -5,7 +5,7 @@ export default function CheckDocs() {
         Check out the{" "}
         <a
           className={"underline"}
-          href={"https://docs.getaurora.dev/guides/intro/"}
+          href={"https://docs.getaurora.dev"}
         >
           {" "}
           documentation here.
