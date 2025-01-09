@@ -2,7 +2,6 @@ import { CloudDownload, Package } from "lucide-react";
 import { getImageName } from "@/lib/utils/download";
 
 export default function DownloadComponent({
-  baseSystem,
   primaryGPU,
   developerEdition,
 }: {
@@ -10,7 +9,7 @@ export default function DownloadComponent({
   primaryGPU: string;
   developerEdition: string;
 }) {
-  const imageName = getImageName(baseSystem, primaryGPU, developerEdition);
+  const imageName = getImageName(primaryGPU, developerEdition);
   const downloadLink: string = `https://dl.getaurora.dev/${imageName}.iso`;
   const checksumLink: string = `https://dl.getaurora.dev/${imageName}.iso-CHECKSUM`;
   //https://dl.getaurora.dev/aurora-dx-latest.iso

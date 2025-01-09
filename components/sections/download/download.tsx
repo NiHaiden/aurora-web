@@ -16,7 +16,6 @@ export default function DownloadAurora({
 }: {
   downloadRef: RefObject<any>;
 }) {
-  const [systemBase, setSystemBase] = useState("");
   const [primaryGPU, setPrimaryGPU] = useState("");
   const [developerVersion, setDeveloperVersion] = useState("");
   return (
@@ -64,43 +63,12 @@ export default function DownloadAurora({
               "flex flex-col items-center justify-center gap-5 lg:items-start lg:justify-start"
             }
           >
+
             <div className={"animate-fade-up"}>
-              <p className={"text-xl"}>Hardware</p>
-              <Select
-                onValueChange={(e) => {
-                  setSystemBase(e);
-                  console.log(systemBase);
-                }}
-              >
-                <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
-                  <SelectValue
-                    placeholder={
-                      <div
-                        className={
-                          "flex flex-row items-center justify-center gap-1"
-                        }
-                      >
-                        <Laptop className={"stroke-aurora-purple"} />
-                        Select your hardware
-                      </div>
-                    }
-                  />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="desktop">Desktop / Laptop</SelectItem>
-                  <SelectItem value="asus">ASUS</SelectItem>
-                  <SelectItem value="framework">Framework</SelectItem>
-                  <SelectItem value="surface">Surface</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            {systemBase !== "" && (
-              <div className={"animate-fade-up"}>
                 <p className={"text-xl"}>Primary GPU</p>
                 <Select
                   onValueChange={(e) => {
                     setPrimaryGPU(e);
-                    console.log(systemBase);
                   }}
                 >
                   <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
@@ -118,9 +86,9 @@ export default function DownloadAurora({
                     />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="intel">Intel</SelectItem>
-                    <SelectItem value="amd">AMD</SelectItem>
-                    <SelectItem value="nvidia">Nvidia</SelectItem>
+                    <SelectItem value="mesa">Intel / AMD </SelectItem>
+                    <SelectItem value="nvidia">Nvidia (RTX-Series/GTX 16xx)</SelectItem>
+                    <SelectItem value="nvidia-legacy">Nvidia Legacy (9xx-10xx Series)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -132,7 +100,6 @@ export default function DownloadAurora({
                 <Select
                   onValueChange={(e) => {
                     setDeveloperVersion(e);
-                    console.log(systemBase);
                   }}
                 >
                   <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
@@ -168,7 +135,6 @@ export default function DownloadAurora({
                   Grab the ISO here for a fresh install:
                 </h1>
                 <DownloadComponent
-                  baseSystem={systemBase}
                   primaryGPU={primaryGPU}
                   developerEdition={developerVersion}
                 />
@@ -181,3 +147,35 @@ export default function DownloadAurora({
     </>
   );
 }
+/*
+ <div className={"animate-fade-up"}>
+              <p className={"text-xl"}>Hardware</p>
+              <Select
+                onValueChange={(e) => {
+                  setSystemBase(e);
+                  console.log(systemBase);
+                }}
+              >
+                <SelectTrigger className="h-[60px] w-[300px] border-aurora-darkblue text-lg">
+                  <SelectValue
+                    placeholder={
+                      <div
+                        className={
+                          "flex flex-row items-center justify-center gap-1"
+                        }
+                      >
+                        <Laptop className={"stroke-aurora-purple"} />
+                        Select your hardware
+                      </div>
+                    }
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="desktop">Desktop / Laptop</SelectItem>
+                  <SelectItem value="asus">ASUS</SelectItem>
+                  <SelectItem value="framework">Framework</SelectItem>
+                  <SelectItem value="surface">Surface</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+ */
