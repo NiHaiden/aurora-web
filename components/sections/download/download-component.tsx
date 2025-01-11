@@ -5,7 +5,6 @@ export default function DownloadComponent({
   primaryGPU,
   developerEdition,
 }: {
-  baseSystem: string;
   primaryGPU: string;
   developerEdition: string;
 }) {

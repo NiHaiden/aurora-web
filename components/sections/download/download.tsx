@@ -92,8 +92,6 @@ export default function DownloadAurora({
                   </SelectContent>
                 </Select>
               </div>
-            )}
-
             {primaryGPU !== "" && (
               <div className={"animate-fade-up"}>
                 <p className={"text-xl"}>Developer Version</p>

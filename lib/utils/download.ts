@@ -10,7 +10,7 @@ export const getImageName = (
       imageName += "-nvidia-stable";
       break;
     case "nvidia":
-      imageName += "nvidia-open-stable";
+      imageName += "-nvidia-open-stable";
       break;
     default:
       imageName += "-stable";

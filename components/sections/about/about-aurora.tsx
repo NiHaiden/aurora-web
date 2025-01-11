@@ -60,7 +60,7 @@ export default function AboutAurora({
             <p className={"text-xl"}>
               Aurora features a lightly customized KDE Plasma for a super smooth
               and delightful desktop experience that can be customized
-              indefinitely. <br />
+              exactly to your liking. <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
@@ -83,8 +83,7 @@ export default function AboutAurora({
               Speed and Reliability
             </h1>
             <p className={"text-xl"}>
-              Perfectly tuned and optimized, for maximum efficiency and
-              reliability like a 100 year old machine. <br />
+              Under-the-hood optimizations for laptops and other devices and a slower kernel update cadence ensures smooth and fast operation. <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
@@ -134,15 +133,13 @@ export default function AboutAurora({
               Hardware Support
             </h1>
             <p className={"text-xl"}>
-              We have individual editions for Surface and ASUS users and all
-              include expanded hardware support for game controllers, printer
-              hardware and much more. <br />
+              Built-in nvidia drivers and expanded support for game controllers, printers and hardware alike is built directly into Aurora. <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                Don't forget to print the starship bills.
+                You don't need to worry about it.
               </span>
             </p>
           </div>
