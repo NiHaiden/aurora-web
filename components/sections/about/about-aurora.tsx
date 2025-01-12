@@ -2,6 +2,7 @@
 import { CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
 import React, { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
+import { useTranslations } from 'next-intl';
 
 export default function AboutAurora({
   aboutRef,
@@ -22,6 +23,8 @@ export default function AboutAurora({
   const ref4 = useRef<HTMLDivElement>(null);
   const isVisible4 = useIsVisible(ref4);
 
+  const t = useTranslations('About-Aurora');
+
   return (
     <div
       ref={aboutRef}
@@ -33,12 +36,10 @@ export default function AboutAurora({
             "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-6xl font-bold text-transparent drop-shadow-lg lg:text-7xl"
           }
         >
-          Aurora for end-users
+          {t('for-end-user')}
         </h1>
         <p className={"text-xl"}>
-          Aurora is the image for people who want a reliable, safe and smooth
-          computing experience for everyday tasks and beyond. The OS for
-          everyone, including those hobby stargazers.
+          {t('reliable')}
         </p>
         <section
           className={
@@ -55,18 +56,16 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-center text-2xl font-bold text-transparent"
               }
             >
-              Simply delightful.
+              {t('simply-delightful')}
             </h1>
             <p className={"text-xl"}>
-              Aurora features a lightly customized KDE Plasma for a super smooth
-              and delightful desktop experience that can be customized
-              indefinitely. <br />
+              {t('simply-delightful-text')}<br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                You can even move the taskbar.
+                {t('simply-delightful-purple')}
               </span>
             </p>
           </div>
@@ -80,17 +79,16 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-center text-2xl font-bold text-transparent"
               }
             >
-              Speed and Reliability
+              {t('speed-reliability')}
             </h1>
             <p className={"text-xl"}>
-              Perfectly tuned and optimized, for maximum efficiency and
-              reliability like a 100 year old machine. <br />
+              {t('speed-reliability-text')}<br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                Your computer will never feel the same again.
+                {t('speed-reliability-purple')}
               </span>
             </p>
           </div>
@@ -104,19 +102,16 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent"
               }
             >
-              Zero Maintenance
+              {t('zero-maintenance')}
             </h1>
             <p className={"text-xl"}>
-              The system only has to be installed{" "}
-              <span className={"font-bold"}>once</span>. Updates of your apps
-              and the system is handled in the background for you.
-              <br />
+              {t('zero-maintenance-text')}<br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text text-left font-bold text-transparent"
                 }
               >
-                Set and forget, like a dream.
+                {t('zero-maintenance-purple')}
               </span>
             </p>
           </div>
@@ -131,18 +126,16 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent"
               }
             >
-              Hardware Support
+              {t('hardware-support')}
             </h1>
             <p className={"text-xl"}>
-              We have individual editions for Surface and ASUS users and all
-              include expanded hardware support for game controllers, printer
-              hardware and much more. <br />
+              {t('hardware-support-text')}<br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                Don't forget to print the starship bills.
+                {t('hardware-support-purple')}
               </span>
             </p>
           </div>

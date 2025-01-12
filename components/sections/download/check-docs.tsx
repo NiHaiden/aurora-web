@@ -1,14 +1,18 @@
+import { useTranslations } from 'next-intl';
+
 export default function CheckDocs() {
+  const t = useTranslations('Download-Component');
+
   return (
     <div className={"w-full"}>
       <div className={"italic text-aurora-darkblue"}>
-        Check out the{" "}
+      {t('check-out')}   {" "}
         <a
           className={"underline"}
           href={"https://docs.getaurora.dev"}
         >
           {" "}
-          documentation here.
+          {t('documentation')} 
         </a>
       </div>
     </div>

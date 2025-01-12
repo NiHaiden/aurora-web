@@ -1,0 +1,109 @@
+{
+  "Navbar": {
+    "end-user": "For end-users",
+    "developer": "For Developers",
+    "faq": "FAQ",
+    "news": "News"
+  },
+  "Download-Component": {
+    "get-aurora": "Get Aurora",
+    "download-iso": "Download ISO",
+    "checksum": "Get Checksum to verify",
+    "ready-to-ride": "Ready to ride the rocketship? Pick your hardware configuration and download the ISO.",
+    "hardware": "Hardware",
+    "select-hardware": "Select your hardware",
+    "primary-gpu": "Primary GPU",
+    "pick-gpu": "Pick your primary GPU",
+    "developer-version": "Developer Version",
+    "are-you-dev": "Are you a dev?",
+    "grab-iso": "Grab the ISO here for a fresh install:",
+    "yes-option": "Yes",
+    "no-option": "No",
+    "check-out": "Check out the",
+    "documentation": "documentation here."
+  },
+  "Introduction": {
+    "stargazer": "Hello stargazer, a new experience awaits.",
+    "powered": "Powered by the awesomeness of KDE and Universal Blue, crafted for you.",
+    "onboard": "Get onboard. Aurora is the ultimate desktop OS for your developer workstation or the perfect maintenance-free OS for everyone.",
+    "gaze": " Let's gaze at the stars together, fellow traveller.",
+    "learn-more": "Learn more"
+  },
+  "About-Aurora": {
+    "for-end-user": "Aurora for end-users",
+    "reliable": "Aurora is the image for people who want a reliable, safe and smooth computing experience for everyday tasks and beyond.",
+    "simply-delightful": "Simply delightful.",
+    "simply-delightful-text": "Aurora features a lightly customized KDE Plasma for a super smooth and delightful desktop experience that can be customized indefinitely.",
+    "simply-delightful-purple": " You can even move the taskbar.",
+    "speed-reliability": "Speed and Reliability",
+    "speed-reliability-text": "Perfectly tuned and optimized, for maximum efficiency and reliability like a 100 year old machine.",
+    "speed-reliability-purple": "Your computer will never feel the same again.",
+    "zero-maintenance": "Zero Maintenance",
+    "zero-maintenance-text": "The system only has to be installed once. Updates of your apps and the system is handled in the background for you.",
+    "zero-maintenance-purple": "Set and forget, like a dream.",
+    "hardware-support": "Hardware Support",
+    "hardware-support-text": "We have individual editions for Surface and ASUS users and all include expanded hardware support for game controllers, printer hardware and much more.",
+    "hardware-support-purple": "Don't forget to print the starship bills."
+  },
+  "About-AuroraDx": {
+    "for-developers": "Aurora for developers",
+    "pro-stargazing": "Are you a pro at stargazing? The developer experience edition takes the great foundation and cranks it up to eleven.",
+    "brew-ready": "Brew, ready for your needs.",
+    "brew-ready-text": "Brew is preinstalled and ready to use on Aurora. Use it to install every CLI tool you could've never dreamt up. Brew is safely integrated to never mess with your host system.",
+    "brew-ready-red": "Beer never tasted so good.",
+    "containers-best-friends": "Containers, your best friends.",
+    "containers-best-friends-text": "Docker and Podman come preconfigured to suit every type of workflow, including a containerized CLI experience. And with Ptyxis, your distrobox is only one click away.",
+    "containers-best-friends-red": "Never say 'works on my machine' again.",
+    "preconfigured-work": "Preconfigured and ready for serious work.",
+    "preconfigured-work-text": "Visual Studio Code is preinstalled and already preconfigured to support workflows involving DevContainers. And with a single command, you can grab Jetbrains Toolbox if you like coffee more.",
+    "preconfigured-work-red": "Or use neovim if you know how to exit it.",
+    "robots-take-over": "Let the robots take over.",
+    "robots-take-over-text": "If you fancy local LLMs or do any kind of machine learning work, Aurora has you covered there too. Run private LLMs with Ollama, spin up a pytorch distrobox for some serious AI work.",
+    "robots-take-over-red": "Use the robots to your advantage."
+  },
+  "Build-Your-Own": {
+    "build-your-own": "Build Your Own Aurora",
+    "want-to-build": "Do you want to build your own image? Want to extend Aurora with your custom themes and bling? Use our image template to help you get started. All you need is some working knowledge on containerization with Docker and a little bit of time. Let's goooo!",
+    "get-image-template": "Get the image template"
+  },
+  "Footer": {
+    "go-up": "Go up",
+    "proudly-built": "Proudly built",
+    "proudly-built-phrase": "a community toolkit designed to reboot the Linux desktop. Built for the love of the game. Welcome to Indie Cloud Native.",
+    "built-with-love": "Built with ❤️ in Austria.",
+    "refined-logo": "Refined logo built by @reisvg.",
+    "background-credits": "Background Image Credits:",
+    "background-images": "Background Images by Jonatan Pie from",
+    "animated-icons": "Animated Icons from",
+    "link-icons": "here.",
+    "copyright": "© Copyright Project Aurora authors.",
+    "not-affiliated": "Aurora is not affiliated and or endorsed by The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS or any other companies mentioned above."
+  },
+  "FAQ": {
+    "faq-title": "Aurora FAQ",
+    "faq-intro": "Interested in more details? Find answers to the most burning questions.",
+    "click-here": "Click here!",
+    "questions": {
+      "q1": {
+        "question": "Can I get GNOME with that?",
+        "answer": "If you'd like GNOME rather than KDE, install Bluefin!",
+        "optionalLink": "https://projectbluefin.io"
+      },
+      "q2": {
+        "question": "What is Aurora Developer Edition? (Aurora-DX)?",
+        "answer": "Aurora Developer Edition is a special edition of Aurora featuring various additional packages that cater to a development audience. These included preinstalled VS Code with DevContainer capabilities, Docker and Podman as container runtimes, tools for creating and managing virtual machines, tools to create a containerized development environment with DevPod and much more. The developer experience also includes various tools for cloud-native developers. You can always install more via brew! If you want the raw package list, click the link.",
+        "optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
+      },
+      "q3": {
+        "question": "What's the difference between Vanilla Kinoite and Aurora?",
+        "answer": "Vanilla Kinoite is a very stock experience. Aurora includes many enhancements and tweaks, like included drivers for various printers, network adapters, game controllers and more as well as included codecs. Aurora also features tweaks to enhance your battery life on a laptop.",
+        "optionalLink": ""
+      },
+      "q4": {
+        "question": "Where can I get the latest news and discussions about Aurora?",
+        "answer": "Check out our Discourse forums for the latest updates and discussions on Aurora.",
+        "optionalLink": "https://universal-blue.discourse.group/c/bluefin/6"
+      }
+    }
+  }
+}

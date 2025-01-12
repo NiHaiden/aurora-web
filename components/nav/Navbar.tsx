@@ -4,7 +4,7 @@ import React, { RefObject, useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import DownloadBtn from "@/components/download-btn";
-
+import {useTranslations} from 'next-intl';
 const Navbar = ({
   introRef,
   endUserRef,
@@ -33,7 +33,7 @@ const Navbar = ({
   const closeNavbar = () => {
     setNavbarOpen(false);
   };
-
+  const t = useTranslations('Navbar');
   return (
     <nav
       className={`fixed top-0 z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-transparent" : "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue shadow-xl"}`}
@@ -73,7 +73,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              For end-users
+              {t('end-user')}
             </button>
             <button
               onClick={() => {
@@ -84,7 +84,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              For developers
+              {t('developer')}
             </button>
             <button
               onClick={() => {
@@ -95,7 +95,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              FAQ
+              {t('faq')}
             </button>
             <button
               onClick={() => {
@@ -106,7 +106,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              News
+              {t('news')}
             </button>
           </div>
           <div
@@ -202,7 +202,7 @@ const Navbar = ({
                     closeNavbar();
                   }}
                 >
-                  For end-users
+                   {t('end-user')}
                 </button>
                 <button
                   onClick={() => {
@@ -213,7 +213,7 @@ const Navbar = ({
                     closeNavbar();
                   }}
                 >
-                  For developers
+                   {t('developer')}
                 </button>
                 <button
                   onClick={() => {
@@ -224,7 +224,7 @@ const Navbar = ({
                     closeNavbar();
                   }}
                 >
-                  FAQ
+                   {t('faq')}
                 </button>
                 <button
                   onClick={() => {
@@ -235,7 +235,7 @@ const Navbar = ({
                     closeNavbar();
                   }}
                 >
-                  News
+                   {t('news')}
                 </button>
               </div>
             </div>

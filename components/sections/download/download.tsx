@@ -10,6 +10,7 @@ import {
 import DownloadComponent from "@/components/sections/download/download-component";
 import CheckDocs from "@/components/sections/download/check-docs";
 import { DownloadIcon } from "@/components/download-icon";
+import { useTranslations } from 'next-intl';
 
 export default function DownloadAurora({
   downloadRef,
@@ -19,6 +20,8 @@ export default function DownloadAurora({
   const [systemBase, setSystemBase] = useState("");
   const [primaryGPU, setPrimaryGPU] = useState("");
   const [developerVersion, setDeveloperVersion] = useState("");
+  const t = useTranslations('Download-Component');
+
   return (
     <>
       <div
@@ -39,7 +42,7 @@ export default function DownloadAurora({
                   "flex flex-row items-center justify-center gap-4 bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% bg-clip-text text-5xl font-bold text-transparent drop-shadow-md lg:justify-start lg:text-7xl"
                 }
               >
-                Get Aurora
+                {t('get-aurora')}
               </h1>
             </div>
 
@@ -48,9 +51,7 @@ export default function DownloadAurora({
                 "flex flex-col items-center gap-5 text-center text-xl text-black lg:flex-row lg:text-left lg:text-2xl"
               }
             >
-              <Rocket className={"stroke-aurora-darkblue"} size={48} /> Ready to
-              ride the rocketship? Pick your hardware configuration and download
-              the ISO.
+              <Rocket className={"stroke-aurora-darkblue"} size={48} /> {t('ready-to-ride')}
             </p>
           </div>
         </div>
@@ -65,7 +66,7 @@ export default function DownloadAurora({
             }
           >
             <div className={"animate-fade-up"}>
-              <p className={"text-xl"}>Hardware</p>
+              <p className={"text-xl"}>{t('hardware')}</p>
               <Select
                 onValueChange={(e) => {
                   setSystemBase(e);
@@ -81,7 +82,7 @@ export default function DownloadAurora({
                         }
                       >
                         <Laptop className={"stroke-aurora-purple"} />
-                        Select your hardware
+                        {t('select-hardware')}
                       </div>
                     }
                   />
@@ -96,7 +97,7 @@ export default function DownloadAurora({
             </div>
             {systemBase !== "" && (
               <div className={"animate-fade-up"}>
-                <p className={"text-xl"}>Primary GPU</p>
+                <p className={"text-xl"}>{t('primary-gpu')}</p>
                 <Select
                   onValueChange={(e) => {
                     setPrimaryGPU(e);
@@ -112,7 +113,7 @@ export default function DownloadAurora({
                           }
                         >
                           <Monitor className={"stroke-aurora-purple"} />
-                          Pick your primary GPU
+                          {t('pick-gpu')}
                         </div>
                       }
                     />
@@ -128,7 +129,7 @@ export default function DownloadAurora({
 
             {primaryGPU !== "" && (
               <div className={"animate-fade-up"}>
-                <p className={"text-xl"}>Developer Version</p>
+                <p className={"text-xl"}>{t('developer-version')}</p>
                 <Select
                   onValueChange={(e) => {
                     setDeveloperVersion(e);
@@ -144,14 +145,14 @@ export default function DownloadAurora({
                           }
                         >
                           <Code className={"stroke-aurora-purple"} />
-                          Are you a dev?
+                          {t('are-you-dev')}
                         </div>
                       }
                     />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="yes">Yes</SelectItem>
-                    <SelectItem value="no">No</SelectItem>
+                    <SelectItem value="yes">{t('yes-option')}</SelectItem>
+                    <SelectItem value="no">{t('no-option')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -165,7 +166,7 @@ export default function DownloadAurora({
                     "bg-gradient-to-tr from-aurora-lightorange via-aurora-darkblue to-aurora-purple bg-clip-text text-3xl font-bold text-transparent"
                   }
                 >
-                  Grab the ISO here for a fresh install:
+                  {t('grab-iso')}
                 </h1>
                 <DownloadComponent
                   baseSystem={systemBase}

@@ -1,7 +1,9 @@
 import { RefObject } from "react";
 import { CircleArrowUp, GithubIcon, GitMerge, GlobeIcon } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export default function Footer({ introRef }: { introRef: RefObject<any> }) {
+  const t = useTranslations('Footer');
   return (
     <>
       <footer
@@ -19,14 +21,14 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           }}
         >
           <CircleArrowUp className={"h-10 w-10"} />
-          Go up
+          {t('go-up')}
         </button>
         <div
           className={
             "flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ublue-darkblue to-ublue-lightblue p-4 text-xl"
           }
-        >
-          Aurora is proudly built with technology from{" "}
+        >{t('proudly-built')}
+          {" "}
           <a
             className={"flex flex-row items-center gap-2 font-bold underline"}
             href={"https://universal-blue.org"}
@@ -34,15 +36,14 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
             <img src={"/ublue-color.svg"} width={35} height={35} />
             Universal Blue
           </a>
-          a community toolkit designed to reboot the Linux desktop. Built for
-          the love of the game. Welcome to Indie Cloud Native.
+          {t('proudly-built-phrase')}
         </div>
-        <div>Built with ❤️ in Austria.</div>
-        <div>Refined logo built by @reisvg. {"<3"}</div>
+        <div>{t('built-with-love')}</div>
+        <div>{t('refined-logo')} {"<3"}</div>
         <div>
-          <span className={"font-bold"}>Background Image Credits:</span>
+          <span className={"font-bold"}>{t('background-credits')}</span>
           <div>
-            Background Images by Jonatan Pie from{" "}
+            {t('background-images')}{" "}
             <a
               className={"cursor-pointer underline"}
               href={"https://unsplash.com/@r3dmax"}
@@ -52,16 +53,16 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           </div>
         </div>
         <div>
-          Animated Icons from{" "}
+          {t('animated-icons')}{" "}
           <a
             className={"cursor-pointer underline"}
             href={"https://icons.pqoqubbw.dev/"}
           >
-            here.
+            {t('link-icons')}
           </a>
         </div>
         <div>
-          © Copyright {new Date().getFullYear()} Project Aurora authors.
+          {t('copyright')} {new Date().getFullYear()} Project Aurora authors.
         </div>
 
         <div
@@ -93,9 +94,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           </a>
         </div>
         <div className={"mb-3 text-sm italic"}>
-          Aurora is not affiliated and or endorsed by The Fedora Project, KDE
-          e.V., The KDE Project, Red Hat, Microsoft, ASUS or any other companies
-          mentioned above.
+          {t('not-affiliated')}
         </div>
       </footer>
     </>

@@ -5,6 +5,7 @@ Copyright 2024 Niklas Haiden
 import { BeerIcon, BotIcon, CodeIcon, ContainerIcon } from "lucide-react";
 import { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
+import { useTranslations } from 'next-intl';
 
 export default function AboutAuroraDx({
   aboutDxRef,
@@ -23,6 +24,8 @@ export default function AboutAuroraDx({
   const ref4 = useRef<HTMLDivElement>(null);
   const isVisible4 = useIsVisible(ref4);
 
+  const t = useTranslations('About-AuroraDx');
+
   return (
     <div ref={aboutDxRef}>
       <div
@@ -37,11 +40,10 @@ export default function AboutAuroraDx({
                 "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-6xl font-bold text-transparent drop-shadow-md lg:text-7xl"
               }
             >
-              Aurora for developers
+              {t('for-developers')}
             </h1>
             <p className={"text-2xl text-white"}>
-              Are you a pro at stargazing? The developer experience edition
-              takes the great foundation and cranks it up to eleven.
+              {t('pro-stargazing')}
             </p>
           </div>
           <div
@@ -59,18 +61,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                Brew, ready for your needs.
+                {t('brew-ready')}
               </h1>
               <p className={"text-xl text-white"}>
-                Brew is preinstalled and ready to use on Aurora. Use it to
-                install every CLI tool you could've never dreamt up. Brew is
-                safely integrated to never mess with your host system. <br />
+                {t('brew-ready-text')} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  Beer never tasted so good.
+                  {t('brew-ready-red')}
                 </span>
               </p>
             </div>
@@ -84,19 +84,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                Containers, your best friends.
+                {t('containers-best-friends')}
               </h1>
               <p className={"text-xl text-white"}>
-                Docker and Podman come preconfigured to suit every type of
-                workflow, including a containerized CLI experience. And with
-                Ptyxis, your distrobox is only one click away.
-                <br />
+                {t('containers-best-friends-text')} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  Never say "works on my machine" again.
+                  {t('containers-best-friends-red')}
                 </span>
               </p>
             </div>
@@ -110,19 +107,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                Preconfigured and ready for serious work.
+                {t('preconfigured-work')}
               </h1>
               <p className={"text-xl text-white"}>
-                Visual Studio Code is preinstalled and already preconfigured to
-                support workflows involving DevContainers. And with a single
-                command, you can grab Jetbrains Toolbox if you like coffee more.
-                <br />
+                {t('preconfigured-work-text')} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-left text-xl font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  Or use neovim if you know how to exit it.
+                  {t('preconfigured-work-red')}
                 </span>
               </p>
             </div>
@@ -136,19 +130,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                Let the robots take over.
+                {t('robots-take-over')}
               </h1>
               <p className={"text-xl text-white"}>
-                If you fancy local LLMs or do any kind of machine learning work,
-                Aurora has you covered there too. Run private LLMs with Ollama
-                spin up a pytorch distrobox for some serious AI work.
-                <br />
+                {t('robots-take-over-text')} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-left text-xl font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  Use the robots to your advantage.
+                  {t('robots-take-over-red')}
                 </span>
               </p>
             </div>
