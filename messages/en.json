@@ -3,7 +3,7 @@
     "end-user": "For end-users",
     "developer": "For Developers",
     "faq": "FAQ",
-    "news": "Berita"
+    "news": "News"
   },
   "Download-Component": {
     "get-aurora": "Get Aurora",
@@ -30,7 +30,7 @@
     "learn-more": "Learn more"
   },
   "About-Aurora": {
-    "for-end-user": "For End User",
+    "for-end-user": "Aurora for end-users",
     "reliable": "Aurora is the image for people who want a reliable, safe and smooth computing experience for everyday tasks and beyond.",
     "simply-delightful": "Simply delightful.",
     "simply-delightful-text": "Aurora features a lightly customized KDE Plasma for a super smooth and delightful desktop experience that can be customized indefinitely.",
@@ -46,7 +46,7 @@
     "hardware-support-purple": "Don't forget to print the starship bills."
   },
   "About-AuroraDx": {
-    "for-developers": "Aurora untuk pengembang",
+    "for-developers": "Aurora for developers",
     "pro-stargazing": "Are you a pro at stargazing? The developer experience edition takes the great foundation and cranks it up to eleven.",
     "brew-ready": "Brew, ready for your needs.",
     "brew-ready-text": "Brew is preinstalled and ready to use on Aurora. Use it to install every CLI tool you could've never dreamt up. Brew is safely integrated to never mess with your host system.",

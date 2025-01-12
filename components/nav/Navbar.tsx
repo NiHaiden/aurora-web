@@ -213,7 +213,7 @@ const Navbar = ({
                     closeNavbar();
                   }}
                 >
-                   {t('developers')}
+                   {t('developer')}
                 </button>
                 <button
                   onClick={() => {

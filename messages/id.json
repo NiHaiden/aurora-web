@@ -24,20 +24,20 @@
   },
   "Introduction": {
     "stargazer": "Halo stargazer, pengalaman baru menantimu.",
-    "powered": "Didukung oleh KDE dan Universal Blue yang mengagumkan dan didesain untukmu.",
-    "onboard": "Bergabunglah, Aurora merupakan sistem operasi desktop yang cocok untuk pengembang dengan komputer kerja mereka maupun sistem operasi yang cocok untuk semua orang!.",
+    "powered": "Ditenagai oleh KDE dan Universal Blue yang mengagumkan dan didesain hanya untukmu saja.",
+    "onboard": "Naik dan bergabunglah bersamaku, Aurora merupakan sistem operasi desktop yang cocok untuk pengembang dengan komputer kerja mereka maupun sistem operasi yang cocok untuk semua orang!.",
     "gaze": "Mari melihat bintang bersamaku, penjelajah.",
     "learn-more": "Pelajari lebih lanjut"
   },
   "About-Aurora": {
-    "for-end-user": " Aurora untuk pengguna akhir",
+    "for-end-user": "Aurora untuk pengguna akhir",
     "reliable": "Aurora merupakan image yang diperuntukan untuk pengguna yang ingin mendapatkan pengalaman berkomputasi andal, aman, dan lancar untuk pekerjaan sehari-hari dan lainnya. Sistem operasi ini cocok untuk semua orang, dan kalian yang merupakan stargazers.",
     "simply-delightful": "Mempesona.",
     "simply-delightful-text": "Aurora menyediakan pengalaman KDE Plasma yang dikustomisasi secara ringan untuk pengalaman yang mulus dan mengagumkan dan masih bisa anda kustomisasi tanpa batas.",
-    "simply-delightful-purple": " Kamu bahkan bisa memindahkan taskbar-nya juga lho.",
+    "simply-delightful-purple": "Kamu bahkan bisa memindahkan taskbar-nya juga lho.",
     "speed-reliability": "Kecepatan dan Relabilitas",
-    "speed-reliability-text": "Diatur dan dioptimisasi secara sempurna, untuk efisiensi dan relabilitas yang maksimal seperti perangkat 100 tahun.",
-    "speed-reliability-purple": " Komputermu tidak akan sama seperti sebelumnya.",
+    "speed-reliability-text": "Diatur dan dioptimisasi secara sempurna, untuk efisiensi dan relabilitas yang maksimal.",
+    "speed-reliability-purple": "Komputermu tidak akan sama seperti sebelumnya.",
     "zero-maintenance": "Nol Perawatan",
     "zero-maintenance-text": "Instalasi cukup dilakukan sekali. Pembaruan aplikasi dan sistem dilakukan secara otomatis untukmu.",
     "zero-maintenance-purple": "Atur dan lupakan, seperti mimpi bukan?.",
@@ -47,16 +47,16 @@
   },
   "About-AuroraDx": {
     "for-developers": "Aurora untuk pengembang",
-    "pro-stargazing": "Apakah kamu jago dalam melihat bintang? Pengalaman menggunakan edisi pengembang akan membuat kamu terpesona.",
+    "pro-stargazing": "Apakah kamu jago dalam ngoding stargazers? Pengalaman menggunakan edisi pengembang akan membuat kamu terpesona.",
     "brew-ready": "Brew, siap untuk segala keperluanmu.",
     "brew-ready-text": "Brew terpasang secara bawaan dan siap dipakai. Untuk memasang berbagai macam aplikasi CLI yang anda mau!. Brew didesain untuk tidak mengganggu sistem dasar anda.",
-    "brew-ready-red": "Bir tidak pernah terasa seenak ini bro!.",
+    "brew-ready-red": "Bir ini kenapa terasa enak sekali?!.",
     "containers-best-friends": "Kontainer, teman baikmu!.",
     "containers-best-friends-text": "Docker dan Podman yang telah dikonfigurasi untuk berbagai macam alur kerja, termasuk pengalaman CLI yang menggunakan container. Dan dengan Ptyxis, distrobox-mu semakin mudah dipakai. ",
-    "containers-best-friends-red": "Udah g ada lagi ini jalan kok di komputerku!",
+    "containers-best-friends-red": "Udah g ada lagi ini jalan kok di komputerku!.",
     "preconfigured-work": "Siap pakai untuk pekerjaan serius",
-    "preconfigured-work-text": "Visual Studio Code tersedia secara bawaan dan telah dikonfigurasi untuk mendukung alur kerja menggunakan DevContainers. Dan dengan satu perintah anda bisa menggunakan Jetbrains Toolbox jika kamu lebih suka ini.",
-    "preconfigured-work-red": "Atau pakai neovim jika kamu tahu cara keluar-nya",
+    "preconfigured-work-text": "Visual Studio Code terpasang secara bawaan dan telah dikonfigurasi untuk mendukung alur kerja menggunakan DevContainers. Dan dengan satu perintah anda bisa menggunakan Jetbrains Toolbox jika kamu lebih suka ini.",
+    "preconfigured-work-red": "Atau pakai neovim jika kamu tahu cara keluar-nya.",
     "robots-take-over": "Biarkan robot mengambil alih",
     "robots-take-over-text": "Jika kamu melakukan machine learning atau menggunakan local LLM, Aurora juga sudah menyiapkannya untukmu. Jalankan LLM Privat dengan Ollama dan menggunakan pytorch distrobox untuk pekerjaan Kecerdasan Buatan yang serius!.",
     "robots-take-over-red": "Gunakan robot untuk kepentinganmu sendiri."
@@ -69,7 +69,7 @@
   "Footer": {
     "go-up": "Pergi keatas",
     "proudly-built": "Dengan bangga dibuat oleh",
-    "proudly-built-phrase": "sebuah alat komunitas yang didesain untuk memulai ulang Destop Linux. Dibuat dengan cinta. Selamat datang di Cloud Native yang mandiri.",
+    "proudly-built-phrase": "sebuah komunitas yang bertujuan untuk memulai ulang Destop Linux dengan peralatan Cloud Native. Dibuat dengan cinta.",
     "built-with-love": "Dibuat dengan ❤️ di Austria.",
     "refined-logo": "Logo yang dipercantik oleh @reisvg.",
     "background-credits": "Kredit Latar Belakang:",
@@ -86,7 +86,7 @@
     "questions": {
       "q1": {
         "question": "Bisakah saya memakai GNOME?",
-        "answer": "Jika anda ingin memakai GNOME,cobalah Bluefin!",
+        "answer": "Jika anda ingin memakai GNOME, coba dan pasang Bluefin!",
         "optionalLink": "https://projectbluefin.io"
       },
       "q2": {
