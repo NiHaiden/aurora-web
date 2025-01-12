@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ArrowDown } from "lucide-react";
-
+import {useTranslations} from 'next-intl';
 export default function DownloadBtn({
   onClick,
 }: {
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-
+  const t = useTranslations('Download-Component');
   return (
     <div className="flex items-center justify-center">
       <button
@@ -27,7 +27,7 @@ export default function DownloadBtn({
             />
           </span>
           <span className="font-semibold text-white transition-colors duration-300 ease-in-out group-hover:text-white">
-            Get Aurora
+          {t('get-aurora')}
           </span>
         </div>
         <span className="absolute inset-0 bg-gradient-to-r from-aurora-orangina to-aurora-lightorange opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />

@@ -1,14 +1,26 @@
 import { RefObject } from "react";
 import { CircleHelp } from "lucide-react";
-import { Question, questions } from "@/components/sections/about/faq/questions";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useTranslations, useMessages } from "next-intl";
+
+interface FAQMessages {
+  [key: string]: {
+    question: string;
+    answer: string;
+    optionalLink: string;
+  };
+}
 
 export default function FAQ({ faqRef }: { faqRef: RefObject<any> }) {
+  const t = useTranslations("FAQ");
+  const messages = useMessages() as unknown as { FAQ: { questions: FAQMessages } };
+  const keys = Object.keys(messages.FAQ.questions);
+
   return (
     <div
       className={
@@ -28,24 +40,23 @@ export default function FAQ({ faqRef }: { faqRef: RefObject<any> }) {
                 "h-12 w-12 animate-fade-up stroke-aurora-darkblue lg:h-24 lg:w-24"
               }
             />
-            Aurora FAQ
+            {t("faq-title")}
           </h1>
           <p
             className={
               "text-center text-xl text-white lg:text-left lg:text-2xl"
             }
           >
-            Interested in more details? Find answers to the most burning
-            questions.
+            {t("faq-intro")}
           </p>
         </div>
         <div className={"flex flex-col gap-3"}>
-          {questions.map((question: Question) => (
+          {keys.map((key) => (
             <QuestionComponent
-              key={question.question}
-              question={question.question}
-              answer={question.answer}
-              optionalLink={question.optionalLink}
+              key={key}
+              question={t(`questions.${key}.question`)}
+              answer={t(`questions.${key}.answer`)}
+              optionalLink={t(`questions.${key}.optionalLink`)}
             />
           ))}
         </div>
@@ -63,6 +74,7 @@ const QuestionComponent = ({
   answer: string;
   optionalLink?: string;
 }) => {
+  const t = useTranslations("FAQ");
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
@@ -77,7 +89,7 @@ const QuestionComponent = ({
               target={"_self"}
               href={optionalLink}
             >
-              Click here!
+              {t("click-here")}
             </a>
           )}
         </AccordionContent>

@@ -1,7 +1,7 @@
 "use client";
 import React, { RefObject, useEffect } from "react";
 import { EarthIcon } from "@/components/earth";
-
+import {useTranslations} from 'next-intl';
 export default function News({ newsRef }: { newsRef: RefObject<any> }) {
   const [discourseHtml, setDiscourseHtml] = React.useState({ __html: "" });
 
@@ -34,7 +34,7 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
       list.appendChild(iframe);
     }
   }, []);
-
+  const t = useTranslations('Navbar');
   return (
     <div
       ref={newsRef}
@@ -52,7 +52,7 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
               "flex w-fit flex-row items-center gap-3 bg-gradient-to-br from-aurora-lightorange via-aurora-darkblue to-aurora-lightorange bg-clip-text p-4 text-7xl font-bold leading-tight text-transparent drop-shadow-md"
             }
           >
-            News
+            {t('news')}
           </h1>
         </div>
         <div

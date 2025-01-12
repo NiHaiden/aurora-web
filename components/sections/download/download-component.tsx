@@ -1,5 +1,6 @@
 import { CloudDownload, Package } from "lucide-react";
 import { getImageName } from "@/lib/utils/download";
+import { useTranslations } from 'next-intl';
 
 export default function DownloadComponent({
   baseSystem,
@@ -14,6 +15,8 @@ export default function DownloadComponent({
   const downloadLink: string = `https://dl.getaurora.dev/${imageName}.iso`;
   const checksumLink: string = `https://dl.getaurora.dev/${imageName}.iso-CHECKSUM`;
   //https://dl.getaurora.dev/aurora-dx-latest.iso
+  const t = useTranslations('Download-Component');
+  
   return (
     <>
       <div className={"flex w-full flex-col gap-5"}>
@@ -23,7 +26,7 @@ export default function DownloadComponent({
             "flex h-fit w-full flex-row items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-aurora-purple to-aurora-blue p-5 text-[18px] text-white shadow-lg"
           }
         >
-          <CloudDownload /> Download ISO ({imageName})
+          <CloudDownload />  {t('download-iso')} ({imageName})
         </a>
         <a
           href={checksumLink}
@@ -31,7 +34,7 @@ export default function DownloadComponent({
             "flex h-fit w-full flex-row items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-aurora-purple to-aurora-blue p-5 text-[18px] text-white shadow-lg"
           }
         >
-          <Package /> Get Checksum to verify
+          <Package /> {t('checksum')}
         </a>
       </div>
     </>

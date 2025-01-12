@@ -21,6 +21,7 @@
     "lucide-react": "^0.364.0",
     "motion": "^11.13.1",
     "next": "^14.2.16",
+    "next-intl": "^3.26.3",
     "prettier": "^3.3.0",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "react": "^18",

@@ -1,0 +1,109 @@
+{
+  "Navbar": {
+    "end-user": "Untuk Pengguna Akhir",
+    "developer": "Untuk Pengembang",
+    "faq": "FAQ",
+    "news": "Berita"
+  },
+  "Download-Component": {
+    "get-aurora": "Dapatkan Aurora",
+    "download-iso": "Unduh ISO",
+    "checksum": "Dapatkan checksum untuk verifikasi",
+    "ready-to-ride": "Siap mengendarai roket luar angkasa? Pilih konfigurasi hardware kamu dan unduh ISO-nya",
+    "hardware": "Perangkat",
+    "select-hardware": "Pilih perangkatmu",
+    "primary-gpu": "Kartu Grafis Utama",
+    "pick-gpu": "Pilih Kartu Grafis Utamamu",
+    "developer-version": "Versi Pengembang",
+    "are-you-dev": "Apakah anda seorang Pengembang?",
+    "grab-iso": "Ambil ISO disini untuk instalasi baru:",
+    "yes-option": "Ya",
+    "no-option": "Tidak",
+    "check-out": "Cek dokumentasinya",
+    "documentation": "disini."
+  },
+  "Introduction": {
+    "stargazer": "Halo stargazer, pengalaman baru menantimu.",
+    "powered": "Didukung oleh KDE dan Universal Blue yang mengagumkan dan didesain untukmu.",
+    "onboard": "Bergabunglah, Aurora merupakan sistem operasi desktop yang cocok untuk pengembang dengan komputer kerja mereka maupun sistem operasi yang cocok untuk semua orang!.",
+    "gaze": "Mari melihat bintang bersamaku, penjelajah.",
+    "learn-more": "Pelajari lebih lanjut"
+  },
+  "About-Aurora": {
+    "for-end-user": " Aurora untuk pengguna akhir",
+    "reliable": "Aurora merupakan image yang diperuntukan untuk pengguna yang ingin mendapatkan pengalaman berkomputasi andal, aman, dan lancar untuk pekerjaan sehari-hari dan lainnya. Sistem operasi ini cocok untuk semua orang, dan kalian yang merupakan stargazers.",
+    "simply-delightful": "Mempesona.",
+    "simply-delightful-text": "Aurora menyediakan pengalaman KDE Plasma yang dikustomisasi secara ringan untuk pengalaman yang mulus dan mengagumkan dan masih bisa anda kustomisasi tanpa batas.",
+    "simply-delightful-purple": " Kamu bahkan bisa memindahkan taskbar-nya juga lho.",
+    "speed-reliability": "Kecepatan dan Relabilitas",
+    "speed-reliability-text": "Diatur dan dioptimisasi secara sempurna, untuk efisiensi dan relabilitas yang maksimal seperti perangkat 100 tahun.",
+    "speed-reliability-purple": " Komputermu tidak akan sama seperti sebelumnya.",
+    "zero-maintenance": "Nol Perawatan",
+    "zero-maintenance-text": "Instalasi cukup dilakukan sekali. Pembaruan aplikasi dan sistem dilakukan secara otomatis untukmu.",
+    "zero-maintenance-purple": "Atur dan lupakan, seperti mimpi bukan?.",
+    "hardware-support": "Dukungan Perangkat Keras",
+    "hardware-support-text": "Kami menyediakan variasi untuk pengguna perangkat Surface & ASUS, semua variasi juga memiliki dukungan untuk perangkat game, printer, dan masih banyak lagi.",
+    "hardware-support-purple": "Jangan lupa untuk mencetak tagihan kapal luar angkasa ini bung."
+  },
+  "About-AuroraDx": {
+    "for-developers": "Aurora untuk pengembang",
+    "pro-stargazing": "Apakah kamu jago dalam melihat bintang? Pengalaman menggunakan edisi pengembang akan membuat kamu terpesona.",
+    "brew-ready": "Brew, siap untuk segala keperluanmu.",
+    "brew-ready-text": "Brew terpasang secara bawaan dan siap dipakai. Untuk memasang berbagai macam aplikasi CLI yang anda mau!. Brew didesain untuk tidak mengganggu sistem dasar anda.",
+    "brew-ready-red": "Bir tidak pernah terasa seenak ini bro!.",
+    "containers-best-friends": "Kontainer, teman baikmu!.",
+    "containers-best-friends-text": "Docker dan Podman yang telah dikonfigurasi untuk berbagai macam alur kerja, termasuk pengalaman CLI yang menggunakan container. Dan dengan Ptyxis, distrobox-mu semakin mudah dipakai. ",
+    "containers-best-friends-red": "Udah g ada lagi ini jalan kok di komputerku!",
+    "preconfigured-work": "Siap pakai untuk pekerjaan serius",
+    "preconfigured-work-text": "Visual Studio Code tersedia secara bawaan dan telah dikonfigurasi untuk mendukung alur kerja menggunakan DevContainers. Dan dengan satu perintah anda bisa menggunakan Jetbrains Toolbox jika kamu lebih suka ini.",
+    "preconfigured-work-red": "Atau pakai neovim jika kamu tahu cara keluar-nya",
+    "robots-take-over": "Biarkan robot mengambil alih",
+    "robots-take-over-text": "Jika kamu melakukan machine learning atau menggunakan local LLM, Aurora juga sudah menyiapkannya untukmu. Jalankan LLM Privat dengan Ollama dan menggunakan pytorch distrobox untuk pekerjaan Kecerdasan Buatan yang serius!.",
+    "robots-take-over-red": "Gunakan robot untuk kepentinganmu sendiri."
+  },
+  "Build-Your-Own": {
+    "build-your-own": "Membuat Aurora-mu sendiri",
+    "want-to-build": "Apakah kamu ingin membuat image-mu sendiri? ingin menambahkan aurora-mu dengan tema dan pernak pernik yang menarik? gunakan templat kami untuk membantumu memulai. Yang kamu butuhkan adalah pengalaman kontainerisasi dengan Docker dan waktu. Gaskeun!!",
+    "get-image-template": "Dapatkan templat image"
+  },
+  "Footer": {
+    "go-up": "Pergi keatas",
+    "proudly-built": "Dengan bangga dibuat oleh",
+    "proudly-built-phrase": "sebuah alat komunitas yang didesain untuk memulai ulang Destop Linux. Dibuat dengan cinta. Selamat datang di Cloud Native yang mandiri.",
+    "built-with-love": "Dibuat dengan ❤️ di Austria.",
+    "refined-logo": "Logo yang dipercantik oleh @reisvg.",
+    "background-credits": "Kredit Latar Belakang:",
+    "background-images": "Latar Belakang oleh Jonatan Pie dari",
+    "animated-icons": "Ikon Animasi dari",
+    "link-icons": "sini.",
+    "copyright": "© Copyright Project Aurora authors.",
+    "not-affiliated": "Aurora tidak terafiliasi maupun dipromosikan oleh The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS maupun perusahaan yang tercantum diatas."
+  },
+  "FAQ": {
+    "faq-title": "Aurora FAQ",
+    "faq-intro": "Tertarik lebih lanjut? Temukan jawaban untuk pertanyaan yang sering ditanyakan!.",
+    "click-here": "Klik disini!",
+    "questions": {
+      "q1": {
+        "question": "Bisakah saya memakai GNOME?",
+        "answer": "Jika anda ingin memakai GNOME,cobalah Bluefin!",
+        "optionalLink": "https://projectbluefin.io"
+      },
+      "q2": {
+        "question": "Apa itu Aurora Developer Edition (Aurora-DX)?",
+        "answer": "Aurora Developer Edition adalah edisi spesial Aurora yang dilengkapi dengan paket-paket program yang berfokus ke pengembang. Seperti VS Code yang terpasang secara default dengan kemampuan DevContainers,Docker dan Podman sebagai container runtime, alat untuk membuat dan menangani mesin virtual, alat untuk membuat lingkungan pengembangan dengan DevPod dsb. Termasuk juga peralatan untuk pengembangan cloud native. Kamu bisa menginstall lebih banyak alat pengembang menggunakan homebrew! Jika anda ingin list paket-paket yang diinstall anda dapat menklik link.",
+        "optionalLink": "https://github.com/ublue-os/bluefin/blob/main/packages.json"
+      },
+      "q3": {
+        "question": "Apa perbedaan Vanilla Kinoite dengan Aurora?",
+        "answer": "Vanilla Kinoite hanya menyediakan hal dasar, Aurora menyertakan berbagai macam penambahan fitur, seperti menyediakan driver untuk berbagai macam printer,adapter jaringan,pengendali permainan, dan masih banyak lagi seperti kodek yang disertakan juga. Aurora juga memberikan sentuhan oprekan untuk meningkatkan daya tahan baterai di laptop.",
+        "optionalLink": ""
+      },
+      "q4": {
+        "question": "Dimana saya bisa mendapatkan berita terbaru tentang Aurora dan mendiskusikannya?",
+        "answer": "Cek Forum Discourse kami untuk berita terbaru dan diskusi Aurora.",
+        "optionalLink": "https://universal-blue.discourse.group/c/bluefin/6"
+      }
+    }
+  }
+}

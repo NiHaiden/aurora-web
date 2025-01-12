@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { RefObject } from "react";
-
+import {useTranslations} from 'next-intl';
 export default function Introduction({
   introRef,
   aboutRef,
@@ -8,6 +8,7 @@ export default function Introduction({
   introRef: RefObject<any>;
   aboutRef: RefObject<any>;
 }) {
+  const t = useTranslations('Introduction');
   return (
     <div
       ref={introRef}
@@ -30,17 +31,15 @@ export default function Introduction({
               "h-fit bg-gradient-to-r from-aurora-lightorange via-aurora-darkblue to-aurora-blue bg-clip-text p-1 text-center text-3xl font-black leading-snug text-transparent drop-shadow-md lg:text-6xl"
             }
           >
-            Hello stargazer, a new experience awaits.
+            {t('stargazer')}
           </h1>
           <h1 className={"text-center text-2xl"}>
-            Powered by the awesomeness of KDE and Universal Blue, crafted for
-            you.
+          {t('powered')}
           </h1>
           <p className={"text-center text-xl"}>
-            Get onboard. Aurora is the ultimate desktop OS for your developer
-            workstation or the perfect maintenance-free OS for everyone.
-            <br />
-            Let's gaze at the stars together, fellow traveller.
+            {t('onboard')}
+            <br/>
+            {t('gaze')}
           </p>
         </div>
       </div>
@@ -55,7 +54,7 @@ export default function Introduction({
           }}
         >
           <ChevronDown className="h-16 w-16 text-white" />
-          <span className={"text-2xl"}>Learn more</span>
+          <span className={"text-2xl"}>{t('learn-more')}</span>
         </div>
 
         <style jsx>{`
