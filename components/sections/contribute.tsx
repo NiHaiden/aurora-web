@@ -16,7 +16,7 @@ export default function Contribute() {
   return (
     <div
       className={
-        "flex h-full min-h-fit w-full flex-col gap-8 bg-white from-aurora-darkblue to-aurora-blue p-10 lg:px-40"
+        "flex h-full min-h-fit w-full flex-col gap-8 bg-white from-aurora-darkblue to-aurora-blue p-10 lg:px-30"
       }
     >
       <h1
