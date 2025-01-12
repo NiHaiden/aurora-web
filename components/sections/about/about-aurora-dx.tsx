@@ -41,7 +41,7 @@ export default function AboutAuroraDx({
             </h1>
             <p className={"text-2xl text-white"}>
               Are you a pro at stargazing? The developer experience edition
-              takes the great foundation and cranks it up to eleven.
+              takes the great foundation and adds lots of developer goodies on top.
             </p>
           </div>
           <div
@@ -141,7 +141,13 @@ export default function AboutAuroraDx({
               <p className={"text-xl text-white"}>
                 If you fancy local LLMs or do any kind of machine learning work,
                 Aurora has you covered there too. Run private LLMs with Ollama
-                spin up a pytorch distrobox for some serious AI work.
+                or{" "}
+                <a
+                  className={"underline underline-offset-2"}
+                  href="https://flathub.org/apps/com.jeffser.Alpaca"
+                >
+                  Alpaca.
+                </a>
                 <br />
                 <span
                   className={
