@@ -10,6 +10,7 @@ import DownloadAurora from "@/components/sections/download/download";
 import FAQ from "@/components/sections/about/faq/faq";
 import News from "@/components/sections/news";
 import BuildYourOwn from "@/components/sections/build-your-own";
+import Contribute from "@/components/sections/contribute";
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -36,6 +37,7 @@ export default function Home() {
         <FAQ faqRef={faqRef} />
         <News newsRef={newsRef} />
         <BuildYourOwn />
+        <Contribute />
         <Footer introRef={introRef} />
       </main>
     </div>

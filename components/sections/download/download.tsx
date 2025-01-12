@@ -35,7 +35,7 @@ export default function DownloadAurora({
               </div>
               <h1
                 className={
-                  "flex flex-row items-center justify-center gap-4 bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% bg-clip-text text-5xl font-bold text-transparent drop-shadow-md lg:justify-start lg:text-7xl"
+                  "flex flex-row items-center justify-center bg-gradient-to-r from-aurora-purple to-aurora-blue to-50% bg-clip-text text-4xl font-bold text-transparent drop-shadow-md lg:justify-start lg:text-7xl"
                 }
               >
                 Get Aurora
