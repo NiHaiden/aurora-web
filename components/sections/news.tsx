@@ -57,7 +57,7 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
         </div>
         <div
           className={
-            "h-[350px] w-full min-w-[350px] rounded-2xl p-6 lg:w-[850px]"
+            "h-[350px] w-full min-w-[450px] rounded-2xl p-6 lg:w-[850px]"
           }
           dangerouslySetInnerHTML={discourseTopics()}
         />
