@@ -90,7 +90,6 @@ export default function DownloadAurora({
                 <SelectContent>
                   <SelectItem value="desktop">Desktop / Laptop</SelectItem>
                   <SelectItem value="asus">ASUS</SelectItem>
-                  <SelectItem value="framework">Framework</SelectItem>
                   <SelectItem value="surface">Surface</SelectItem>
                 </SelectContent>
               </Select>
