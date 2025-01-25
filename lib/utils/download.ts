@@ -9,12 +9,24 @@ export const getImageName = (
   imageName += hardwareExtended ? "-hwe" : "";
   switch (primaryGPU) {
     case "nvidia-legacy":
+      if(hardwareExtended) {
+        imageName += "-nvidia-latest";
+        break;
+      }
       imageName += "-nvidia-stable";
       break;
     case "nvidia":
+      if(hardwareExtended) {
+        imageName += "-nvidia-open-latest";
+        break;
+      }
       imageName += "-nvidia-open-stable";
       break;
     default:
+      if(hardwareExtended) {
+        imageName += "-latest";
+        break;
+      }
       imageName += "-stable";
       break;
   }
