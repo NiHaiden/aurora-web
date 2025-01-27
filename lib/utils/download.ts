@@ -1,29 +1,36 @@
 export const getImageName = (
-  hardware: string,
+  hardwareExtended: boolean,
   primaryGPU: string,
   devEdition: string,
 ) => {
   let imageName: string = "";
 
   imageName += isDevEdition(devEdition) ? "aurora-dx" : "aurora";
-  switch (hardware) {
-    case "desktop":
-      if (primaryGPU === "nvidia") {
-        imageName += "-nvidia-stable";
-      } else imageName += "-stable";
+  imageName += hardwareExtended ? "-hwe" : "";
+  switch (primaryGPU) {
+    case "nvidia-legacy":
+      if(hardwareExtended) {
+        imageName += "-nvidia-latest";
+        break;
+      }
+      imageName += "-nvidia-stable";
       break;
-    case "asus":
-      if (primaryGPU === "nvidia") imageName += "-asus-nvidia-latest";
-      else imageName += "-asus-latest";
+    case "nvidia":
+      if(hardwareExtended) {
+        imageName += "-nvidia-open-latest";
+        break;
+      }
+      imageName += "-nvidia-open-stable";
       break;
-    case "surface":
-      if (primaryGPU === "nvidia") imageName += "-surface-nvidia-latest";
-      else imageName += "-surface-latest";
-      break;
-    case "framework":
+    default:
+      if(hardwareExtended) {
+        imageName += "-latest";
+        break;
+      }
       imageName += "-stable";
       break;
   }
+
 
   return imageName;
 };

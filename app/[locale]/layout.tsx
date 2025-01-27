@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Aurora",
   description: "The ultimate developer workstation",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/aurora-v3_logo.svg",
   },
 };
 
