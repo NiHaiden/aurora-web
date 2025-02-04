@@ -69,6 +69,6 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
 function discourseTopics() {
   return {
     __html:
-      ' <d-topics-list discourse-url="https://universal-blue.discourse.group" per-page="5" tags="bluefin-news" template="complete"></d-topics-list> ',
+      ' <d-topics-list discourse-url="https://universal-blue.discourse.group" per-page="5" tags="aurora-news" template="complete"></d-topics-list> ',
   };
 }
