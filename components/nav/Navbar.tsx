@@ -38,7 +38,7 @@ const Navbar = ({
     <nav
       className={`fixed top-0 z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-transparent" : "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue shadow-xl"}`}
     >
-      <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
+      <div className="w-2/3 container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
           <div
             className={"cursor-pointer"}
@@ -52,14 +52,14 @@ const Navbar = ({
           >
             <img
               src={"/aurora-v3-white.svg"}
-              width={60}
-              height={60}
+              width={35}
+              height={35}
               className={`${isTop ? "hidden" : "block"}`}
             />
             <img
               src={"/aurora-v3_logo.svg"}
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               className={`${isTop ? "block" : "hidden"}`}
             />
           </div>

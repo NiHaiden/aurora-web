@@ -34,14 +34,20 @@ export default function Home() {
       <main className="min-h-[100dvh] w-full">
         <Hero introRef={introRef} aboutRef={aboutRef} />
         <AboutAuroraNew/>
-        <AboutAurora aboutRef={aboutRef} aboutDxRef={aboutDXRef} />
+
+        <Footer introRef={introRef} />
+      </main>
+    </div>
+  );
+
+}
+
+
+/*
+  <AboutAurora aboutRef={aboutRef} aboutDxRef={aboutDXRef} />
         <AboutAuroraDx aboutDxRef={aboutDXRef} />
         <DownloadAurora downloadRef={downloadRef} />
         <FAQ faqRef={faqRef} />
         <News newsRef={newsRef} />
         <BuildYourOwn />
-        <Footer introRef={introRef} />
-      </main>
-    </div>
-  );
-}
+ */

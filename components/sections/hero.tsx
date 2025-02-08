@@ -29,15 +29,16 @@ export default function Hero({
           <TextLoop className='italic'>
             <span>Develop your next app.</span>
             <span>Launch a space rocket.</span>
-            <span>Watch videos.</span>
-            <span>Draw your next movie poster.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Watch videos.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-darkblue"}>Draw your next movie poster.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-lightred to-aurora-orangina"}>Dream about the stars.</span>
           </TextLoop>
         </div>
         <div className="flex w-2/3 flex-col items-start justify-start gap-5 lg:w-2/3 lg:flex-row">
           <div className="relative">
             <button className="relative inline-flex items-center gap-3 rounded-md bg-aurora-orangina px-4 py-2 text-xl text-zinc-50 outline outline-1 outline-[#fff2f21f]"
             onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}>
-              <ArrowDown /> Get Started
+              <ArrowDown />{t("learn-more")}
             </button>
           </div>
 

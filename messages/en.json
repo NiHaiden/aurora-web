@@ -8,14 +8,14 @@
   "Download-Component": {
     "get-aurora": "Get Aurora",
     "download-iso": "Download ISO",
-    "checksum": "Get Checksum to verify",
+    "checksum": "Get checksum to verify",
     "ready-to-ride": "Ready to ride the rocketship? Pick your hardware configuration and download the ISO.",
-    "hardware": "Hardware",
+    "hwe-version": "Do you have a Surface / ASUS Device?",
     "select-hardware": "Select your hardware",
     "primary-gpu": "Primary GPU",
     "pick-gpu": "Pick your primary GPU",
     "developer-version": "Developer Version",
-    "are-you-dev": "Are you a dev?",
+    "are-you-dev": "Do you want developer tools?",
     "grab-iso": "Grab the ISO here for a fresh install:",
     "yes-option": "Yes",
     "no-option": "No",
@@ -28,7 +28,7 @@
     "powered": "Powered by the awesomeness of KDE and Universal Blue, crafted for you.",
     "onboard": "Get onboard the starship to your new desktop operating system.",
     "gaze": " Let's gaze at the stars together, fellow traveller.",
-    "learn-more": "Get started"
+    "learn-more": "Learn more"
   },
   "About-Aurora": {
     "for-end-user": "Aurora for end-users",
