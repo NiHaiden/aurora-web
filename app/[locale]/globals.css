@@ -72,11 +72,12 @@
     }
 
     .bgimg {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url("/aurora_wallpaper.jpg");
         width: 100%;
         min-height: 100vh;
         background-attachment: fixed;
+        backdrop-filter: blur(10px);
         background-size: cover;
         background-position: center;
         position: relative;
@@ -97,6 +98,11 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
+    }
+
+    .serif-font {
+        font-family: "Poltawski Nowy", serif;
+        font-weight: 700;
     }
 }
 

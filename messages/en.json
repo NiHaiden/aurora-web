@@ -23,11 +23,12 @@
     "documentation": "documentation here."
   },
   "Introduction": {
-    "stargazer": "Hello stargazer, a new experience awaits.",
+    "title": "Aurora.",
+    "stargazer": "Hello stargazer, Aurora awaits you.",
     "powered": "Powered by the awesomeness of KDE and Universal Blue, crafted for you.",
-    "onboard": "Get onboard. Aurora is the ultimate desktop OS for your developer workstation or the perfect maintenance-free OS for everyone.",
+    "onboard": "Get onboard the starship to your new desktop operating system.",
     "gaze": " Let's gaze at the stars together, fellow traveller.",
-    "learn-more": "Learn more"
+    "learn-more": "Get started"
   },
   "About-Aurora": {
     "for-end-user": "Aurora for end-users",

@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/nav/Navbar";
-import Introduction from "@/components/sections/Introduction";
+import Hero from "@/components/sections/hero";
 import AboutAurora from "@/components/sections/about/about-aurora";
 import Footer from "@/components/footer/Footer";
 import AboutAuroraDx from "@/components/sections/about/about-aurora-dx";
@@ -10,6 +10,9 @@ import DownloadAurora from "@/components/sections/download/download";
 import FAQ from "@/components/sections/about/faq/faq";
 import News from "@/components/sections/news";
 import BuildYourOwn from "@/components/sections/build-your-own";
+import AboutAuroraNew from "@/components/sections/about/about-aurora-new";
+
+
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -29,7 +32,8 @@ export default function Home() {
         newsRef={newsRef}
       />
       <main className="min-h-[100dvh] w-full">
-        <Introduction introRef={introRef} aboutRef={aboutRef} />
+        <Hero introRef={introRef} aboutRef={aboutRef} />
+        <AboutAuroraNew/>
         <AboutAurora aboutRef={aboutRef} aboutDxRef={aboutDXRef} />
         <AboutAuroraDx aboutDxRef={aboutDXRef} />
         <DownloadAurora downloadRef={downloadRef} />
