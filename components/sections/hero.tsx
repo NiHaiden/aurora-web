@@ -31,6 +31,7 @@ export default function Hero({
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Launch a space rocket.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Watch videos.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-darkblue"}>Draw your next movie poster.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-darkblue"}>Split a Helium atom.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-lightred to-aurora-orangina"}>Dream about the stars.</span>
           </TextLoop>
         </div>

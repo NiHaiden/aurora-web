@@ -50,7 +50,7 @@ export default function AboutAuroraNew() {
             </Animator>
           </ScrollPage>
           <ScrollPage>
-            <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -500))}>
               <span className={"text-6xl font-bold"}>
                 Are you ready to experience Aurora? <br/>
                 Let's go for a small journey through your new desktop. <br/>
