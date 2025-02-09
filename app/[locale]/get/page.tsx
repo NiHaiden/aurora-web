@@ -33,7 +33,6 @@ export default function GetAurora() {
         "bgimg min-w-dvw flex min-h-dvh items-center justify-center gap-5 p-5"
       }
     >
-      <Navbar />
       <div className="flex flex-col items-center justify-center gap-5">
         <div
           className={"flex w-full max-w-screen-2xl items-start justify-start"}

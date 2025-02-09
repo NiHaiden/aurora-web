@@ -27,8 +27,8 @@ export default function Hero({
         <div className="w-2/3 text-2xl font-semibold md:w-3/4 md:text-3xl lg:w-2/3 lg:text-4xl">
           The ultimate productivity workstation, for everyone. Hello stargazer.<br />
           <TextLoop className='italic'>
-            <span>Develop your next app.</span>
-            <span>Launch a space rocket.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina"}>Develop your next app.</span>
+            <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Launch a space rocket.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Watch videos.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-darkblue"}>Draw your next movie poster.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-lightred to-aurora-orangina"}>Dream about the stars.</span>

@@ -31,34 +31,56 @@ export default function AboutAuroraNew() {
         direction === "out" || direction === "both"
           ? { style: { transform: (p) => `rotate(${p * 360 * cycle}deg)` } }
           : {},
-    } as Animation);
+    }) as Animation;
 
   const parent = useRef<HTMLDivElement>(null);
   return (
-    <main>
-      <section
-        style={{ height: "100vh", backgroundColor: "skyblue" }}
-      ></section>
-
+    <main className={"w-dvw bg-zinc-950 text-white"}>
       <section ref={parent}>
         <ScrollContainer scrollParent={parent.current}>
           <ScrollPage>
             <Animator animation={batch(Sticky(), Fade(), Spin(1, "out"))}>
-              <h1 style={{ fontSize: 50 }}>Hello!!!</h1>
+              <h1
+                className={
+                  " bg-gradient-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-6xl lg:text-9xl font-bold text-transparent"
+                }
+              >
+                Hello, stargazer.
+              </h1>
             </Animator>
           </ScrollPage>
           <ScrollPage>
             <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-              <span style={{ fontSize: 30 }}>
-                Let me show you scroll animation 😀
+              <span className={"text-6xl font-bold"}>
+                Are you ready to experience Aurora? <br/>
+                Let's go for a small journey through your new desktop. <br/>
+                Experience tranquality and freedom.
               </span>
             </Animator>
           </ScrollPage>
           <ScrollPage>
             <Animator animation={ZoomInScrollOut}>
-              <span style={{ fontSize: 40 }}>I'm FadeUpScrollOut ✨</span>
+              <img
+                className={"h-full w-full rounded-3xl drop-shadow-2xl"}
+                src={"/desktop.png"}
+              />
+              <h1 className={"text-7xl font-bold text-white"}>
+                Welcome to your new desktop.
+              </h1>
+              <div className={"text-2xl font-semibold text-white"}>
+                Aurora is here to delight you with a beautiful, customizable and
+                flexible desktop where you feel right at home the moment you
+                turn the computer on.
+                <br />
+                Develop faster than ever before. Explore the galaxy. Write your
+                next novel.
+              </div>
             </Animator>
           </ScrollPage>
+          <section
+            style={{ height: "80vh" }}
+            className={"bg-zinc-800"}
+          ></section>
           <ScrollPage>
             <Animator animation={FadeUp}>
               <span style={{ fontSize: 40 }}>I'm FadeUp ⛅️</span>
