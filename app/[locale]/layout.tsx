@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 const serifFont = Poltawski_Nowy({subsets: ["latin"]});
 import { GeistSans } from 'geist/font/sans';
 export const metadata: Metadata = {
-  title: "Aurora",
-  description: "The ultimate developer workstation",
+  title: "Aurora - your next OS.",
+  description: "The ultimate productivity workstation",
   icons: {
     icon: "/aurora-v3_logo.svg",
   },
