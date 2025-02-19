@@ -20,12 +20,12 @@ export default function Hero({
     >
       <div className="z-10 flex flex-col items-center justify-center gap-5 lg:m-0">
         <div className="mb-4 flex w-2/3 items-center justify-start md:w-3/4 lg:w-2/3">
-          <h1 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold uppercase italic tracking-widest text-transparent md:text-7xl lg:text-9xl">
+          <h1 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold capitalize italic tracking-widest text-transparent md:text-7xl lg:text-9xl">
             {t("title")}
           </h1>
         </div>
         <div className="w-2/3 text-2xl font-semibold md:w-3/4 md:text-3xl lg:w-2/3 lg:text-4xl">
-          The ultimate productivity workstation, for everyone. Hello stargazer.<br />
+          The ultimate productivity workstation, for everyone. Dare to soar.<br />
           <TextLoop className='italic'>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina"}>Develop your next app.</span>
             <span className={"bg-clip-text text-transparent bg-gradient-to-r from-aurora-blue to-aurora-lightorange"}>Launch a space rocket.</span>
