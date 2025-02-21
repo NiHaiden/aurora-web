@@ -175,7 +175,7 @@ export default function GetAurora() {
         >
           <div
             className={
-              "flex w-full flex-col gap-3 rounded-3xl border border-zinc-600 p-4 px-6 py-6 backdrop-blur-2xl"
+              "flex w-full flex-col justify-between gap-3 rounded-3xl border border-zinc-600 p-4 px-6 py-6 backdrop-blur-2xl"
             }
           >
             <h1
@@ -196,7 +196,7 @@ export default function GetAurora() {
           </div>
           <div
             className={
-              "flex w-full flex-col gap-3 rounded-3xl border border-zinc-600 p-4 px-6 py-6 backdrop-blur-2xl"
+              "flex w-full flex-col gap-3 justify-between rounded-3xl border border-zinc-600 p-4 px-6 py-6 backdrop-blur-2xl"
             }
           >
             <h1

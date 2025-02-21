@@ -1,41 +1,252 @@
 import { GlowEffect } from "@/components/ui/glow";
+import { SoftwareCard } from "@/components/BlurCard";
+import Homebrew from "@/components/icons/homebrew";
+import { BeerIcon, BoxesIcon, ContainerIcon } from "lucide-react";
 
 export default function AboutAuroraNew() {
   return (
-    <main className={"min-h-dvh bg-zinc-950 text-white p-10"}>
+    <main className={"min-h-dvh bg-zinc-950 p-10 text-white"}>
       <div className={"flex flex-row gap-10"}>
-        <div className="flex w-full flex-col items-center justify-center">
-          <div className="ml-10 relative flex flex-col items-center justify-center gap-10 lg:flex-row">
-            <div className={"relative aspect-auto min-w-[860px] h-full w-full"}>
+        <div className="flex w-full flex-col items-center justify-center gap-24">
+          <div className="relative flex flex-col items-center justify-center gap-10">
+            <div
+              className={
+                "relative aspect-auto h-full w-full max-w-screen-2xl lg:min-w-[750px]"
+              }
+            >
               <div className="relative h-full w-full">
                 <GlowEffect
-                  colors={['#3B1C6F','#D95C7F', '#66B9F2', '#4E67B2', '#EC92A1',  '#AA507A']}
-                  mode='colorShift'
-                  blur='soft'
+                  colors={[
+                    "#3B1C6F",
+                    "#D95C7F",
+                    "#66B9F2",
+                    "#4E67B2",
+                    "#EC92A1",
+                    "#AA507A",
+                  ]}
+                  mode="colorShift"
+                  blur="soft"
                   duration={5}
                   scale={1.008}
                 />
                 <div className="relative h-full w-full rounded-lg bg-black text-white dark:bg-white dark:text-black">
-                  <img className={"w-full h-full"} src={"/desktop.png"} alt={"Desktop"} />
+                  <img
+                    className={"h-full w-full"}
+                    src={"/desktop.png"}
+                    alt={"Desktop"}
+                  />
                 </div>
               </div>
             </div>
-            <div className={"w-full"}>
+            <div className={"w-full max-w-screen-2xl"}>
               <h2 className="mt-8 text-3xl font-semibold">
-                <h1 className={"text-7xl font-bold text-white"}>
+                <h1
+                  className={
+                    "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+                  }
+                >
                   Welcome to your new desktop.
                 </h1>
               </h2>
               <p className="mt-4 w-full text-2xl">
-                <div className={"w-full text-3xl font-semibold text-white"}>
+                <div
+                  className={
+                    "w-full text-xl font-semibold text-white lg:text-3xl"
+                  }
+                >
                   Aurora is here to delight you with a beautiful, customizable
                   and flexible desktop where you feel right at home the moment
                   you turn the computer on.
                   <br />
                   Develop faster than ever before. Explore the galaxy. Write
                   your next novel.
+                  <br />
+                  Feel right at home with a familiar desktop experience similar
+                  to Windows.
                 </div>
               </p>
+            </div>
+          </div>
+          <div
+            className={
+              "flex max-w-screen-2xl flex-col items-center justify-center gap-10 p-10"
+            }
+          >
+            <h1
+              className={
+                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+              }
+            >
+              How Aurora makes your life easier.
+            </h1>
+            <p className={"text-xl"}>
+              Aurora is built on a modern, stable and open-source foundation.
+              Lets rethink the Linux desktop from the ground up.
+            </p>
+            <div className={"flex w-full items-center justify-center"}>
+              <SoftwareCard
+                imageSrc={"/discover.png"}
+                size={"large"}
+                title={
+                  <span
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-bold text-transparent lg:text-5xl"
+                    }
+                  >
+                    <BoxesIcon className={"size-24 text-aurora-blue"} /> Your
+                    app store
+                  </span>
+                }
+                text={
+                  "Install all your apps from the Flathub App Store via the Discover App. Find your favorite music client, web browser and more. And let us take care of updating them for you."
+                }
+              />
+            </div>
+
+            <div className={"bgimg_resilient min-h-dvh w-dvw p-10"}>
+              <div
+                className={
+                  "flex h-full w-full flex-col items-center justify-center"
+                }
+              >
+                <div
+                  className={
+                    "flex max-w-screen-2xl flex-col items-center justify-center gap-5"
+                  }
+                >
+                  <h1
+                    className={
+                      "bg-gradient-to-br from-aurora-lightorange to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl"
+                    }
+                  >
+                    Aurora is an atomic OS. Decisively different.
+                  </h1>
+                  <div
+                    className={
+                      "flex w-full flex-col gap-5 text-xl font-semibold lg:text-3xl"
+                    }
+                  >
+                    <span>
+                      Resilient like a lonesome tree in the desert, Aurora is
+                      built on a foundation of atomic components, which means:
+                    </span>
+                    <span>
+                      - Updates are only applied fully and are tested carefully
+                      before they're shipped to you.
+                    </span>
+                    <br />
+                    <span>
+                      - And if something ever breaks, you can rollback to a
+                      known-good state.
+                    </span>
+                    <span className={"text-4xl font-bold"}>
+                      Stop worrying about updates.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={"min-h-dvh w-dvw p-10"}>
+              <div
+                className={
+                  "flex h-full w-full flex-col items-center justify-center"
+                }
+              >
+                <div
+                  className={
+                    "flex max-w-screen-2xl flex-col items-center justify-center gap-5"
+                  }
+                >
+                  <h1
+                    className={
+                      "bg-gradient-to-br from-aurora-lightorange to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl"
+                    }
+                  >
+                    Expanded hardware support.
+                  </h1>
+                  <div className={"grid w-full lg:grid-cols-3"}>
+                    <div className="relative h-full w-full">
+                      <GlowEffect
+                        colors={[
+                          "#3B1C6F",
+                          "#D95C7F",
+                          "#66B9F2",
+                          "#4E67B2",
+                          "#EC92A1",
+                          "#AA507A",
+                        ]}
+                        mode="colorShift"
+                        blur="soft"
+                        duration={5}
+                        scale={1.008}
+                      />
+                      <div
+                        className={
+                          "h-full w-full rounded-3xl border border-zinc-500 bg-zinc-950 p-4"
+                        }
+                      >
+                        <div className="relative h-full w-full rounded-lg">
+                          <h1
+                            className={
+                              "bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-3xl font-semibold text-transparent"
+                            }
+                          >
+                            Included Nvidia drivers
+                          </h1>
+                          <div className={"text-xl"}>
+                            If you are rocking a GPU from team-green, we have
+                            you covered. Simply download the edition that
+                            includes the drivers for your Nvidia GPU and install
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1
+              className={
+                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
+              }
+            >
+              Developers, developers, developers!
+            </h1>
+            <div className={"grid grid-cols-1 gap-10 lg:grid-cols-2"}>
+              <SoftwareCard
+                imageSrc={"/brew.png"}
+                title={
+                  <span
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
+                    }
+                  >
+                    <BeerIcon className={"size-24 text-aurora-blue"} /> Homebrew
+                  </span>
+                }
+                text={
+                  "Using Homebrew, you can install all your favorite CLI apps and developer tools that you need to get your job done. And we'll take care of keeping them up to date for you."
+                }
+              />
+              <SoftwareCard
+                imageSrc={"/distrobox.png"}
+                title={
+                  <span
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
+                    }
+                  >
+                    <ContainerIcon className={"size-24 text-aurora-blue"} />{" "}
+                    Distrobox
+                  </span>
+                }
+                text={
+                  "Do you need a special app that is only available for some Linux distributions? Distrobox is here to help you. It allows you to install any GUI or CLI app that is available for this distribution. And it's neatly containerized too."
+                }
+              />
             </div>
           </div>
         </div>

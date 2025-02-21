@@ -82,6 +82,17 @@
         z-index: 1;
     }
 
+    .bgimg_resilient {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+        url("/resilient.jpg");
+        background-attachment: fixed;
+        backdrop-filter: blur(50px);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+
     .bgimg_faq {
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
         url("/jonatan-pie-aurora.jpg");

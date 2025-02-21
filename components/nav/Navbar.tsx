@@ -5,6 +5,7 @@ import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import DownloadBtn from "@/components/download-btn";
 import {useTranslations} from 'next-intl';
+import {useRouter} from "@/i18n/routing";
 const Navbar = ({
   introRef,
   endUserRef,
@@ -22,7 +23,7 @@ const Navbar = ({
 }) => {
   const [isTop, setIsTop] = useState(true);
   const [navbarOpen, setNavbarOpen] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     document.addEventListener("scroll", () => {
       const isTop = window.scrollY > 100;
@@ -116,10 +117,7 @@ const Navbar = ({
           >
             <DownloadBtn
               onClick={() => {
-                downloadRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
+                router.push("/get");
                 closeNavbar();
               }}
             />
