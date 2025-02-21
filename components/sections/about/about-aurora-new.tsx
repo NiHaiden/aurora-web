@@ -1,9 +1,9 @@
 import { GlowEffect } from "@/components/ui/glow";
 import { SoftwareCard } from "@/components/BlurCard";
-import Homebrew from "@/components/icons/homebrew";
 import { BeerIcon, BoxesIcon, ContainerIcon } from "lucide-react";
+import Contributors from "@/components/sections/contributors";
 
-export default function AboutAuroraNew() {
+export default async function AboutAuroraNew() {
   return (
     <main className={"min-h-dvh bg-zinc-950 p-10 text-white"}>
       <div className={"flex flex-row gap-10"}>
@@ -207,46 +207,61 @@ export default function AboutAuroraNew() {
                 </div>
               </div>
             </div>
-
-            <h1
-              className={
-                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
-              }
-            >
-              Developers, developers, developers!
-            </h1>
-            <div className={"grid grid-cols-1 gap-10 lg:grid-cols-2"}>
-              <SoftwareCard
-                imageSrc={"/brew.png"}
-                title={
-                  <span
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
-                    }
-                  >
-                    <BeerIcon className={"size-24 text-aurora-blue"} /> Homebrew
-                  </span>
+            <div className={"max-w-screen-2xl flex flex-col gap-5 items-center justify-center"}>
+              <h1
+                className={
+                  "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
                 }
-                text={
-                  "Using Homebrew, you can install all your favorite CLI apps and developer tools that you need to get your job done. And we'll take care of keeping them up to date for you."
+              >
+                For the community, by the community.
+              </h1>
+              <div className={"text-xl"}>
+                Aurora is built and maintained by the community, for the community. We are passionate in what we do.
+              </div>
+              <Contributors/>
+            </div>
+            <div>
+              <h1
+                className={
+                  "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
                 }
-              />
-              <SoftwareCard
-                imageSrc={"/distrobox.png"}
-                title={
-                  <span
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
-                    }
-                  >
-                    <ContainerIcon className={"size-24 text-aurora-blue"} />{" "}
-                    Distrobox
-                  </span>
-                }
-                text={
-                  "Do you need a special app that is only available for some Linux distributions? Distrobox is here to help you. It allows you to install any GUI or CLI app that is available for this distribution. And it's neatly containerized too."
-                }
-              />
+              >
+                Developers, developers, developers!
+              </h1>
+              <div className={"grid grid-cols-1 gap-10 lg:grid-cols-2"}>
+                <SoftwareCard
+                  imageSrc={"/brew.png"}
+                  title={
+                    <span
+                      className={
+                        "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
+                      }
+                    >
+                      <BeerIcon className={"size-24 text-aurora-blue"} />{" "}
+                      Homebrew
+                    </span>
+                  }
+                  text={
+                    "Using Homebrew, you can install all your favorite CLI apps and developer tools that you need to get your job done. And we'll take care of keeping them up to date for you."
+                  }
+                />
+                <SoftwareCard
+                  imageSrc={"/distrobox.png"}
+                  title={
+                    <span
+                      className={
+                        "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent"
+                      }
+                    >
+                      <ContainerIcon className={"size-24 text-aurora-blue"} />{" "}
+                      Distrobox
+                    </span>
+                  }
+                  text={
+                    "Do you need a special app that is only available for some Linux distributions? Distrobox is here to help you. It allows you to install any GUI or CLI app that is available for this distribution. And it's neatly containerized too."
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>

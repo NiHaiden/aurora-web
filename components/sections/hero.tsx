@@ -16,9 +16,9 @@ export default function Hero({
   return (
     <div
       ref={introRef}
-      className="bgimg relative flex h-screen w-screen animate-fade-up flex-col justify-center gap-4 overflow-hidden text-wrap bg-gray-900 text-white backdrop-blur-xl animate-ease-linear"
+      className="bgimg relative flex h-screen w-screen animate-fade-up flex-col justify-center gap-4 overflow-hidden text-wrap bg-gray-900 text-white backdrop-blur-xl animate-ease-linear items-center"
     >
-      <div className="z-10 flex flex-col items-center justify-center gap-5 lg:m-0">
+      <div className="max-w-screen-2xl z-10 flex flex-col items-center justify-center gap-5 lg:m-0">
         <div className="mb-4 flex w-2/3 items-center justify-start md:w-3/4 lg:w-2/3">
           <h1 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold capitalize italic tracking-widest text-transparent md:text-7xl lg:text-9xl">
             {t("title")}
