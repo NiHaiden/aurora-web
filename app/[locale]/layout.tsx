@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poltawski_Nowy } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { DiscourseScript } from "./discourse-script";
@@ -7,10 +7,11 @@ import UmamiScript from "@/umami-script";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 const inter = Inter({ subsets: ["latin"] });
-
+const serifFont = Poltawski_Nowy({subsets: ["latin"]});
+import { GeistSans } from 'geist/font/sans';
 export const metadata: Metadata = {
-  title: "Aurora",
-  description: "The ultimate developer workstation",
+  title: "Aurora - your next OS.",
+  description: "The ultimate productivity workstation",
   icons: {
     icon: "/aurora-v3_logo.svg",
   },
@@ -28,7 +29,7 @@ export default async function RootLayout({
       <head>
         <UmamiScript />
       </head>
-      <body className={inter.className}>
+      <body className={GeistSans.className}>
         <DiscourseScript />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <NextIntlClientProvider messages={messages}>

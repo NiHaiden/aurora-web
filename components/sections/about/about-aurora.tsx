@@ -43,7 +43,7 @@ export default function AboutAurora({
         </p>
         <section
           className={
-            "grid w-full grid-cols-1 grid-rows-4 gap-5 lg:grid-cols-2 lg:grid-rows-1"
+            "grid w-full grid-cols-1 grid-rows-4 gap-5 lg:grid-cols-3 lg:grid-rows-1"
           }
         >
           <div

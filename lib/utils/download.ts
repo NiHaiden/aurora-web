@@ -7,6 +7,7 @@ export const getImageName = (
 
   imageName += isDevEdition(devEdition) ? "aurora-dx" : "aurora";
   imageName += hardwareExtended ? "-hwe" : "";
+
   switch (primaryGPU) {
     case "nvidia-legacy":
       if(hardwareExtended) {
