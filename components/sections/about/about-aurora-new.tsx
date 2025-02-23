@@ -1,13 +1,21 @@
 import { GlowEffect } from "@/components/ui/glow";
 import { SoftwareCard } from "@/components/BlurCard";
-import { BeerIcon, BoxesIcon, ContainerIcon } from "lucide-react";
+import {
+  ArrowUpRightIcon,
+  BeerIcon,
+  BoxesIcon,
+  ContainerIcon,
+  Gem,
+  PersonStanding,
+  Speech,
+} from "lucide-react";
 import Contributors from "@/components/sections/contributors";
 
 export default async function AboutAuroraNew() {
   return (
     <main className={"min-h-dvh bg-zinc-950 p-10 text-white"}>
       <div className={"flex flex-row gap-10"}>
-        <div className="flex w-full flex-col items-center justify-center gap-24">
+        <div className="flex w-full flex-col items-center justify-center gap-32">
           <div className="relative flex flex-col items-center justify-center gap-10">
             <div
               className={
@@ -31,7 +39,7 @@ export default async function AboutAuroraNew() {
                 />
                 <div className="relative h-full w-full rounded-lg bg-black text-white dark:bg-white dark:text-black">
                   <img
-                    className={"h-full w-full"}
+                    className={"h-full w-full rounded-xl"}
                     src={"/desktop.png"}
                     alt={"Desktop"}
                   />
@@ -56,13 +64,17 @@ export default async function AboutAuroraNew() {
                 >
                   Aurora is here to delight you with a beautiful, customizable
                   and flexible desktop where you feel right at home the moment
-                  you turn the computer on.
+                  you turn the computer on with its windows-like interface.
                   <br />
-                  Develop faster than ever before. Explore the galaxy. Write
-                  your next novel.
-                  <br />
-                  Feel right at home with a familiar desktop experience similar
-                  to Windows.
+                  Develop faster than ever before.{" "}
+                  <span
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text font-bold italic text-transparent"
+                    }
+                  >
+                    Explore the galaxy.
+                  </span>{" "}
+                  Write your next novel.
                 </div>
               </p>
             </div>
@@ -165,41 +177,25 @@ export default async function AboutAuroraNew() {
                   >
                     Expanded hardware support.
                   </h1>
-                  <div className={"grid w-full lg:grid-cols-3"}>
-                    <div className="relative h-full w-full">
-                      <GlowEffect
-                        colors={[
-                          "#3B1C6F",
-                          "#D95C7F",
-                          "#66B9F2",
-                          "#4E67B2",
-                          "#EC92A1",
-                          "#AA507A",
-                        ]}
-                        mode="colorShift"
-                        blur="soft"
-                        duration={5}
-                        scale={1.008}
-                      />
-                      <div
-                        className={
-                          "h-full w-full rounded-3xl border border-zinc-500 bg-zinc-950 p-4"
-                        }
-                      >
-                        <div className="relative h-full w-full rounded-lg">
-                          <h1
-                            className={
-                              "bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-3xl font-semibold text-transparent"
-                            }
-                          >
-                            Included Nvidia drivers
-                          </h1>
-                          <div className={"text-xl"}>
-                            If you are rocking a GPU from team-green, we have
-                            you covered. Simply download the edition that
-                            includes the drivers for your Nvidia GPU and install
-                            it.
-                          </div>
+                  <div className={"grid w-full lg:grid-cols-2"}>
+                    <div
+                      className={
+                        "h-full w-full rounded-3xl border border-zinc-500 bg-zinc-950 p-4"
+                      }
+                    >
+                      <div className="relative h-full w-full rounded-lg">
+                        <Gem />
+                        <h1
+                          className={
+                            "bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-3xl font-semibold text-transparent"
+                          }
+                        >
+                          Included Nvidia drivers
+                        </h1>
+                        <div className={"text-xl"}>
+                          If you are rocking a GPU from team-green, we have you
+                          covered. Simply download the edition that includes the
+                          drivers for your Nvidia GPU and install it.
                         </div>
                       </div>
                     </div>
@@ -207,7 +203,11 @@ export default async function AboutAuroraNew() {
                 </div>
               </div>
             </div>
-            <div className={"max-w-screen-2xl flex flex-col gap-5 items-center justify-center"}>
+            <div
+              className={
+                "flex max-w-screen-2xl flex-col items-center justify-center gap-5"
+              }
+            >
               <h1
                 className={
                   "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
@@ -216,9 +216,93 @@ export default async function AboutAuroraNew() {
                 For the community, by the community.
               </h1>
               <div className={"text-xl"}>
-                Aurora is built and maintained by the community, for the community. We are passionate in what we do.
+                Aurora is built and maintained by the community, for the
+                community. We are passionate in what we do.
               </div>
-              <Contributors/>
+              <Contributors />
+            </div>
+            <div
+              className={
+                "flex max-w-screen-2xl flex-col items-center justify-center gap-5 lg:pxr-0 px-4"
+              }
+            >
+              <h1
+                className={
+                  "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
+                }
+              >
+                Docs & Community
+              </h1>
+              <div className={"text-xl"}>
+                If you want to consult or documentation, contribute to it or
+                need help / want to hang out in our community, you will find it
+                here. We have forums and a Discord server.
+              </div>
+              <div
+                className={
+                  "grid w-full max-w-screen-2xl grid-cols-1 gap-10 lg:grid-cols-2"
+                }
+              >
+                <div
+                  className={
+                    "flex w-full flex-col rounded-2xl gap-4 border border-zinc-500 bg-gradient-to-tr from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-zinc-950 p-4"
+                  }
+                >
+                  <h1 className={"text-2xl font-bold text-white"}>
+                    Our Documentation
+                  </h1>
+                  <div>
+                    You can find our documentation and answers to common
+                    questions here.
+                  </div>
+                  <div className={"flex w-full justify-end"}>
+                    <a
+                      href={"https://docs.getaurora.dev"}
+                      target={"_blank"}
+                      rel={"noreferrer"}
+                      className={
+                        "flex flex-row items-center gap-3 rounded-2xl border p-3 text-lg font-bold text-white"
+                      }
+                    >
+                      Go to Documentation <ArrowUpRightIcon size={32} />
+                    </a>
+                  </div>
+                </div>
+                <div
+                    className={
+                      "flex w-full flex-col rounded-2xl gap-4 border border-zinc-500 from-aurora-blue via-aurora-darkblue to-aurora-purple bg-gradient-to-tr p-4"
+                    }
+                >
+                  <h1 className={"text-3xl font-bold text-white"}>
+                    Community (Discord & Forums)
+                  </h1>
+                  <div>
+                    We have forums for you to ask questions and discuss or a discord server to hang out in.
+                  </div>
+                  <div className={"flex w-full justify-end gap-5 items-center"}>
+                    <a
+                        href={"https://universal-blue.discourse.group"}
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        className={
+                          "flex flex-row items-center gap-3 rounded-2xl border p-3 text-lg font-bold text-white"
+                        }
+                    >
+                      Go to Forums <PersonStanding size={32} />
+                    </a>
+                    <a
+                        href={"https://discord.gg/WEu6BdFEtp"}
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        className={
+                          "flex flex-row items-center gap-3 rounded-2xl border p-3 text-lg font-bold text-white"
+                        }
+                    >
+                      Go to Discord <ArrowUpRightIcon size={32} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <h1
