@@ -1,18 +1,59 @@
-export default async function Contributors() {
-  const data = await getContributors();
+"use client";
 
+import useSWR from "swr";
+
+
+export default function Contributors() {
   return (
-    <div className={"flex flex-wrap h-fit w-full max-w-screen-2xl gap-4 justify-center\n"}>
-      {filterBotContributors(data.contributors!).map((contributor: GitHubContributor) => (
-        <ContributorBadge
-          key={contributor.id}
-          img={contributor.avatar_url}
-          profileUrl={contributor.html_url}
-          name={contributor.login}
-        />
-      ))}
-    </div>
-  );
+      <div>
+        <div
+            className={
+              "flex max-w-screen-2xl flex-col items-center justify-center gap-5"
+            }
+        >
+          <h1
+              className={
+                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
+              }
+          >
+            For the community, by the community.
+          </h1>
+          <div className={"text-xl"}>
+            Aurora is built and maintained by the community, for the
+            community. We are passionate in what we do.
+          </div>
+          <ContributorsGrid />
+        </div>
+      </div>
+  )
+}
+
+
+
+function ContributorsGrid() {
+  const { data, error} = useSWR("/api/contributors", getContributors);
+
+
+  if(data) {
+    return (
+        <div className={"flex flex-wrap h-fit w-full max-w-screen-2xl gap-4 justify-center\n"}>
+          {filterBotContributors(data.contributors!).map((contributor: GitHubContributor) => (
+              <ContributorBadge
+                  key={contributor.id}
+                  img={contributor.avatar_url}
+                  profileUrl={contributor.html_url}
+                  name={contributor.login}
+              />
+          ))}
+        </div>
+    );
+  } else {
+    return (
+        <div className={"flex flex-wrap h-fit w-full max-w-screen-2xl gap-4 justify-center"}>
+          Contributors could not be loaded.
+        </div>
+    )
+  }
 }
 
 const filterBotContributors = (contributors: GitHubContributor[]): GitHubContributor[] => {

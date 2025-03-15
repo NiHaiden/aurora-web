@@ -12,7 +12,7 @@ export default function DownloadBtn({
     <div className="flex items-center justify-center">
       <button
         onClick={onClick}
-        className={`group relative overflow-hidden rounded-2xl border ${isHovered ? "border-none": ""} border-zinc-100 50 bg-transparent px-6 py-2 transition-all duration-300 ease-out`}
+        className={`group relative overflow-hidden rounded-2xl border border-zinc-100 50 bg-transparent px-6 py-2 transition-all duration-300 ease-out`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

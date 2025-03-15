@@ -14,7 +14,7 @@ export default function CheckDocs() {
           {" "}
           {t('documentation')} 
         </a>
-      </div>
+      </div>ülplok,olm,
     </div>
   );
 }

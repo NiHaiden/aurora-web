@@ -29,7 +29,7 @@ export default async function RootLayout({
       <head>
         <UmamiScript />
       </head>
-      <body className={GeistSans.className}>
+      <body className={inter.className}>
         <DiscourseScript />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <NextIntlClientProvider messages={messages}>
