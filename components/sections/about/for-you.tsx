@@ -1,9 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
-import { ArrowUpRight, Cuboid, ShoppingBag, TextSearch } from "lucide-react";
+import {
+  ArrowUpRight,
+  BookHeart,
+  Circle,
+  CpuIcon,
+  Cuboid,
+  LoaderCircle,
+  Recycle,
+  RefreshCcw,
+  ShoppingBag,
+} from "lucide-react";
 
-export default function ParadigmShift() {
+export default function ForYou() {
   return (
     <div
       className={
@@ -15,13 +25,12 @@ export default function ParadigmShift() {
           "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
         }
       >
-        Aurora is a paradigm shift for Linux.
+        How does Aurora fit in for you?
       </h1>
       <p className={"text-xl"}>
-        To rethink the Linux Desktop experience from the ground up, we built
-        Aurora on new technology and principles. What does this mean for you?
+        Here are a few reasons why you should consider using Aurora.
       </p>
-      <div className={"grid grid-cols-1 gap-10 lg:grid-cols-1"}>
+      <div className={"grid grid-cols-1 gap-10 lg:grid-cols-3"}>
         <Card className={"w-full border-none bg-black text-white"}>
           <MagicCard
             className={"w-full border-none"}
@@ -33,34 +42,35 @@ export default function ParadigmShift() {
           >
             <CardHeader>
               <CardTitle className={"flex flex-row items-center gap-3"}>
-                <Cuboid size={48} className={"text-aurora-blue"} />
+                <RefreshCcw
+                  size={48}
+                  className={
+                    "animate-spin text-aurora-blue animate-duration-[5000ms]"
+                  }
+                />
                 <h1
                   className={
                     "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl text-3xl font-semibold text-transparent"
                   }
                 >
-                  Building on atomic principles.
+                  Automatic updates, forever.
                 </h1>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className={"text-xl"}>
-                We built Aurora on completely different technology and
-                principles compared to a normal Linux Desktop.
+                Aurora downloads and applies updates automatically in the
+                background.
                 <br />
-                Updates are built and tested before they ever reach you and are
-                a single package that gets applied in the background.
-                <br />
-                And if a new version of Aurora breaks something, you can
-                rollback to a known-good state.
+                This includes the operating system itself and all installed
+                applications.
                 <br />
                 <span
                   className={
                     "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  The OS should never break on an update. Resilient against
-                  failure.
+                  Let us take care of your updates.
                 </span>
               </div>
             </CardContent>
@@ -80,43 +90,23 @@ export default function ParadigmShift() {
                 className={"flex flex-row items-center justify-between gap-3"}
               >
                 <div className={"flex flex-row items-center gap-3"}>
-                  <ShoppingBag className={"text-aurora-blue"} size={48} />
+                  <CpuIcon className={"text-aurora-blue"} size={48} />
                   <h1
                     className={
                       "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
                     }
                   >
-                    A unified app store.
+                    Expanded hardware support.
                   </h1>
                 </div>
-                <a
-                  href={"https://flathub.org"}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  className={
-                    "flex flex-row items-center gap-3 rounded-2xl border border-aurora-blue p-3 text-lg font-bold text-white"
-                  }
-                >
-                  Checkout Flathub
-                  <ArrowUpRight size={32} />
-                </a>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className={"text-xl"}>
-                Utilizing the power of the Flathub App Store, we have a unified
-                and one-stop shop for app developers and app users alike. For
-                the first time, there is a unified app store for the Linux
-                platform where developers can publish their apps easily and earn
-                money to support their OSS work.
+                Aurora includes support all graphics cards and CPUs, including
+                GPUs from Nvidia. Expanded hardware support extends to game
+                controllers and more printer drivers.
                 <br />
-                <span
-                  className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-semibold text-transparent"
-                  }
-                >
-                  It's the year of the Linux App Store.
-                </span>
               </div>
             </CardContent>
           </MagicCard>
@@ -135,32 +125,24 @@ export default function ParadigmShift() {
                 className={"flex flex-row items-center justify-between gap-3"}
               >
                 <div className={"flex flex-row items-center gap-3"}>
-                  <TextSearch className={"text-aurora-blue"} size={48} />
+                  <BookHeart className={"text-aurora-blue"} size={48} />
                   <h1
                     className={
                       "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
                     }
                   >
-                    Easily auditable and extendable.
+                    Help where you need it.
                   </h1>
                 </div>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className={"text-xl"}>
-                Aurora is nothing more than a collection of bash scripts,
-                containerfiles and custom programs stitched together. This makes
-                it easy to audit, contribute and help out. By building a easy
-                entry-point for developers, we hope to encourage contributions
-                from new users. Go on this journey with us.
+                To make life easier for users, we have a easy to use way to
+                switch image editions when you buy new hardware. We also have
+                included a few common utilities to get started quickly with many
+                common tasks.
                 <br />
-                <span
-                  className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-semibold text-transparent"
-                  }
-                >
-                  It's the year of the Linux App Store.
-                </span>
               </div>
             </CardContent>
           </MagicCard>
