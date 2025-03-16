@@ -31,7 +31,7 @@ const Navbar = ({
   const t = useTranslations('Navbar');
   return (
     <nav
-      className={`fixed ${isTop ? "top-0": "lg:top-4 top-0"} z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-aurora-blue/30 backdrop-blur-2xl" : "bg-transparent"}`}
+      className={`fixed ${isTop ? "top-4": "lg:top-4 top-0"} z-30 w-full text-white transition duration-300 ease-in-out`}
     >
       <div className={`lg:w-full max-w-screen-2xl w-full container mx-auto flex flex-col flex-wrap items-center p-3 md:flex-row ${isTop ? "bg-transparent" : "bg-aurora-blue/30 backdrop-blur-2xl lg:rounded-3xl px-4"}`}>
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
