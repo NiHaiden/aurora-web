@@ -72,7 +72,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           <div className={"text-xl font-bold italic"}>
             Deploying Linux to your machine, please wait...
           </div>
-          <img className={"scale-50"} src={"/deploying_linux.png"} />
+          <img className={"scale-50"} src={"/glorp.png"} />
         </div>
       </footer>
     </>
