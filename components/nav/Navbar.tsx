@@ -9,9 +9,11 @@ import {useRouter} from "@/i18n/routing";
 const Navbar = ({
   introRef,
   newsRef,
+    downloadRef
 }: {
   introRef: RefObject<any>;
   newsRef: RefObject<any>;
+  downloadRef: RefObject<any>;
 }) => {
   const [isTop, setIsTop] = useState(true);
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -29,7 +31,7 @@ const Navbar = ({
   const t = useTranslations('Navbar');
   return (
     <nav
-      className={`fixed ${isTop ? "top-0": "lg:top-4 top-0"} z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-aurora-blue/30" : "bg-transparent"}`}
+      className={`fixed ${isTop ? "top-0": "lg:top-4 top-0"} z-30 w-full text-white transition duration-300 ease-in-out ${isTop ? "bg-aurora-blue/30 backdrop-blur-2xl" : "bg-transparent"}`}
     >
       <div className={`lg:w-full max-w-screen-2xl w-full container mx-auto flex flex-col flex-wrap items-center p-3 md:flex-row ${isTop ? "bg-transparent" : "bg-aurora-blue/30 backdrop-blur-2xl lg:rounded-3xl px-4"}`}>
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
@@ -53,7 +55,7 @@ const Navbar = ({
           <div className="flex flex-row items-center justify-center gap-14 text-lg">
             <button
               onClick={() => {
-                endUserRef.current.scrollIntoView({
+                introRef.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
@@ -81,7 +83,10 @@ const Navbar = ({
           >
             <DownloadBtn
               onClick={() => {
-                router.push("/get");
+                downloadRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                })
                 closeNavbar();
               }}
             />
@@ -148,32 +153,11 @@ const Navbar = ({
           {(ref) => (
             <div
               ref={ref}
-              className={`mt-5 flex-grow items-center rounded-2xl lg:flex ${isTop ? "bg-gradient-to-r from-aurora-purple via-aurora-darkblue to-aurora-blue" : "bg-transparent"}`}
+              className={`mt-5 flex-grow items-center rounded-2xl lg:flex`}
               id="example-navbar-warning"
             >
               <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
-                <button
-                  onClick={() => {
-                    endUserRef.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    closeNavbar();
-                  }}
-                >
-                   {t('end-user')}
-                </button>
-                <button
-                  onClick={() => {
-                    developerRef.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    closeNavbar();
-                  }}
-                >
-                   {t('developer')}
-                </button>
+
               </div>
             </div>
           )}

@@ -10,15 +10,15 @@ export default function Home() {
   const aboutRef = React.createRef<HTMLDivElement>();
   const aboutDXRef = useRef(null);
   const introRef = useRef(null);
-  const downloadRef = useRef(null);
+  const downloadRef = React.createRef<HTMLDivElement>();
   const faqRef = useRef(null);
   const newsRef = useRef(null);
   return (
     <div>
-      <Navbar introRef={introRef} newsRef={newsRef} />
+      <Navbar introRef={introRef} newsRef={newsRef} downloadRef={downloadRef} />
       <main className="min-h-[100dvh]">
         <Hero introRef={introRef} aboutRef={aboutRef} />
-        <AboutAuroraNew aboutRef={aboutRef} />
+        <AboutAuroraNew aboutRef={aboutRef} downloadRef={downloadRef} />
         <Footer introRef={introRef} />
       </main>
     </div>

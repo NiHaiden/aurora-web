@@ -8,9 +8,9 @@ import News from "@/components/sections/news";
 import {RefObject, useRef} from "react";
 import DownloadAurora from "@/components/sections/download/download";
 
-export default function AboutAuroraNew({aboutRef}: {aboutRef: RefObject<HTMLDivElement>}) {
+export default function AboutAuroraNew({aboutRef, downloadRef}: {aboutRef: RefObject<HTMLDivElement>; downloadRef: RefObject<HTMLDivElement>}) {
   return (
-    <main  className={"min-h-dvh bg-zinc-950 p-10 text-white"}>
+    <main  className={"min-h-dvh bg-gray-950 p-10 text-white"}>
       <div ref={aboutRef} className={"flex flex-row gap-10"}>
         <div className="flex w-full flex-col items-center justify-center gap-44">
           <YourNewDesktop />
@@ -20,7 +20,7 @@ export default function AboutAuroraNew({aboutRef}: {aboutRef: RefObject<HTMLDivE
           <Contributors />
           <AboutDocs />
           <News newsRef={useRef(null)} />
-          <DownloadAurora/>
+          <DownloadAurora downloadRef={downloadRef}/>
         </div>
       </div>
     </main>

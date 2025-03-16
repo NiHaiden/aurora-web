@@ -22,6 +22,7 @@ import DownloadComponent from "@/components/sections/download/download-component
 import CheckDocs from "@/components/sections/download/check-docs";
 import { useTranslations } from "next-intl";
 import { Switch } from "@/components/ui/switch";
+import {getImageName} from "@/lib/utils/download";
 
 export default function DownloadAurora({
   downloadRef,
@@ -31,26 +32,26 @@ export default function DownloadAurora({
   const [primaryGPU, setPrimaryGPU] = useState("");
   const [developerVersion, setDeveloperVersion] = useState("");
   const [isHWE, setIsHWE] = useState("no");
+  const imageName = getImageName(isHWE === "yes", primaryGPU, developerVersion);
   const t = useTranslations("Download-Component");
   return (
-      <div
+      <div ref={downloadRef}
           className={
-            "flex items-center justify-center gap-5 p-5"
+            "flex items-center justify-center gap-5"
           }
       >
         <div className="flex flex-col items-center justify-center gap-5">
           <div
-              className={"flex w-full max-w-screen-2xl items-start justify-start"}
+              className={"flex w-full max-w-screen-2xl items-center justify-center"}
           >
             <div className={"inline-flex items-center gap-10"}>
-              <DownloadIcon className={"h-24 w-24 stroke-aurora-orangina"} />
-              <h1
-                  className={
-                    "bg-gradient-to-r from-aurora-orangina via-aurora-lightorange to-aurora-blue bg-clip-text text-center text-3xl font-bold text-transparent lg:text-7xl"
-                  }
-              >
-                Download Aurora
-              </h1>
+                <h1
+                    className={
+                        "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl"
+                    }
+                >
+                    Download Aurora
+                </h1>
             </div>
           </div>
           <div
@@ -58,7 +59,7 @@ export default function DownloadAurora({
                 "flex w-full max-w-screen-2xl flex-col gap-5 rounded-3xl border border-zinc-600 p-5 backdrop-blur-2xl lg:w-full lg:p-14"
               }
           >
-            <div className={"text-2xl text-white"}>
+            <div className={"text-lg lg:text-2xl text-white"}>
               Please fill in the options to get the edition that best suits you.
               Decide wherether you want to include developer tooling on your
               installed system or not.
@@ -70,7 +71,7 @@ export default function DownloadAurora({
                   }
               >
                 <div className={"animate-fade-up"}>
-                  <p className={"text-3xl text-white"}>{t("primary-gpu")}</p>
+                  <p className={"text-xl lg:text-3xl text-white"}>{t("primary-gpu")}</p>
                   <Select
                       onValueChange={(e) => {
                         setPrimaryGPU(e);
@@ -142,7 +143,7 @@ export default function DownloadAurora({
                 </div>
                 <div>
                   <div className={"animate-fade-up"}>
-                    <p className={"text-3xl text-white"}>
+                    <p className={"text-xl lg:text-3xl text-white"}>
                       {"Surface / ASUS Device"}
                     </p>
                     <Select
@@ -213,7 +214,7 @@ export default function DownloadAurora({
                 to burn the image to your machine.
               </p>
               <div>
-                <DownloadButtons imageName={"aurora"} isHelium={true} />
+                <DownloadButtons imageName={imageName} isHelium={true} />
               </div>
             </div>
           </div>
@@ -229,8 +230,8 @@ function DownloadButtons({
   imageName: string;
   isHelium: boolean;
 }) {
-  const downloadLink = "";
-  const checksumLink = "";
+    const downloadLink: string = `https://dl.getaurora.dev/${imageName}.iso`;
+    const checksumLink: string = `https://dl.getaurora.dev/${imageName}.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
   return (
       <div className={"flex w-full flex-col gap-3 lg:flex-row"}>
