@@ -13,7 +13,7 @@ export default function Contributors() {
         >
           <h1
               className={
-                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-7xl font-bold text-transparent"
+                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
               }
           >
             For the community, by the community.
@@ -71,7 +71,7 @@ function ContributorBadge({
   name: string;
 }) {
   return (
-    <a href={profileUrl} className={"flex flex-row gap-5 items-center justify-center h-fit w-fit bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-4 rounded-full"}>
+    <a href={profileUrl} className={"flex flex-row gap-5 items-center justify-center h-fit w-fit bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 lg:px-4 px-2 rounded-full"}>
       <img width={55} height={55} src={img} alt={name} className={"rounded-full"} />
       <span className={"text-white"}>
         {name}

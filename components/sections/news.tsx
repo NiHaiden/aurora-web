@@ -39,22 +39,22 @@ export default function News({ newsRef }: { newsRef: RefObject<any> }) {
     <div
       ref={newsRef}
       className={
-        "flex w-full flex-col items-center justify-center p-40"
+        "flex w-full flex-col items-center justify-center"
       }
     >
-      <div className={"animate-fade-up invert"}>
+      <div className={"animate-fade-up "}>
         <div className={"flex flex-row items-center justify-center gap-5"}>
           <h1
-            className={
-              "flex w-fit flex-row items-center gap-3 text-black p-4 text-7xl font-bold leading-tight drop-shadow-md"
-            }
+              className={
+                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+              }
           >
             {t('news')}
           </h1>
         </div>
         <div
           className={
-            "h-[350px] w-full min-w-[450px] rounded-2xl p-6 lg:w-[850px]"
+            "h-[350px] w-full min-w-[450px] rounded-2xl p-6 lg:w-[850px] invert"
           }
           dangerouslySetInnerHTML={discourseTopics()}
         />

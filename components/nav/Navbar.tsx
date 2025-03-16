@@ -8,17 +8,9 @@ import {useTranslations} from 'next-intl';
 import {useRouter} from "@/i18n/routing";
 const Navbar = ({
   introRef,
-  endUserRef,
-  developerRef,
-  faqRef,
-  downloadRef,
   newsRef,
 }: {
   introRef: RefObject<any>;
-  endUserRef: RefObject<any>;
-  developerRef: RefObject<any>;
-  faqRef: RefObject<any>;
-  downloadRef: RefObject<any>;
   newsRef: RefObject<any>;
 }) => {
   const [isTop, setIsTop] = useState(true);
@@ -69,28 +61,6 @@ const Navbar = ({
               }}
             >
               {t('end-user')}
-            </button>
-            <button
-              onClick={() => {
-                developerRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                closeNavbar();
-              }}
-            >
-              {t('developer')}
-            </button>
-            <button
-              onClick={() => {
-                faqRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-                closeNavbar();
-              }}
-            >
-              {t('faq')}
             </button>
             <button
               onClick={() => {
@@ -150,10 +120,7 @@ const Navbar = ({
               className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
               type="button"
               onClick={() => {
-                downloadRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
+                router.push("/get");
                 closeNavbar();
               }}
             >
@@ -206,28 +173,6 @@ const Navbar = ({
                   }}
                 >
                    {t('developer')}
-                </button>
-                <button
-                  onClick={() => {
-                    faqRef.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    closeNavbar();
-                  }}
-                >
-                   {t('faq')}
-                </button>
-                <button
-                  onClick={() => {
-                    newsRef.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    closeNavbar();
-                  }}
-                >
-                   {t('news')}
                 </button>
               </div>
             </div>

@@ -25,7 +25,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
         </button>
         <div
           className={
-            "flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ublue-darkblue to-ublue-lightblue p-4 text-xl"
+            "flex flex-col items-center justify-center gap-2 p-4 text-xl"
           }
         >{t('proudly-built')}
           {" "}
@@ -39,35 +39,9 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           {t('proudly-built-phrase')}
         </div>
         <div>{t('built-with-love')}</div>
-        <div>{t('refined-logo')} {"<3"}</div>
-        <div>
-          <span className={"font-bold"}>{t('background-credits')}</span>
-          <div>
-            {t('background-images')}{" "}
-            <a
-              className={"cursor-pointer underline"}
-              href={"https://unsplash.com/@r3dmax"}
-            >
-              Unsplash
-            </a>
-          </div>
-        </div>
-        <div>
-          {t('animated-icons')}{" "}
-          <a
-            className={"cursor-pointer underline"}
-            href={"https://icons.pqoqubbw.dev/"}
-          >
-            {t('link-icons')}
-          </a>
-        </div>
-        <div>
-          {t('copyright')} {new Date().getFullYear()} Project Aurora authors.
-        </div>
-
         <div
           className={
-            "mb-5 flex w-fit flex-col items-center justify-center gap-5 rounded-2xl bg-gradient-to-r from-aurora-purple to-aurora-darkblue p-4 underline lg:flex-row"
+            "mb-5 flex w-full lg:w-fit flex-col items-center justify-center gap-5 lg:flex-row underline underline-offset-4"
           }
         >
           <a
@@ -95,6 +69,10 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
         </div>
         <div className={"mb-3 text-sm italic"}>
           {t('not-affiliated')}
+        </div>
+        <div>
+          <div className={"text-xl font-bold italic"}>Deploying Linux to your machine, please wait...</div>
+          <img className={"scale-50"} src={"/deploying_linux.png"}/>
         </div>
       </footer>
     </>
