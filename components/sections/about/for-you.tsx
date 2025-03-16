@@ -1,17 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
-import {
-  ArrowUpRight,
-  BookHeart,
-  Circle,
-  CpuIcon,
-  Cuboid,
-  LoaderCircle,
-  Recycle,
-  RefreshCcw,
-  ShoppingBag,
-} from "lucide-react";
+import { BookHeart, CpuIcon, RefreshCcw } from "lucide-react";
 
 export default function ForYou() {
   return (

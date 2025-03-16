@@ -19,7 +19,7 @@ export default function DownloadComponent({
 
   return (
     <>
-      <div className={"flex w-full flex-col gap-5 "}>
+      <div className={"flex w-full flex-col gap-5"}>
         <a
           href={downloadLink}
           className={

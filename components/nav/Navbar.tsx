@@ -4,12 +4,13 @@ import React, { RefObject, useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import DownloadBtn from "@/components/download-btn";
-import {useTranslations} from 'next-intl';
-import {useRouter} from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
+
 const Navbar = ({
   introRef,
   newsRef,
-    downloadRef
+  downloadRef,
 }: {
   introRef: RefObject<any>;
   newsRef: RefObject<any>;
@@ -28,12 +29,14 @@ const Navbar = ({
   const closeNavbar = () => {
     setNavbarOpen(false);
   };
-  const t = useTranslations('Navbar');
+  const t = useTranslations("Navbar");
   return (
     <nav
-      className={`fixed ${isTop ? "top-4": "lg:top-4 top-0"} z-30 w-full text-white transition duration-300 ease-in-out`}
+      className={`fixed ${isTop ? "top-4" : "top-0 lg:top-4"} z-30 w-full text-white transition duration-300 ease-in-out`}
     >
-      <div className={`lg:w-full max-w-screen-2xl w-full container mx-auto flex flex-col flex-wrap items-center p-3 md:flex-row ${isTop ? "bg-transparent" : "bg-aurora-blue/30 backdrop-blur-2xl lg:rounded-3xl px-4"}`}>
+      <div
+        className={`container mx-auto flex w-full max-w-screen-2xl flex-col flex-wrap items-center p-3 md:flex-row lg:w-full ${isTop ? "bg-transparent" : "bg-aurora-blue/30 px-4 backdrop-blur-2xl lg:rounded-3xl"}`}
+      >
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
           <div
             className={"cursor-pointer"}
@@ -62,7 +65,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              {t('end-user')}
+              {t("end-user")}
             </button>
             <button
               onClick={() => {
@@ -73,7 +76,7 @@ const Navbar = ({
                 closeNavbar();
               }}
             >
-              {t('news')}
+              {t("news")}
             </button>
           </div>
           <div
@@ -85,8 +88,8 @@ const Navbar = ({
               onClick={() => {
                 downloadRef.current.scrollIntoView({
                   behavior: "smooth",
-                  block: "start"
-                })
+                  block: "start",
+                });
                 closeNavbar();
               }}
             />
@@ -156,9 +159,7 @@ const Navbar = ({
               className={`mt-5 flex-grow items-center rounded-2xl lg:flex`}
               id="example-navbar-warning"
             >
-              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
-
-              </div>
+              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg"></div>
             </div>
           )}
         </Transition>

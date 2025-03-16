@@ -4,11 +4,12 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { DiscourseScript } from "./discourse-script";
 import UmamiScript from "@/umami-script";
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages} from 'next-intl/server';
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+
 const inter = Inter({ subsets: ["latin"] });
-const serifFont = Poltawski_Nowy({subsets: ["latin"]});
-import { GeistSans } from 'geist/font/sans';
+const serifFont = Poltawski_Nowy({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
   title: "Aurora - your next OS.",
   description: "The ultimate productivity workstation",

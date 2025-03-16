@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
 import KDELogo from "@/components/icons/kde";
+import { Trees } from "lucide-react";
 
 export default function YourNewDesktop() {
   return (
@@ -68,7 +69,11 @@ export default function YourNewDesktop() {
               <CardHeader>
                 <CardTitle className={"flex flex-row items-center gap-3"}>
                   <KDELogo size={64} />
-                  <h1 className={"text-3xl font-bold"}>
+                  <h1
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
+                    }
+                  >
                     Built with KDE Plasma.
                   </h1>
                 </CardTitle>
@@ -94,17 +99,21 @@ export default function YourNewDesktop() {
             >
               <CardHeader>
                 <CardTitle className={"flex flex-row items-center gap-3"}>
-                  <h1 className={"text-3xl font-bold"}>Sensible defaults</h1>
+                  <Trees size={32} className={"text-aurora-blue"} />
+                  <h1
+                    className={
+                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl text-3xl font-semibold text-transparent"
+                    }
+                  >
+                    Sensible defaults
+                  </h1>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div>
-                  Aurora is built around the customizable and adaptable KDE
-                  Plasma Desktop Environment. <br />
-                  Customized by us to have the best experience out of the box.
-                  Feel right at home.
-                  <br />
-                  We did the work for you.
+                  With a set of carefully selected applications and chosen
+                  defaults, Aurora is built for daily usage and is easy, fun and
+                  productive. It takes care of you and works alongside you.
                 </div>
               </CardContent>
             </MagicCard>

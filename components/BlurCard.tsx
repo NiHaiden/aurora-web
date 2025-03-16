@@ -13,7 +13,9 @@ export function SoftwareCard({
   text: React.ReactNode;
 }) {
   return (
-    <div className={`relative my-4 aspect-square ${size === "normal" ? "lg:h-[700px] lg:w-[700px] w-[450px] h-[550px]" : "lg:h-[900px] lg:w-[900px] w-[450px] h-[550px] "}  overflow-hidden rounded-[4px]`}>
+    <div
+      className={`relative my-4 aspect-square ${size === "normal" ? "h-[550px] w-[450px] lg:h-[700px] lg:w-[700px]" : "h-[550px] w-[450px] lg:h-[900px] lg:w-[900px]"} overflow-hidden rounded-[4px]`}
+    >
       <img
         src={imageSrc}
         alt="Benjamin Spiers - Moonlight 2023"

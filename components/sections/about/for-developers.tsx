@@ -1,14 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
-import {
-  BrainCircuit,
-  CodeIcon,
-  ContainerIcon,
-  CpuIcon,
-  RefreshCcw,
-} from "lucide-react";
-import Homebrew from "@/components/icons/homebrew";
+import { BrainCircuit, CodeIcon, ContainerIcon } from "lucide-react";
 
 export default function ForDevelopers() {
   return (

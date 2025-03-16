@@ -141,6 +141,7 @@ export function AuroraText({
 
       requestAnimationFrame(animate);
     }
+
     animate();
   }, [dimensions, colors, speed]);
 

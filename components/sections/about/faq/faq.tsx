@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useTranslations, useMessages } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 
 interface FAQMessages {
   [key: string]: {
@@ -18,7 +18,9 @@ interface FAQMessages {
 
 export default function FAQ({ faqRef }: { faqRef: RefObject<any> }) {
   const t = useTranslations("FAQ");
-  const messages = useMessages() as unknown as { FAQ: { questions: FAQMessages } };
+  const messages = useMessages() as unknown as {
+    FAQ: { questions: FAQMessages };
+  };
   const keys = Object.keys(messages.FAQ.questions);
 
   return (

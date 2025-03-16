@@ -1,33 +1,7 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Check,
-  CloudDownload,
-  Code,
-  DownloadIcon,
-  LaptopIcon,
-  Monitor,
-  Package,
-  XIcon,
-} from "lucide-react";
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import Navbar from "@/components/nav/Navbar";
-
 export default function GetAurora() {
-
-  return (
-      <div>nothing</div>
-  );
+  return <div>nothing</div>;
 }
 
 function DownloadCard() {
@@ -39,7 +13,6 @@ function DownloadCard() {
     ></div>
   );
 }
-
 
 
 /*
