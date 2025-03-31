@@ -2,7 +2,7 @@
 import React, { RefObject, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
-export default function News({ newsRef }: { newsRef: RefObject<any> }) {
+export default function News({ newsRef }: { newsRef: RefObject<HTMLDivElement> }) {
   const [discourseHtml, setDiscourseHtml] = React.useState({ __html: "" });
 
   useEffect(() => {

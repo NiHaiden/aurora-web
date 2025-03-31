@@ -11,9 +11,11 @@ import DownloadAurora from "@/components/sections/download/download";
 export default function AboutAuroraNew({
   aboutRef,
   downloadRef,
+  newsRef
 }: {
   aboutRef: RefObject<HTMLDivElement>;
   downloadRef: RefObject<HTMLDivElement>;
+  newsRef: RefObject<HTMLDivElement>;
 }) {
   return (
     <main className={"min-h-dvh bg-gray-950 p-10 text-white"}>
@@ -25,7 +27,7 @@ export default function AboutAuroraNew({
           <ForDevelopers />
           <Contributors />
           <AboutDocs />
-          <News newsRef={useRef(null)} />
+          <News newsRef={newsRef} />
           <DownloadAurora downloadRef={downloadRef} />
         </div>
       </div>

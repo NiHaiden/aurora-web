@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar introRef={introRef} newsRef={newsRef} downloadRef={downloadRef} />
       <main className="min-h-[100dvh]">
         <Hero introRef={introRef} aboutRef={aboutRef} />
-        <AboutAuroraNew aboutRef={aboutRef} downloadRef={downloadRef} />
+        <AboutAuroraNew aboutRef={aboutRef} downloadRef={downloadRef} newsRef={newsRef} />
         <Footer introRef={introRef} />
       </main>
     </div>

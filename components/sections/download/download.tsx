@@ -28,6 +28,7 @@ export default function DownloadAurora({
   const [developerVersion, setDeveloperVersion] = useState("");
   const [isHWE, setIsHWE] = useState("no");
   const imageName = getImageName(isHWE === "yes", primaryGPU, developerVersion);
+  console.log(imageName);
   const t = useTranslations("Download-Component");
   return (
     <div ref={downloadRef} className={"flex items-center justify-center gap-5"}>
@@ -207,7 +208,10 @@ export default function DownloadAurora({
               to burn the image to your machine.
             </p>
             <div>
+              {primaryGPU ?  
               <DownloadButtons imageName={imageName} isHelium={true} />
+              : <div>Please select your hardware.</div>
+}
             </div>
           </div>
         </div>

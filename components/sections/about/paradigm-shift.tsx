@@ -39,7 +39,7 @@ export default function ParadigmShift() {
                     "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl text-3xl font-semibold text-transparent"
                   }
                 >
-                  Building on atomic principles.
+                  Rock-solid, new paradigms.
                 </h1>
               </CardTitle>
             </CardHeader>
@@ -159,7 +159,7 @@ export default function ParadigmShift() {
                     "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  It's the year of the Linux App Store.
+                  We don't restrict your ability to audit Aurora.
                 </span>
               </div>
             </CardContent>
