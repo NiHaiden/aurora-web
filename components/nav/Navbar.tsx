@@ -128,7 +128,10 @@ const Navbar = ({
               className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
               type="button"
               onClick={() => {
-                router.push("/get");
+                downloadRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
                 closeNavbar();
               }}
             >
