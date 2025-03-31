@@ -2,7 +2,7 @@
 import { CloudDownload, ComputerIcon, Gauge, SparklesIcon } from "lucide-react";
 import React, { RefObject, useRef } from "react";
 import { useIsVisible } from "@/lib/utils/scroll";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function AboutAurora({
   aboutRef,
@@ -23,7 +23,7 @@ export default function AboutAurora({
   const ref4 = useRef<HTMLDivElement>(null);
   const isVisible4 = useIsVisible(ref4);
 
-  const t = useTranslations('About-Aurora');
+  const t = useTranslations("About-Aurora");
 
   return (
     <div
@@ -36,14 +36,12 @@ export default function AboutAurora({
             "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-6xl font-bold text-transparent drop-shadow-lg lg:text-7xl"
           }
         >
-          {t('for-end-user')}
+          {t("for-end-user")}
         </h1>
-        <p className={"text-xl"}>
-          {t('reliable')}
-        </p>
+        <p className={"text-xl"}>{t("reliable")}</p>
         <section
           className={
-            "grid w-full grid-cols-1 grid-rows-4 gap-5 lg:grid-cols-2 lg:grid-rows-1"
+            "grid w-full grid-cols-1 grid-rows-4 gap-5 lg:grid-cols-3 lg:grid-rows-1"
           }
         >
           <div
@@ -56,16 +54,17 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-center text-2xl font-bold text-transparent"
               }
             >
-              {t('simply-delightful')}
+              {t("simply-delightful")}
             </h1>
             <p className={"text-xl"}>
-              {t('simply-delightful-text')}<br />
+              {t("simply-delightful-text")}
+              <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                {t('simply-delightful-purple')}
+                {t("simply-delightful-purple")}
               </span>
             </p>
           </div>
@@ -79,16 +78,17 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-center text-2xl font-bold text-transparent"
               }
             >
-              {t('speed-reliability')}
+              {t("speed-reliability")}
             </h1>
             <p className={"text-xl"}>
-              {t('speed-reliability-text')}<br />
+              {t("speed-reliability-text")}
+              <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                {t('speed-reliability-purple')}
+                {t("speed-reliability-purple")}
               </span>
             </p>
           </div>
@@ -102,16 +102,17 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent"
               }
             >
-              {t('zero-maintenance')}
+              {t("zero-maintenance")}
             </h1>
             <p className={"text-xl"}>
-              {t('zero-maintenance-text')}<br />
+              {t("zero-maintenance-text")}
+              <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text text-left font-bold text-transparent"
                 }
               >
-                {t('zero-maintenance-purple')}
+                {t("zero-maintenance-purple")}
               </span>
             </p>
           </div>
@@ -126,16 +127,17 @@ export default function AboutAurora({
                 "bg-gradient-to-br from-aurora-blue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent"
               }
             >
-              {t('hardware-support')}
+              {t("hardware-support")}
             </h1>
             <p className={"text-xl"}>
-              {t('hardware-support-text')}<br />
+              {t("hardware-support-text")}
+              <br />
               <span
                 className={
                   "bg-gradient-to-r from-aurora-purple to-aurora-darkblue bg-clip-text font-bold text-transparent"
                 }
               >
-                {t('hardware-support-purple')}
+                {t("hardware-support-purple")}
               </span>
             </p>
           </div>

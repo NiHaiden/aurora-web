@@ -1,9 +1,9 @@
 import { RefObject } from "react";
 import { CircleArrowUp, GithubIcon, GitMerge, GlobeIcon } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Footer({ introRef }: { introRef: RefObject<any> }) {
-  const t = useTranslations('Footer');
+  const t = useTranslations("Footer");
   return (
     <>
       <footer
@@ -21,14 +21,14 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           }}
         >
           <CircleArrowUp className={"h-10 w-10"} />
-          {t('go-up')}
+          {t("go-up")}
         </button>
         <div
           className={
-            "flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ublue-darkblue to-ublue-lightblue p-4 text-xl"
+            "flex flex-col items-center justify-center gap-2 p-4 text-xl"
           }
-        >{t('proudly-built')}
-          {" "}
+        >
+          {t("proudly-built")}{" "}
           <a
             className={"flex flex-row items-center gap-2 font-bold underline"}
             href={"https://universal-blue.org"}
@@ -36,38 +36,12 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
             <img src={"/ublue-color.svg"} width={35} height={35} />
             Universal Blue
           </a>
-          {t('proudly-built-phrase')}
+          {t("proudly-built-phrase")}
         </div>
-        <div>{t('built-with-love')}</div>
-        <div>{t('refined-logo')} {"<3"}</div>
-        <div>
-          <span className={"font-bold"}>{t('background-credits')}</span>
-          <div>
-            {t('background-images')}{" "}
-            <a
-              className={"cursor-pointer underline"}
-              href={"https://unsplash.com/@r3dmax"}
-            >
-              Unsplash
-            </a>
-          </div>
-        </div>
-        <div>
-          {t('animated-icons')}{" "}
-          <a
-            className={"cursor-pointer underline"}
-            href={"https://icons.pqoqubbw.dev/"}
-          >
-            {t('link-icons')}
-          </a>
-        </div>
-        <div>
-          {t('copyright')} {new Date().getFullYear()} Project Aurora authors.
-        </div>
-
+        <div>{t("built-with-love")}</div>
         <div
           className={
-            "mb-5 flex w-fit flex-col items-center justify-center gap-5 rounded-2xl bg-gradient-to-r from-aurora-purple to-aurora-darkblue p-4 underline lg:flex-row"
+            "mb-5 flex w-full flex-col items-center justify-center gap-5 underline underline-offset-4 lg:w-fit lg:flex-row"
           }
         >
           <a
@@ -93,8 +67,12 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
             Website Source Code
           </a>
         </div>
-        <div className={"mb-3 text-sm italic"}>
-          {t('not-affiliated')}
+        <div className={"mb-3 text-sm italic"}>{t("not-affiliated")}</div>
+        <div>
+          <div className={"text-xl font-bold italic"}>
+            Deploying Linux to your machine, please wait...
+          </div>
+          <img className={"scale-50"} src={"/glorp.png"} />
         </div>
       </footer>
     </>

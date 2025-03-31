@@ -2,10 +2,10 @@
 Copyright 2024 Niklas Haiden
  */
 
-import { BeerIcon, BotIcon, CodeIcon, ContainerIcon } from "lucide-react";
-import { RefObject, useRef } from "react";
-import { useIsVisible } from "@/lib/utils/scroll";
-import { useTranslations } from 'next-intl';
+import {BeerIcon, BotIcon, CodeIcon, ContainerIcon} from "lucide-react";
+import {RefObject, useRef} from "react";
+import {useIsVisible} from "@/lib/utils/scroll";
+import {useTranslations} from "next-intl";
 
 export default function AboutAuroraDx({
   aboutDxRef,
@@ -24,7 +24,7 @@ export default function AboutAuroraDx({
   const ref4 = useRef<HTMLDivElement>(null);
   const isVisible4 = useIsVisible(ref4);
 
-  const t = useTranslations('About-AuroraDx');
+  const t = useTranslations("About-AuroraDx");
 
   return (
     <div ref={aboutDxRef}>
@@ -40,11 +40,9 @@ export default function AboutAuroraDx({
                 "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-6xl font-bold text-transparent drop-shadow-md lg:text-7xl"
               }
             >
-              {t('for-developers')}
+              {t("for-developers")}
             </h1>
-            <p className={"text-2xl text-white"}>
-              {t('pro-stargazing')}
-            </p>
+            <p className={"text-2xl text-white"}>{t("pro-stargazing")}</p>
           </div>
           <div
             className={
@@ -61,16 +59,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                {t('brew-ready')}
+                {t("brew-ready")}
               </h1>
               <p className={"text-xl text-white"}>
-                {t('brew-ready-text')} <br />
+                {t("brew-ready-text")} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  {t('brew-ready-red')}
+                  {t("brew-ready-red")}
                 </span>
               </p>
             </div>
@@ -84,16 +82,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                {t('containers-best-friends')}
+                {t("containers-best-friends")}
               </h1>
               <p className={"text-xl text-white"}>
-                {t('containers-best-friends-text')} <br />
+                {t("containers-best-friends-text")} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  {t('containers-best-friends-red')}
+                  {t("containers-best-friends-red")}
                 </span>
               </p>
             </div>
@@ -107,16 +105,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                {t('preconfigured-work')}
+                {t("preconfigured-work")}
               </h1>
               <p className={"text-xl text-white"}>
-                {t('preconfigured-work-text')} <br />
+                {t("preconfigured-work-text")} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-left text-xl font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  {t('preconfigured-work-red')}
+                  {t("preconfigured-work-red")}
                 </span>
               </p>
             </div>
@@ -130,16 +128,16 @@ export default function AboutAuroraDx({
                   "bg-gradient-to-tr from-aurora-lightorange to-aurora-lightred bg-clip-text text-center text-2xl font-bold text-transparent drop-shadow-md"
                 }
               >
-                {t('robots-take-over')}
+                {t("robots-take-over")}
               </h1>
               <p className={"text-xl text-white"}>
-                {t('robots-take-over-text')} <br />
+                {t("robots-take-over-text")} <br />
                 <span
                   className={
                     "bg-gradient-to-tr from-aurora-orangina to-aurora-lightorange bg-clip-text text-left text-xl font-bold text-transparent drop-shadow-md"
                   }
                 >
-                  {t('robots-take-over-red')}
+                  {t("robots-take-over-red")}
                 </span>
               </p>
             </div>

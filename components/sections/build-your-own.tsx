@@ -1,8 +1,8 @@
 import { ArrowRightCircle, Hammer } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function BuildYourOwn() {
-  const t = useTranslations('Build-Your-Own');
+  const t = useTranslations("Build-Your-Own");
   return (
     <div
       className={
@@ -17,7 +17,7 @@ export default function BuildYourOwn() {
             }
           >
             <Hammer className={"h-12 w-12 text-white"} />
-            {t('build-your-own')}
+            {t("build-your-own")}
           </h1>
         </div>
         <div
@@ -29,14 +29,15 @@ export default function BuildYourOwn() {
             className={
               "flex w-full flex-col gap-3 text-xl text-white lg:text-2xl"
             }
-          >{t('want-to-build')}
+          >
+            {t("want-to-build")}
             <a
               className={
                 "flex w-fit flex-row items-center justify-center gap-2 rounded-3xl bg-gradient-to-tr from-aurora-purple to-aurora-darkblue p-5 drop-shadow-md"
               }
               href={"https://github.com/ublue-os/image-template"}
             >
-              {t('get-image-template')}{" "}
+              {t("get-image-template")}{" "}
               <ArrowRightCircle className={"h-10 w-10"} />
             </a>
           </div>

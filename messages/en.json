@@ -1,6 +1,6 @@
 {
   "Navbar": {
-    "end-user": "For end-users",
+    "end-user": "About Aurora",
     "developer": "For Developers",
     "faq": "FAQ",
     "news": "News"
@@ -8,14 +8,14 @@
   "Download-Component": {
     "get-aurora": "Get Aurora",
     "download-iso": "Download ISO",
-    "checksum": "Get Checksum to verify",
+    "checksum": "Get checksum to verify",
     "ready-to-ride": "Ready to ride the rocketship? Pick your hardware configuration and download the ISO.",
-    "hardware": "Hardware",
+    "hwe-version": "Do you have a Surface / ASUS Device?",
     "select-hardware": "Select your hardware",
     "primary-gpu": "Primary GPU",
     "pick-gpu": "Pick your primary GPU",
     "developer-version": "Developer Version",
-    "are-you-dev": "Are you a dev?",
+    "are-you-dev": "Do you want developer tools?",
     "grab-iso": "Grab the ISO here for a fresh install:",
     "yes-option": "Yes",
     "no-option": "No",
@@ -23,9 +23,10 @@
     "documentation": "documentation here."
   },
   "Introduction": {
-    "stargazer": "Hello stargazer, a new experience awaits.",
+    "title": "Aurora,",
+    "stargazer": "Hello stargazer, Aurora awaits you.",
     "powered": "Powered by the awesomeness of KDE and Universal Blue, crafted for you.",
-    "onboard": "Get onboard. Aurora is the ultimate desktop OS for your developer workstation or the perfect maintenance-free OS for everyone.",
+    "onboard": "Get onboard the starship to your new desktop operating system.",
     "gaze": " Let's gaze at the stars together, fellow traveller.",
     "learn-more": "Learn more"
   },
@@ -68,7 +69,7 @@
   },
   "Footer": {
     "go-up": "Go up",
-    "proudly-built": "Proudly built",
+    "proudly-built": "Proudly built with",
     "proudly-built-phrase": "a community toolkit designed to reboot the Linux desktop. Built for the love of the game. Welcome to Indie Cloud Native.",
     "built-with-love": "Built with ❤️ in Austria.",
     "refined-logo": "Refined logo built by @reisvg.",
