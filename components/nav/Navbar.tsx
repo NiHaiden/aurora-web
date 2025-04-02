@@ -35,11 +35,11 @@ const Navbar = ({
       className={`fixed ${isTop ? "top-4" : "top-0 lg:top-4"} z-30 w-full text-white transition duration-300 ease-in-out`}
     >
       <div
-        className={`container mx-auto flex w-full max-w-screen-2xl flex-col flex-wrap items-center p-3 md:flex-row lg:w-full ${isTop ? "bg-transparent" : "bg-aurora-blue/30 px-4 backdrop-blur-2xl lg:rounded-3xl"}`}
+        className={`container mx-auto flex w-full max-w-screen-2xl flex-col flex-wrap items-center lg:p-2 p-4 md:flex-row lg:w-2/3 ${isTop ? "bg-transparent" : "bg-aurora-blue/30 px-2 backdrop-blur-2xl lg:rounded-3xl"}`}
       >
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
           <div
-            className={"cursor-pointer"}
+            className={"cursor-pointer ml-2"}
             onClick={() => {
               introRef.current.scrollIntoView({
                 behavior: "smooth",

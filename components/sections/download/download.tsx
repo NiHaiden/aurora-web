@@ -62,8 +62,8 @@ export default function DownloadAurora({
                 "grid h-full w-full grid-cols-1 grid-rows-3 items-start justify-start gap-5 lg:grid-cols-3 lg:grid-rows-1"
               }
             >
-              <div className={"animate-fade-up"}>
-                <p className={"text-xl text-white lg:text-3xl"}>
+              <div className={"animate-fade-up flex flex-col gap-2"}>
+                <p className={"text-lg text-white lg:text-2xl"}>
                   {t("primary-gpu")}
                 </p>
                 <Select
@@ -71,7 +71,7 @@ export default function DownloadAurora({
                     setPrimaryGPU(e);
                   }}
                 >
-                  <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-lg text-white">
+                  <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-sm text-white">
                     <SelectValue
                       placeholder={
                         <div
@@ -97,8 +97,8 @@ export default function DownloadAurora({
                 </Select>
               </div>
 
-              <div className={"animate-fade-up"}>
-                <p className={"text-xl text-white lg:text-3xl"}>
+              <div className={"animate-fade-up flex flex-col gap-2"}>
+                <p className={"text-lg text-white lg:text-2xl"}>
                   {t("developer-version")}
                 </p>
                 <Select
@@ -106,7 +106,7 @@ export default function DownloadAurora({
                     setDeveloperVersion(e);
                   }}
                 >
-                  <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-lg text-white">
+                  <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-sm text-white">
                     <SelectValue
                       placeholder={
                         <div
@@ -136,8 +136,8 @@ export default function DownloadAurora({
                 </Select>
               </div>
               <div>
-                <div className={"animate-fade-up"}>
-                  <p className={"text-xl text-white lg:text-3xl"}>
+                <div className={"animate-fade-up flex flex-col gap-2"}>
+                  <p className={"text-lg text-white lg:text-2xl"}>
                     {"Surface / ASUS Device"}
                   </p>
                   <Select
@@ -145,7 +145,7 @@ export default function DownloadAurora({
                       setIsHWE(e);
                     }}
                   >
-                    <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-lg text-white">
+                    <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-sm text-white">
                       <SelectValue
                         placeholder={
                           <div
