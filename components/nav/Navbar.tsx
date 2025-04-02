@@ -112,14 +112,14 @@ const Navbar = ({
           >
             <img
               src={"/aurora-v3-white.svg"}
-              width={60}
-              height={60}
+              width={45}
+              height={45}
               className={`${isTop ? "hidden" : "block"}`}
             />
             <img
               src={"/aurora-v3_logo.svg"}
-              width={60}
-              height={60}
+              width={45}
+              height={45}
               className={`${isTop ? "block" : "hidden"}`}
             />
           </div>
@@ -162,7 +162,9 @@ const Navbar = ({
               className={`mt-5 flex-grow items-center rounded-2xl lg:flex`}
               id="example-navbar-warning"
             >
-              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg"></div>
+              <div className="flex w-full flex-col items-center justify-center gap-14 p-10 text-lg">
+                <NavbarItems introRef={introRef} newsRef={newsRef} closeNavbar={closeNavbar}/>
+              </div>
             </div>
           )}
         </Transition>
@@ -171,3 +173,33 @@ const Navbar = ({
   );
 };
 export default Navbar;
+
+function NavbarItems({introRef, newsRef, closeNavbar}: {introRef: any, newsRef: any, closeNavbar: any}) {
+  const t = useTranslations("Navbar");
+  return (
+    <>
+      <button
+        onClick={() => {
+          introRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          closeNavbar();
+        }}
+      >
+        {t("end-user")}
+      </button>
+      <button
+        onClick={() => {
+          newsRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          closeNavbar();
+        }}
+      >
+        {t("news")}
+      </button>
+    </>
+  );
+}

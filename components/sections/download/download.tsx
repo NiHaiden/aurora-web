@@ -31,7 +31,7 @@ export default function DownloadAurora({
   console.log(imageName);
   const t = useTranslations("Download-Component");
   return (
-    <div ref={downloadRef} className={"flex items-center justify-center gap-5"}>
+    <div ref={downloadRef} className={"flex items-center justify-center gap-5 h-dvh"}>
       <div className="flex flex-col items-center justify-center gap-5">
         <div
           className={"flex w-full max-w-screen-2xl items-center justify-center"}
