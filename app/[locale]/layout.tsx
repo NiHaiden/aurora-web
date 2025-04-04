@@ -11,8 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 const serifFont = Poltawski_Nowy({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aurora - your next OS.",
-  description: "The ultimate productivity workstation",
+  title: "Aurora - The Linux-based ultimate workstation",
+  description: "The ultimate productivity workstation, stable and streamlined for you.",
+  openGraph: {
+    type: "website",
+    images: ["/scaled_down_wallpaper.jpg"]
+  },
   icons: {
     icon: "/aurora-v3_logo.svg",
   },
