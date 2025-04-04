@@ -2,8 +2,27 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
 import { ArrowUpRight, Cuboid, ShoppingBag, TextSearch } from "lucide-react";
+import useIsMobile from "@/components/sections/about/useIsMobile";
+
+function FlathubLink() {
+  return (
+    <a
+      href={"https://flathub.org"}
+      target={"_blank"}
+      rel={"noreferrer"}
+      className={
+        "flex flex-row justify-between items-center gap-3 rounded-2xl border border-aurora-blue p-3 text-lg font-bold text-white"
+      }
+    >
+      Checkout Flathub
+      <ArrowUpRight size={32} />
+    </a>
+  );
+}
 
 export default function ParadigmShift() {
+  const isMobile = useIsMobile();
+
   return (
     <div
       className={
@@ -89,21 +108,12 @@ export default function ParadigmShift() {
                     A unified app store.
                   </h1>
                 </div>
-                <a
-                  href={"https://flathub.org"}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  className={
-                    "flex flex-row items-center gap-3 rounded-2xl border border-aurora-blue p-3 text-lg font-bold text-white"
-                  }
-                >
-                  Checkout Flathub
-                  <ArrowUpRight size={32} />
-                </a>
+                {!isMobile &&
+                <FlathubLink /> }
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className={"text-xl"}>
+            <CardContent className={"flex flex-col gap-3"}>
+              <div className={"text-xl flex flex-col gap-3"}>
                 Utilizing the power of the Flathub App Store, we have a unified
                 and one-stop shop for app developers and app users alike. For
                 the first time, there is a unified app store for the Linux
@@ -117,6 +127,7 @@ export default function ParadigmShift() {
                 >
                   It's the year of the Linux App Store.
                 </span>
+                {isMobile && <FlathubLink /> }
               </div>
             </CardContent>
           </MagicCard>
