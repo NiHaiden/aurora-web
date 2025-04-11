@@ -12,7 +12,7 @@ export default function Contributors() {
       >
         <h1
           className={
-            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
           }
         >
           For the community, by the community.

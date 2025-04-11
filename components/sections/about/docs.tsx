@@ -12,7 +12,7 @@ export default function AboutDocs() {
     >
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl"
+          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl py-2"
         }
       >
         Documentation & Community

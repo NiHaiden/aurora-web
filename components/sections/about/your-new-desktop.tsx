@@ -40,7 +40,7 @@ export default function YourNewDesktop() {
       <div className={"flex w-full max-w-screen-2xl flex-col gap-3"}>
         <h1
           className={
-            "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+            "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
           }
         >
           Welcome, it's your new desktop.
