@@ -25,7 +25,7 @@ export default function Hero({
       <div className="z-10 flex max-w-screen-2xl flex-col items-center justify-center gap-5 lg:m-0">
         <div className="mb-4 flex w-2/3 items-center justify-start md:w-3/4 lg:w-2/3">
           <h1 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold uppercase tracking-widest text-transparent md:text-7xl lg:text-9xl">
-            <img src={"/aurora-v3-text-logo.svg"} alt="Aurora Logo" />
+            <img src={"/aurora-text-logo-v4.svg"} alt="Aurora Logo" />
           </h1>
         </div>
         <div className="flex w-2/3 flex-col gap-3 text-2xl font-semibold md:w-3/4 md:text-3xl lg:w-2/3 lg:text-4xl">
