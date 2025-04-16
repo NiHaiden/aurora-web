@@ -39,6 +39,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           {t("proudly-built-phrase")}
         </div>
         <div>{t("built-with-love")}</div>
+        <div>Logos are by @adelia.svg ❤️</div>
         <div
           className={
             "mb-5 flex w-full flex-col items-center justify-center gap-5 underline underline-offset-4 lg:w-fit lg:flex-row"
