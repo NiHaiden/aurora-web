@@ -90,9 +90,6 @@ export default function DownloadAurora({
                     <SelectItem value="nvidia">
                       Nvidia (RTX-Series/GTX 16xx)
                     </SelectItem>
-                    <SelectItem value="nvidia-legacy">
-                      Nvidia Legacy (9xx-10xx Series)
-                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
