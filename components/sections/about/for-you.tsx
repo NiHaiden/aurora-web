@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { auroraColors } from "@/lib/aurora-colors";
-import { BookHeart, CpuIcon, RefreshCcw } from "lucide-react";
+import { BookHeart, CpuIcon, RefreshCcw, RefreshCw, RotateCw } from "lucide-react";
 
 export default function ForYou() {
   return (
@@ -32,7 +32,7 @@ export default function ForYou() {
           >
             <CardHeader>
               <CardTitle className={"flex flex-row items-center gap-3"}>
-                <RefreshCcw
+                <RotateCw
                   size={48}
                   className={
                     "animate-spin text-aurora-blue animate-duration-[5000ms]"
