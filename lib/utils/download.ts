@@ -21,14 +21,14 @@ export const getImageName = (
         imageName += "-nvidia-open-latest";
         break;
       }
-      imageName += "-nvidia-open-stable-live";
+      imageName += "-nvidia-open-stable-x86_64";
       break;
     default:
       if(hardwareExtended) {
         imageName += "-latest";
         break;
       }
-      imageName += "-stable-live";
+      imageName += "-stable-x86_64";
       break;
   }
 
