@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "The ultimate productivity workstation, stable and streamlined for you.",
   openGraph: {
     type: "website",
-    images: ["/scaled_down_wallpaper.jpg"]
+    images: ["/wallpaper.jpg"]
   },
   icons: {
     icon: "/aurora-v3_logo.svg",
