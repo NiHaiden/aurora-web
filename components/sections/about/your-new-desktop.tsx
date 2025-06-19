@@ -35,6 +35,7 @@ export default function YourNewDesktop() {
               alt={"Desktop"}
             />
           </div>
+          <div className="text-white text-sm font-semibold mt-5">Art made by the awesome <a className={"underline underline-offset-2"} href={"https://ko-fi.com/chandeleer"}>@Chandeleer.</a></div>
         </div>
       </div>
       <div className={"flex w-full max-w-screen-2xl flex-col gap-3"}>
