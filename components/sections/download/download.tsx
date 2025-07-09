@@ -176,7 +176,7 @@ function DownloadButtons({
           "flex h-fit w-full flex-row items-center justify-center gap-2 rounded-2xl border border-zinc-600 p-5 text-[18px] text-white shadow-lg"
         }
       >
-        <Package /> {t("checksum")}
+        <Package /> {t("checksum")} (SHA256)
       </a>
     </div>
   );
