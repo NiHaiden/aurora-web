@@ -93,7 +93,7 @@ export default function ForYou() {
             </CardHeader>
             <CardContent>
               <div className={"text-xl"}>
-                Aurora includes support all graphics cards and CPUs, including
+                Aurora includes support for all graphics cards and CPUs, including
                 GPUs from Nvidia. Expanded hardware support extends to game
                 controllers and more printer drivers.
                 <br />
