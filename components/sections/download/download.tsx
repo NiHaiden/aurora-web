@@ -129,7 +129,7 @@ export default function DownloadAurora({
               >
                 Fedora Image Writer <ArrowUpRight />
               </a>{" "}
-              to burn the image to your machine.
+              to burn the image to your machine. <span className="font-bold text-lg">Do not use Ventoy, as it's unsupported with our Live ISO.</span>
             </p>
             <div>
               {primaryGPU ? (
