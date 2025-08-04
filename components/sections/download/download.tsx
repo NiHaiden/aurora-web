@@ -153,12 +153,14 @@ export default function DownloadAurora({
 function DownloadButtons({
   imageName,
   isHelium,
+  isx86=true // this flag will only be useful in later versions
 }: {
   imageName: string;
   isHelium: boolean;
+  isx86?: boolean;
 }) {
-  const downloadLink: string = `https://dl.getaurora.dev/${imageName}.iso`;
-  const checksumLink: string = `https://dl.getaurora.dev/${imageName}.iso-CHECKSUM`;
+  const downloadLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso`;
+  const checksumLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
   return (
     <div className={"flex w-full flex-col gap-3 lg:flex-row"}>
