@@ -138,6 +138,7 @@ export default function DownloadAurora({
                   <span className={"font-bold italic"}>To turn on the developer experience, run <code className={"p-2"}>ujust devmode</code> once it's installed.
                     See the docs <a href={"https://docs.getaurora.dev/dx/aurora-dx-intro"} className={"underline underline-offset-2"}>here.</a>
                   </span>
+                  <span>If you're rebasing, your image name will be <code className="font-bold italic">{imageName.replace("-stable", ":stable")}</code>.</span>
                 </span>
               ) : (
                 <div>Please select your hardware.</div>
