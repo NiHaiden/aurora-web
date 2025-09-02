@@ -30,6 +30,7 @@ export default function Hero({
         </div>
         <div className="flex w-2/3 flex-col gap-3 text-2xl font-semibold md:w-3/4 md:text-3xl lg:w-2/3 lg:text-4xl">
           your stable, privacy-respecting and ultimate productivity OS.
+          Change out new logo.
           <br />
           <TextLoop className="italic">
             <span
