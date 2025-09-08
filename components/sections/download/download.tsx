@@ -69,7 +69,8 @@ export default function DownloadAurora({
               </h1>
             </div>
             <div className={"text-lg text-white lg:text-2xl"}>
-              Please choose your primary GPU to get the edition with preinstalled drivers.
+              Please choose your primary GPU to get the edition with
+              preinstalled drivers.
             </div>
             <div className={"w-full"}>
               <div>
@@ -129,16 +130,46 @@ export default function DownloadAurora({
               >
                 Fedora Image Writer <ArrowUpRight />
               </a>{" "}
-              to burn the image to your machine. <span className="font-bold text-lg">Do not use Ventoy, as it's unsupported with our ISO.</span>
+              to burn the image to your machine.{" "}
+              <span className="text-lg font-bold">
+                Do not use Ventoy, as it's unsupported with our ISO.
+              </span>
             </p>
             <div>
               {primaryGPU ? (
-                <span className={"w-full flex flex-col gap-5"}>
+                <span className={"flex w-full flex-col gap-5"}>
                   <DownloadButtons imageName={imageName} isHelium={true} />
-                  <span className={"font-bold italic"}>To turn on the developer experience, run <code className={"p-2"}>ujust devmode</code> once it's installed.
-                    See the docs <a href={"https://docs.getaurora.dev/dx/aurora-dx-intro"} className={"underline underline-offset-2"}>here.</a>
+                  <span className={"font-bold italic"}>
+                    To turn on the developer experience, run{" "}
+                    <code className={"p-2"}>ujust devmode</code> once it's
+                    installed. See the docs{" "}
+                    <a
+                      href={"https://docs.getaurora.dev/dx/aurora-dx-intro"}
+                      className={"underline underline-offset-2"}
+                    >
+                      here.
+                    </a>
                   </span>
-                  <span>If you're rebasing, your image name will be <code className="font-bold italic">{imageName.replace("-stable", ":stable")}</code>.</span>
+                  <span>
+                    If you're rebasing, your image name will be{" "}
+                    <code className="font-bold italic">
+                      {imageName.replace("-stable", ":stable")}
+                    </code>
+                    .
+                  </span>
+                  <span className={"flex flex-row items-center gap-3 bg-gradient-to-r from-aurora-darkblue via-aurora-orangina to-aurora-purple p-3 rounded-2xl w-fit"}>
+                    Download too slow? Check out our friends at
+                    <a
+                      className={
+                        "inline-flex items-center gap-1 font-bold underline underline-offset-2"
+                      }
+                      href={"https://fedoraproject.org/workstation/download"}
+                    >
+                      {" "}
+                      Fosstorrents
+                      <ArrowUpRight />
+                    </a>
+                  </span>
                 </span>
               ) : (
                 <div>Please select your hardware.</div>
@@ -154,7 +185,7 @@ export default function DownloadAurora({
 function DownloadButtons({
   imageName,
   isHelium,
-  isx86=true // this flag will only be useful in later versions
+  isx86 = true, // this flag will only be useful in later versions
 }: {
   imageName: string;
   isHelium: boolean;
