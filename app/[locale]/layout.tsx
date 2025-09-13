@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/wallpaper.jpg"]
   },
   icons: {
-    icon: "/aurora-v3_logo.svg",
+    icon: "/aurora-logo.svg",
   },
 };
 
