@@ -49,7 +49,7 @@ const Navbar = ({
             }}
           >
             <img
-              src={"/aurora-v3-white.svg"}
+              src={"/aurora-logo-white.svg"}
               width={45}
               height={45}
               className={``}
@@ -111,13 +111,13 @@ const Navbar = ({
             }}
           >
             <img
-              src={"/aurora-v3-white.svg"}
+              src={"/aurora-logo-white.svg"}
               width={45}
               height={45}
               className={`${isTop ? "hidden" : "block"}`}
             />
             <img
-              src={"/aurora-v3_logo.svg"}
+              src={"/aurora-logo.svg"}
               width={45}
               height={45}
               className={`${isTop ? "block" : "hidden"}`}
