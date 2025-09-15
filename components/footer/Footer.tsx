@@ -39,7 +39,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
           {t("proudly-built-phrase")}
         </div>
         <div>{t("built-with-love")}</div>
-        <div>Logos have been crafted by Delphic Melody (@furtivetardigrade on Discord) and @zandrro. ❤️
+        <div>Logos have been crafted by Delphic Melody (@furtivetardigrade on Discord) and @zandrro. ❤️</div>
         <div>Wallpapers & other art are made by <a className={"underline"} href={"https://ko-fi.com/chandeleer"} target={"_blank"}>Chandeleer</a> ❤️</div>
         <div
           className={
