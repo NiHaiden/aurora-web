@@ -3,12 +3,7 @@
 import { BorderTrail } from "@/components/ui/border-trail";
 import { GlowEffect } from "@/components/ui/glow";
 import { InView } from "@/components/ui/in-view";
-import {
-  BriefcaseBusiness,
-  Cpu,
-  Gamepad2,
-  ShieldCheck,
-} from "lucide-react";
+import { Code, LifeBuoy, Palette, RefreshCcw } from "lucide-react";
 import { RefObject } from "react";
 
 interface SwitchReasonsProps {
@@ -17,32 +12,32 @@ interface SwitchReasonsProps {
 
 const reasons = [
   {
-    title: "Enterprise-ready compatibility",
+    title: "Updates you can forget about",
     description:
-      "Run specialised business software, compliance agents, and hardware drivers without a second thought.",
-    icon: BriefcaseBusiness,
-    accent: "from-sky-500/60 to-blue-400/40",
+      "Aurora ships atomic, image-based upgrades with automatic rollbacks so your fleet stays patched without the weekend reboots.",
+    icon: RefreshCcw,
+    accent: "from-aurora-blue/60 to-aurora-darkblue/40",
   },
   {
-    title: "Performance tuned for creativity",
+    title: "Developer muscle built-in",
     description:
-      "Optimised GPU pipelines, Studio drivers, and colour-managed workflows keep designers and editors in sync.",
-    icon: Cpu,
-    accent: "from-emerald-500/50 to-teal-400/40",
+      "Containers, Brew, virtualization, and GPU tooling are prepped from the first boot so engineers can ship faster than on stock Windows installs.",
+    icon: Code,
+    accent: "from-aurora-lightorange/50 to-aurora-purple/40",
   },
   {
-    title: "Gaming ecosystem unlocked",
+    title: "Delightful Plasma experience",
     description:
-      "DirectX 12 Ultimate, Game Bar integrations, and Xbox services deliver the best PC gaming catalogue available.",
-    icon: Gamepad2,
-    accent: "from-purple-500/50 to-indigo-400/40",
+      "A curated KDE setup with Aurora's design system delivers a fluid, customisable desktop without registry hacks or third-party theming.",
+    icon: Palette,
+    accent: "from-aurora-blue/50 to-aurora-lightorange/40",
   },
   {
-    title: "Security teams sleep better",
+    title: "Community and enterprise ready",
     description:
-      "BitLocker, Windows Hello, and Microsoft Defender provide layered protection aligned with enterprise policies.",
-    icon: ShieldCheck,
-    accent: "from-amber-500/50 to-orange-400/40",
+      "Opinionated docs, automation hooks, and a welcoming community make migrations smoother than wrangling Windows group policies.",
+    icon: LifeBuoy,
+    accent: "from-aurora-purple/50 to-aurora-blue/40",
   },
 ];
 
@@ -54,26 +49,25 @@ export function SwitchReasons({ reasonsRef }: SwitchReasonsProps) {
     >
       <GlowEffect
         className="opacity-40"
-        colors={["#1d4ed8", "#0284c7", "#0f172a"]}
+        colors={["#66B9F2", "#EC92A1", "#0f172a"]}
         mode="colorShift"
         blur="stronger"
         scale={1.4}
         duration={12}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(14,116,144,0.35),_transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(78,103,178,0.32),_transparent_65%)]" />
       <div className="container relative z-10 mx-auto flex flex-col gap-14 px-6">
         <InView
           variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
           transition={{ duration: 0.7 }}
           className="space-y-4 text-center md:text-left"
         >
-          <p className="text-sm uppercase tracking-[0.4em] text-sky-200">Why professionals switch</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-sky-200">Why Windows users switch</p>
           <h2 className="text-3xl font-semibold md:text-4xl">
-            Windows 10 keeps teams connected, supported, and ready for mission-critical work.
+            Aurora automates the maintenance Windows 10 keeps handing back to you.
           </h2>
           <p className="mx-auto max-w-2xl text-base text-slate-300 md:mx-0">
-            When deadlines rely on predictable tooling and security certifications, Windows 10 steps in with a proven platform
-            backed by Microsoft&apos;s global ecosystem.
+            From updates and drivers to developer tooling, Aurora gives modern teams breathing room so they can build instead of babysit workstations.
           </p>
         </InView>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">

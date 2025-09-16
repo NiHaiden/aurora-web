@@ -6,32 +6,32 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 const comparisonPoints = [
   {
-    label: "Compatibility",
-    windows:
-      "Trusted support for Adobe CC, Autodesk, SAP, and thousands of vendor-certified peripherals with automatic driver updates.",
+    label: "Updates & stability",
     aurora:
-      "Relies on community fixes, Flatpaks, or compatibility layers that add friction for regulated workflows.",
+      "Image-based upgrades apply atomically with automatic rollbacks, so workstations stay patched without scheduling late-night restarts.",
+    windows:
+      "Cumulative updates and servicing stacks demand maintenance windows, manual testing, and hope that the next reboot actually succeeds.",
   },
   {
-    label: "Management",
-    windows:
-      "Deep integration with Microsoft Endpoint Manager, Azure Active Directory, and granular group policy controls.",
+    label: "Developer experience",
     aurora:
-      "Manual configuration and custom tooling make fleet governance harder for large organisations.",
+      "Brew, container runtimes, GPU tooling, and virtualization ship by default—developers can launch environments in minutes with ujust recipes.",
+    windows:
+      "Piecing together WSL, Hyper-V, package managers, and drivers wastes hours before code ever runs.",
   },
   {
-    label: "Security",
-    windows:
-      "Built-in BitLocker, Windows Hello biometrics, and Defender ATP to satisfy enterprise compliance requirements.",
+    label: "Workspace delight",
     aurora:
-      "Depends on third-party hardening and lacks unified dashboards favoured by security teams.",
+      "Aurora's tailored KDE Plasma theme, tiling presets, and gestures create a focused workspace without registry hacks or ads.",
+    windows:
+      "Shell customisation relies on third-party hacks while the OS surfaces nags, promotions, and inconsistent UX patterns.",
   },
   {
-    label: "Productivity",
-    windows:
-      "Optimised for Microsoft 365, Teams Rooms, and hybrid meetings with first-party hardware and software synergy.",
+    label: "Fleet automation",
     aurora:
-      "Alternative app stacks demand retraining and slow collaboration with Windows-based partners.",
+      "GitOps-friendly images, reproducible blueprints, and open tooling integrate with your CI/CD to roll out desktops like infrastructure.",
+    windows:
+      "Group policies, MDT images, and Intune scripts sprawl across portals with drift that's hard to reason about.",
   },
 ];
 
@@ -40,13 +40,13 @@ export function SwitchComparison() {
     <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950 py-28 text-white">
       <GlowEffect
         className="opacity-40"
-        colors={["#0284c7", "#0ea5e9", "#0f172a"]}
+        colors={["#66B9F2", "#4E67B2", "#EC92A1"]}
         mode="flowHorizontal"
         blur="stronger"
         scale={1.5}
         duration={10}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(12,74,110,0.28),_transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(102,185,242,0.24),_transparent_70%)]" />
       <div className="container relative z-10 mx-auto flex flex-col gap-12 px-6">
         <InView
           variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
@@ -55,11 +55,10 @@ export function SwitchComparison() {
         >
           <p className="text-sm uppercase tracking-[0.4em] text-sky-200">Aurora vs Windows 10</p>
           <h2 className="text-3xl font-semibold md:text-4xl">
-            The Windows 10 stack accelerates delivery while minimising support calls.
+            Aurora streamlines the parts of Windows 10 that still feel manual.
           </h2>
           <p className="mx-auto max-w-2xl text-base text-slate-300 md:mx-0">
-            Compare your daily workflow and see how Windows 10 keeps compatibility, manageability, and security aligned with the
-            expectations of enterprise environments.
+            Explore how Aurora's automated desktop experience compares to the maintenance-heavy Windows 10 stack across the moments your teams feel every day.
           </p>
         </InView>
         <InView
@@ -79,8 +78,8 @@ export function SwitchComparison() {
             <div className="relative space-y-8">
               <div className="grid gap-4 rounded-3xl border border-white/5 bg-white/5 p-6 text-xs uppercase tracking-[0.3em] text-slate-400 md:grid-cols-3">
                 <span>Focus</span>
-                <span className="text-sky-200">Windows 10</span>
-                <span className="text-slate-400">Aurora</span>
+                <span className="text-sky-200">Aurora</span>
+                <span className="text-slate-400">Windows 10</span>
               </div>
               <div className="space-y-6">
                 {comparisonPoints.map((point) => (
@@ -91,11 +90,11 @@ export function SwitchComparison() {
                     <div className="font-semibold uppercase tracking-[0.2em] text-slate-300">
                       {point.label}
                     </div>
-                    <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 p-5 text-sky-100 shadow-inner">
-                      {point.windows}
+                    <div className="rounded-2xl border border-aurora-blue/30 bg-aurora-blue/15 p-5 text-sky-100 shadow-inner">
+                      {point.aurora}
                     </div>
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-300">
-                      {point.aurora}
+                      {point.windows}
                     </div>
                   </div>
                 ))}

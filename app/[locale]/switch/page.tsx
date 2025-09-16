@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SwitchPageClient from "./SwitchPageClient";
 
 export const metadata: Metadata = {
-  title: "Switch to Windows 10 | Aurora",
+  title: "Switch to Aurora | Aurora",
   description:
-    "Explore why teams are moving from Aurora to Windows 10 with a modern, animated overview of productivity, compatibility, and migration resources.",
+    "See why teams are leaving Windows 10 for Aurora with an animated tour of automated updates, developer tooling, and migration resources.",
 };
 
 export default function SwitchPage() {
