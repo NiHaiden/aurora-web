@@ -139,6 +139,7 @@ export function GlowEffect({
           backfaceVisibility: "hidden",
         } as React.CSSProperties
       }
+      //@ts-ignore
       animate={animations[mode]}
       className={cn(
         "pointer-events-none absolute inset-0 h-full w-full",
