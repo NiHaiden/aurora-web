@@ -163,7 +163,7 @@ export default function DownloadAurora({
                       className={
                         "inline-flex items-center gap-1 font-bold underline underline-offset-2"
                       }
-                      href={"https://fedoraproject.org/workstation/download"}
+                      href={"https://fosstorrents.com/distributions/aurora/"}
                     >
                       {" "}
                       Fosstorrents
