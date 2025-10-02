@@ -20,8 +20,8 @@ import { useTranslations } from "next-intl";
 import { getImageName } from "@/lib/utils/download";
 
 export default function DownloadAurora({
-  downloadRef,
-}: {
+                                         downloadRef,
+                                       }: {
   downloadRef: RefObject<any>;
 }) {
   const [primaryGPU, setPrimaryGPU] = useState("");
@@ -30,150 +30,133 @@ export default function DownloadAurora({
   const imageName = getImageName(isHWE === "yes", primaryGPU, developerVersion);
   console.log(imageName);
   const t = useTranslations("Download-Component");
+
   return (
     <div
       ref={downloadRef}
-      className={"flex h-dvh items-center justify-center gap-5"}
+      className="flex min-h-dvh items-center justify-center p-6"
     >
-      <div className="flex flex-col items-center justify-center gap-5">
-        <div
-          className={"flex w-full max-w-screen-2xl items-center justify-center"}
-        >
-          <div className={"inline-flex items-center gap-10"}>
-            <h1
-              className={
-                "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl"
-              }
-            >
-              Download Aurora
-            </h1>
-          </div>
+      <div className="w-full max-w-4xl space-y-12">
+        {/* Header */}
+        <div className="text-center">
+          <h1 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
+            Download Aurora
+          </h1>
+          <p className="mt-4 text-lg text-zinc-300 lg:text-xl">
+            The ultimate productivity workstation for developers
+          </p>
         </div>
-        <div
-          className={
-            "flex flex-col items-center justify-center gap-10 xl:flex-row"
-          }
-        >
-          <div
-            className={
-              "flex w-full max-w-screen-2xl flex-col gap-5 rounded-3xl border border-zinc-600 p-5 backdrop-blur-2xl lg:w-full lg:p-14"
-            }
-          >
-            <div className={"inline-flex items-center gap-10"}>
-              <h1
-                className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-bold text-transparent lg:text-4xl"
-                }
-              >
-                Your hardware options
-              </h1>
-            </div>
-            <div className={"text-lg text-white lg:text-2xl"}>
-              Please choose your primary GPU to get the edition with
-              preinstalled drivers.
-            </div>
-            <div className={"w-full"}>
+
+        {/* Main Content Card */}
+        <div className="rounded-3xl border border-zinc-600 bg-black/20 p-8 backdrop-blur-2xl lg:p-12">
+          <div className="space-y-8">
+            {/* Hardware Selection Section */}
+            <div className="space-y-6">
               <div>
-                <div className={"flex animate-fade-up flex-col gap-2"}>
-                  <p className={"text-lg text-white lg:text-2xl"}>
-                    {t("primary-gpu")}
-                  </p>
-                  <Select
-                    onValueChange={(e) => {
-                      setPrimaryGPU(e);
-                    }}
-                  >
-                    <SelectTrigger className="h-[60px] w-full border-zinc-600 bg-transparent text-sm text-white">
-                      <SelectValue
-                        placeholder={
-                          <div
-                            className={
-                              "flex flex-row items-center justify-center gap-2"
-                            }
-                          >
-                            <Monitor className={"stroke-white"} />
-                            {t("pick-gpu")}
-                          </div>
-                        }
-                      />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="mesa">Intel / AMD </SelectItem>
-                      <SelectItem value="nvidia">
-                        Nvidia (RTX-Series/GTX 16xx)
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                <h2 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-bold text-transparent lg:text-3xl">
+                  Hardware Configuration
+                </h2>
+                <p className="mt-2 text-lg text-zinc-300">
+                  Select your primary GPU to get the edition with preinstalled drivers
+                </p>
+              </div>
+
+              <div className="animate-fade-up space-y-2">
+                <p className="text-lg font-medium text-white">
+                  {t("primary-gpu")}
+                </p>
+                <Select onValueChange={setPrimaryGPU}>
+                  <SelectTrigger className="h-14 w-full border-zinc-600 bg-zinc-900/50 text-white backdrop-blur-sm transition-colors hover:bg-zinc-900/70">
+                    <SelectValue
+                      placeholder={
+                        <div className="flex items-center gap-2">
+                          <Monitor className="h-5 w-5 stroke-zinc-400" />
+                          <span className="text-zinc-400">{t("pick-gpu")}</span>
+                        </div>
+                      }
+                    />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="mesa">Intel / AMD</SelectItem>
+                    <SelectItem value="nvidia">
+                      Nvidia (RTX-Series/GTX 16xx)
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
-          </div>
-          <div
-            className={
-              "flex w-full flex-col justify-between gap-3 rounded-3xl border border-zinc-600 p-4 px-6 py-6 backdrop-blur-2xl"
-            }
-          >
-            <h1
-              className={
-                "bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-purple bg-clip-text text-3xl font-bold text-transparent"
-              }
-            >
-              Aurora Download
-            </h1>
-            <p className={"text-xl"}>
-              Download the ultimate productivity workstation right here. Use{" "}
-              <a
-                className={
-                  "inline-flex items-center gap-1 font-bold underline underline-offset-2"
-                }
-                href={"https://fedoraproject.org/workstation/download"}
-              >
-                Fedora Image Writer <ArrowUpRight />
-              </a>{" "}
-              to burn the image to your machine.{" "}
-              <span className="text-lg font-bold">
-                Do not use Ventoy, as it's unsupported with our ISO.
-              </span>
-            </p>
-            <div>
-              {primaryGPU ? (
-                <span className={"flex w-full flex-col gap-5"}>
-                  <DownloadButtons imageName={imageName} isHelium={true} />
-                  <span className={"font-bold italic"}>
-                    To turn on the developer experience, run{" "}
-                    <code className={"p-2"}>ujust devmode</code> once it's
-                    installed. See the docs{" "}
+
+            {/* Download Section */}
+            <div className="border-t border-zinc-700 pt-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-purple bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+                    Download & Installation
+                  </h3>
+                  <p className="mt-2 text-zinc-300">
+                    Use{" "}
                     <a
-                      href={"https://docs.getaurora.dev/dx/aurora-dx-intro"}
-                      className={"underline underline-offset-2"}
+                      className="inline-flex items-center gap-1 font-semibold text-aurora-blue underline underline-offset-2 transition-colors hover:text-aurora-lightorange"
+                      href="https://fedoraproject.org/workstation/download"
                     >
-                      here.
-                    </a>
-                  </span>
-                  <span>
-                    If you're rebasing, your image name will be{" "}
-                    <code className="font-bold italic">
-                      {imageName.replace("-stable", ":stable")}
-                    </code>
-                    .
-                  </span>
-                  <span className={"flex flex-row items-center gap-3 bg-gradient-to-r from-aurora-darkblue via-aurora-orangina to-aurora-purple p-3 rounded-2xl w-fit"}>
-                    Download too slow? Check out our friends at
-                    <a
-                      className={
-                        "inline-flex items-center gap-1 font-bold underline underline-offset-2"
-                      }
-                      href={"https://fedoraproject.org/workstation/download"}
-                    >
-                      {" "}
-                      Fosstorrents
-                      <ArrowUpRight />
-                    </a>
-                  </span>
-                </span>
-              ) : (
-                <div>Please select your hardware.</div>
-              )}
+                      Fedora Image Writer <ArrowUpRight className="h-4 w-4" />
+                    </a>{" "}
+                    to burn the image to your machine.{" "}
+                    <span className="font-semibold text-orange-400">
+                      Do not use Ventoy, as it's unsupported with our ISO.
+                    </span>
+                  </p>
+                </div>
+
+                {primaryGPU ? (
+                  <div className="space-y-6">
+                    <DownloadButtons imageName={imageName} isHelium={true} />
+
+                    <div className="space-y-4 rounded-2xl bg-zinc-900/30 p-6">
+                      <div className="text-sm text-zinc-300">
+                        <span className="font-semibold text-white">Developer Mode:</span>{" "}
+                        Run <code className="rounded bg-zinc-800 px-2 py-1 text-aurora-blue">ujust devmode</code> after installation.{" "}
+                        <a
+                          href="https://docs.getaurora.dev/dx/aurora-dx-intro"
+                          className="text-aurora-blue underline underline-offset-2 hover:text-aurora-lightorange"
+                        >
+                          Learn more
+                        </a>
+                      </div>
+
+                      <div className="text-sm text-zinc-300">
+                        <span className="font-semibold text-white">Rebasing:</span>{" "}
+                        Your image name will be{" "}
+                        <code className="rounded bg-zinc-800 px-2 py-1 text-aurora-blue">
+                          {imageName.replace("-stable", ":stable")}
+                        </code>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue/20 via-aurora-orangina/20 to-aurora-purple/20 border border-gray-700/30 p-4">
+                      <div className="text-sm text-zinc-300">
+                        <span className="font-semibold text-white">Slow download?</span> Check out our friends at{" "}
+                        <a
+                          className="inline-flex items-center gap-1 font-semibold text-aurora-blue underline underline-offset-2 transition-colors hover:text-aurora-lightorange"
+                          href="https://fedoraproject.org/workstation/download"
+                        >
+                          Fosstorrents
+                          <ArrowUpRight className="h-4 w-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center rounded-2xl border-2 border-dashed border-zinc-600 p-12 text-center">
+                    <div className="space-y-2">
+                      <Monitor className="mx-auto h-12 w-12 text-zinc-400" />
+                      <p className="text-lg text-zinc-400">
+                        Please select your hardware configuration above
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -183,10 +166,10 @@ export default function DownloadAurora({
 }
 
 function DownloadButtons({
-  imageName,
-  isHelium,
-  isx86 = true, // this flag will only be useful in later versions
-}: {
+                           imageName,
+                           isHelium,
+                           isx86 = true,
+                         }: {
   imageName: string;
   isHelium: boolean;
   isx86?: boolean;
@@ -194,23 +177,29 @@ function DownloadButtons({
   const downloadLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso`;
   const checksumLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
+
   return (
-    <div className={"flex w-full flex-col gap-3 lg:flex-row"}>
+    <div className="grid gap-4 lg:grid-cols-2">
       <a
         href={downloadLink}
-        className={
-          "flex h-fit w-full flex-row items-center justify-center gap-2 rounded-2xl border border-zinc-600 p-5 text-[18px] text-white shadow-lg"
-        }
+        className="group flex items-center justify-center gap-3 rounded-2xl border border-aurora-blue/50 bg-gradient-to-r from-aurora-blue/10 to-aurora-purple/10 p-6 text-white shadow-lg transition-all duration-200 hover:border-aurora-blue hover:from-aurora-blue/20 hover:to-aurora-purple/20 hover:shadow-aurora-blue/25"
       >
-        <CloudDownload /> {t("download-iso")} ({imageName})
+        <CloudDownload className="h-5 w-5 transition-transform group-hover:scale-110" />
+        <div className="text-center">
+          <div className="font-semibold">{t("download-iso")}</div>
+          <div className="text-sm text-zinc-400">({imageName})</div>
+        </div>
       </a>
+
       <a
         href={checksumLink}
-        className={
-          "flex h-fit w-full flex-row items-center justify-center gap-2 rounded-2xl border border-zinc-600 p-5 text-[18px] text-white shadow-lg"
-        }
+        className="group flex items-center justify-center gap-3 rounded-2xl border border-zinc-600 bg-zinc-900/30 p-6 text-white shadow-lg transition-all duration-200 hover:border-zinc-500 hover:bg-zinc-900/50"
       >
-        <Package /> {t("checksum")} (SHA256)
+        <Package className="h-5 w-5 transition-transform group-hover:scale-110" />
+        <div className="text-center">
+          <div className="font-semibold">{t("checksum")}</div>
+          <div className="text-sm text-zinc-400">(SHA256)</div>
+        </div>
       </a>
     </div>
   );
