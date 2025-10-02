@@ -42,9 +42,6 @@ export default function DownloadAurora({
           <h1 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
             Download Aurora
           </h1>
-          <p className="mt-4 text-lg text-zinc-300 lg:text-xl">
-            The ultimate productivity workstation for developers
-          </p>
         </div>
 
         {/* Main Content Card */}
@@ -182,12 +179,12 @@ function DownloadButtons({
     <div className="grid gap-4 lg:grid-cols-2">
       <a
         href={downloadLink}
-        className="group flex items-center justify-center gap-3 rounded-2xl border border-aurora-blue/50 bg-gradient-to-r from-aurora-blue/10 to-aurora-purple/10 p-6 text-white shadow-lg transition-all duration-200 hover:border-aurora-blue hover:from-aurora-blue/20 hover:to-aurora-purple/20 hover:shadow-aurora-blue/25"
+        className="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue via-aurora-orangina to-aurora-purple border border-aurora-blue/50 p-6 text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:shadow-aurora-blue/25 hover:scale-[1.02]"
       >
         <CloudDownload className="h-5 w-5 transition-transform group-hover:scale-110" />
         <div className="text-center">
           <div className="font-semibold">{t("download-iso")}</div>
-          <div className="text-sm text-zinc-400">({imageName})</div>
+          <div className="text-sm text-white/80">({imageName})</div>
         </div>
       </a>
 
