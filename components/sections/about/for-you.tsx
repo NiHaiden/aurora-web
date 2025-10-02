@@ -1,7 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MagicCard } from "@/components/magicui/magic-card";
-import { auroraColors } from "@/lib/aurora-colors";
-import { BookHeart, CpuIcon, RefreshCcw, RefreshCw, RotateCw } from "lucide-react";
+import SpotlightCard from "@/components/SpotlightCard";
+import { BookHeart, CpuIcon, RotateCw } from "lucide-react";
 
 export default function ForYou() {
   return (
@@ -17,126 +15,117 @@ export default function ForYou() {
       >
         How does Aurora fit in for you?
       </h1>
-      <p className={"text-xl"}>
+      <p className={"text-xl text-center max-w-3xl"}>
         Here are a few reasons why you should consider using Aurora.
       </p>
-      <div className={"grid grid-cols-1 gap-10 lg:grid-cols-3"}>
-        <Card className={"w-full border-none bg-black text-white"}>
-          <MagicCard
-            className={"w-full border-none"}
-            gradientColor={auroraColors.blue}
-            gradientFrom={auroraColors.blue}
-            gradientTo={auroraColors.darkBlue}
-            gradientSize={100}
-            gradientOpacity={0.3}
-          >
-            <CardHeader>
-              <CardTitle className={"flex flex-row items-center gap-3"}>
-                <RotateCw
-                  size={48}
+      <div className={"grid grid-cols-1 gap-8 lg:grid-cols-3 w-full"}>
+        <SpotlightCard
+          className="text-white bg-black/20 border-zinc-500/40 backdrop-blur-md"
+          spotlightColor={`rgba(102, 185, 242, 0.2)`} // aurora-blue
+        >
+          <div className={"flex flex-col items-center gap-6 text-center h-full"}>
+            <div className={"flex-shrink-0"}>
+              <RotateCw
+                size={48}
+                className={
+                  "animate-spin text-aurora-blue animate-duration-[5000ms]"
+                }
+              />
+            </div>
+            <div className={"flex flex-col gap-4 flex-1"}>
+              <h2
+                className={
+                  "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
+                }
+              >
+                Automatic updates, forever.
+              </h2>
+              <div className={"text-xl leading-relaxed"}>
+                <p className={"mb-4"}>
+                  Aurora downloads and applies updates automatically in the
+                  background. This includes the operating system itself and all installed
+                  applications.
+                </p>
+                <p
                   className={
-                    "animate-spin text-aurora-blue animate-duration-[5000ms]"
-                  }
-                />
-                <h1
-                  className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl text-3xl font-semibold text-transparent"
-                  }
-                >
-                  Automatic updates, forever.
-                </h1>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className={"text-xl"}>
-                Aurora downloads and applies updates automatically in the
-                background.
-                <br />
-                This includes the operating system itself and all installed
-                applications.
-                <br />
-                <span
-                  className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   Let us take care of your updates.
-                </span>
+                </p>
               </div>
-            </CardContent>
-          </MagicCard>
-        </Card>
-        <Card className={"border-none bg-black text-white"}>
-          <MagicCard
-            className={"h-full border-none"}
-            gradientColor={auroraColors.blue}
-            gradientFrom={auroraColors.blue}
-            gradientTo={auroraColors.darkBlue}
-            gradientSize={100}
-            gradientOpacity={0.3}
-          >
-            <CardHeader>
-              <CardTitle
-                className={"flex flex-row items-center justify-between gap-3"}
+            </div>
+          </div>
+        </SpotlightCard>
+
+        <SpotlightCard
+          className="text-white bg-black/20 border-zinc-500/40 backdrop-blur-md"
+          spotlightColor={`rgba(217, 92, 127, 0.2)`} // aurora-orangina
+        >
+          <div className={"flex flex-col items-center gap-6 text-center h-full"}>
+            <div className={"flex-shrink-0"}>
+              <CpuIcon className={"text-aurora-orangina"} size={48} />
+            </div>
+            <div className={"flex flex-col gap-4 flex-1"}>
+              <h2
+                className={
+                  "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
+                }
               >
-                <div className={"flex flex-row items-center gap-3"}>
-                  <CpuIcon className={"text-aurora-blue"} size={48} />
-                  <h1
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
-                    }
-                  >
-                    Expanded hardware support.
-                  </h1>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className={"text-xl"}>
-                Aurora includes support for all graphics cards and CPUs, including
-                GPUs from Nvidia. Expanded hardware support extends to game
-                controllers and more printer drivers.
-                <br />
+                Expanded hardware support.
+              </h2>
+              <div className={"text-xl leading-relaxed"}>
+                <p className={"mb-4"}>
+                  Aurora includes support for all graphics cards and CPUs, including
+                  GPUs from Nvidia. Expanded hardware support extends to game
+                  controllers and more printer drivers.
+                </p>
+                <p
+                  className={
+                    "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
+                  }
+                >
+                  Hardware that just works.
+                </p>
               </div>
-            </CardContent>
-          </MagicCard>
-        </Card>
-        <Card className={"border-none bg-black text-white"}>
-          <MagicCard
-            className={"h-full border-none"}
-            gradientColor={auroraColors.blue}
-            gradientFrom={auroraColors.blue}
-            gradientTo={auroraColors.darkBlue}
-            gradientSize={100}
-            gradientOpacity={0.3}
-          >
-            <CardHeader>
-              <CardTitle
-                className={"flex flex-row items-center justify-between gap-3"}
+            </div>
+          </div>
+        </SpotlightCard>
+
+        <SpotlightCard
+          className="text-white bg-black/20 border-zinc-500/40 backdrop-blur-md"
+          spotlightColor={`rgba(78, 103, 178, 0.2)`} // aurora-darkblue
+        >
+          <div className={"flex flex-col items-center gap-6 text-center h-full"}>
+            <div className={"flex-shrink-0"}>
+              <BookHeart className={"text-aurora-darkblue"} size={48} />
+            </div>
+            <div className={"flex flex-col gap-4 flex-1"}>
+              <h2
+                className={
+                  "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
+                }
               >
-                <div className={"flex flex-row items-center gap-3"}>
-                  <BookHeart className={"text-aurora-blue"} size={48} />
-                  <h1
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
-                    }
-                  >
-                    Help where you need it.
-                  </h1>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className={"text-xl"}>
-                To make life easier for users, we have a easy to use way to
-                switch image editions when you buy new hardware. We also have
-                included a few common utilities to get started quickly with many
-                common tasks.
-                <br />
+                Help where you need it.
+              </h2>
+              <div className={"text-xl leading-relaxed"}>
+                <p className={"mb-4"}>
+                  To make life easier for users, we have a easy to use way to
+                  switch image editions when you buy new hardware. We also have
+                  included a few common utilities to get started quickly with many
+                  common tasks.
+                </p>
+                <p
+                  className={
+                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
+                  }
+                >
+                  Support when you need it.
+                </p>
               </div>
-            </CardContent>
-          </MagicCard>
-        </Card>
+            </div>
+          </div>
+        </SpotlightCard>
       </div>
     </div>
   );

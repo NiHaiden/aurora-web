@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poltawski_Nowy } from "next/font/google";
+import { Geist, Geist_Mono } from 'next/font/google'
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { DiscourseScript } from "./discourse-script";
@@ -8,6 +9,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({subsets: ["latin"]});
 const serifFont = Poltawski_Nowy({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,7 +36,7 @@ export default async function RootLayout({
       <head>
         <UmamiScript />
       </head>
-      <body className={inter.className}>
+      <body className={geist.className}>
         <DiscourseScript />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <NextIntlClientProvider messages={messages}>

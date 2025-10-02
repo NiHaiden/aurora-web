@@ -18,7 +18,7 @@ export default function AboutAuroraNew({
   newsRef: RefObject<HTMLDivElement>;
 }) {
   return (
-    <main className={"min-h-dvh bg-gray-950 p-10 text-white"}>
+    <main className={"min-h-dvh p-10 bg-zinc-950 text-white"}>
       <div ref={aboutRef} className={"flex flex-row gap-10"}>
         <div className="flex w-full flex-col items-center justify-center gap-44">
           <YourNewDesktop />

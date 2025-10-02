@@ -21,6 +21,7 @@
     "highlight.js": "^11.10.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.507.0",
+    "mathjs": "^14.8.1",
     "motion": "^12.23.12",
     "next": "^15.2.2",
     "next-intl": "^3.26.3",
