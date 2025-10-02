@@ -98,7 +98,7 @@ export default function DownloadAurora({
                     >
                       Fedora Image Writer <ArrowUpRight className="h-4 w-4" />
                     </a>{" "}
-                    to burn the image to your machine.{" "}
+                    to burn the image to your USB drive.{" "}
                     <span className="font-semibold text-orange-400">
                       Do not use Ventoy, as it's unsupported with our ISO.
                     </span>
@@ -179,7 +179,7 @@ function DownloadButtons({
     <div className="grid gap-4 lg:grid-cols-2">
       <a
         href={downloadLink}
-        className="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue via-aurora-orangina to-aurora-purple border border-aurora-blue/50 p-6 text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:shadow-aurora-blue/25 hover:scale-[1.02]"
+        className="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue to-aurora-purple  border-gray-200 text-white shadow-lg transition-all duration-200 hover:shadow-lg hover:shadow-aurora-darkblue/50 hover:scale-[1.02]"
       >
         <CloudDownload className="h-5 w-5 transition-transform group-hover:scale-110" />
         <div className="text-center">
@@ -190,7 +190,7 @@ function DownloadButtons({
 
       <a
         href={checksumLink}
-        className="group flex items-center justify-center gap-3 rounded-2xl border border-zinc-600 bg-zinc-900/30 p-6 text-white shadow-lg transition-all duration-200 hover:border-zinc-500 hover:bg-zinc-900/50"
+        className="group flex items-center justify-center gap-3 rounded-2xl border border-zinc-600 bg-zinc-900/30 p-6 text-white shadow-lg transition-all duration-200 hover:border-zinc-500 hover:bg-zinc-900/50 hover:shadow-lg hover:shadow-aurora-darkblue/50 hover:scale-[1.02]"
       >
         <Package className="h-5 w-5 transition-transform group-hover:scale-110" />
         <div className="text-center">
