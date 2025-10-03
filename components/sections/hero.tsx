@@ -30,7 +30,13 @@ export default function Hero({
           </h1>
         </div>
         <div className="flex w-2/3 flex-col gap-3 text-2xl font-semibold md:w-3/4 md:text-3xl lg:w-2/3 lg:text-4xl">
-          <BlurText text="is here. Enjoy a privacy-respecting, smooth and stable experience on your PC. Imagine that." delay={50} animateBy="words" direction="top" className="text-2xl" />
+          <BlurText
+            text="is here. Enjoy a privacy-respecting, smooth and stable experience on your PC. Imagine that."
+            delay={50}
+            animateBy="words"
+            direction="top"
+            className="text-2xl"
+          />
 
           <TextLoop className="italic">
             <span
@@ -78,24 +84,27 @@ export default function Hero({
           </TextLoop>
         </div>
         <div className="flex w-2/3 flex-col-reverse items-center justify-center gap-5 lg:w-2/3 lg:flex-row lg:items-start lg:justify-start">
-          <div className="relative">
+          <div className="group relative">
             <button
-              className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-md bg-aurora-orangina px-4 py-2 text-xl text-zinc-50 outline outline-1 outline-[#fff2f21f]"
+              className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-aurora-orangina to-aurora-lightorange px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-aurora-orangina/25 active:scale-95"
               onClick={() =>
                 aboutRef.current?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              <ArrowDown />
+              <ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
               {t("learn-more")}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </button>
           </div>
 
-          <div className="relative">
+          <div className="group relative">
             <button
-              className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-md bg-aurora-darkblue px-4 py-2 text-xl text-zinc-50 outline outline-1 outline-[#fff2f21f]"
+              className="relative inline-flex min-w-[250px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-aurora-darkblue to-aurora-blue px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-aurora-darkblue/25 active:scale-95"
               onClick={() => router.push("https://docs.getaurora.dev")}
             >
-              Go to the docs <ArrowUpRight className="h-6 w-6" />
+              Go to the docs
+              <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </button>
           </div>
         </div>
