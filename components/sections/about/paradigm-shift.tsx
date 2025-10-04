@@ -54,7 +54,7 @@ export default function ParadigmShift() {
                   "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
-                Rock-solid, new paradigms.
+                Rock-solid.
               </h2>
               <div className={"text-xl leading-relaxed"}>
                 <p className={"mb-4"}>
@@ -63,7 +63,7 @@ export default function ParadigmShift() {
                 </p>
                 <p className={"mb-4"}>
                   Updates are built and tested before they ever reach you and are
-                  a single package that gets applied in the background.
+                  a single image that gets applied in the background.
                 </p>
                 <p className={"mb-4"}>
                   And if a new version of Aurora breaks something, you can
@@ -74,8 +74,7 @@ export default function ParadigmShift() {
                     "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  The OS should never break on an update. Resilient against
-                  failure.
+                  Image based is the future.
                 </p>
               </div>
             </div>
@@ -151,7 +150,7 @@ export default function ParadigmShift() {
                     "bg-gradient-to-r from-aurora-darkblue to-aurora-blue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  We don't restrict your ability to audit Aurora.
+                  The power of Docker is here for the desktop. Wowza.
                 </p>
               </div>
             </div>

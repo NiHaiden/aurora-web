@@ -41,9 +41,6 @@ export default function DownloadAurora({
           <h1 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2">
             Download Aurora
           </h1>
-          <p className="mt-4 text-xl text-zinc-300 max-w-3xl mx-auto">
-            Choose your hardware configuration and get Aurora tailored for your system
-          </p>
         </div>
 
         {/* Unified Download Card */}

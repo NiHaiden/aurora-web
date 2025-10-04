@@ -1,5 +1,5 @@
 import SpotlightCard from "@/components/SpotlightCard";
-import { BookHeart, CpuIcon, RotateCw } from "lucide-react";
+import { BookHeart, CpuIcon, RotateCw, ScrollText } from "lucide-react";
 
 export default function ForYou() {
   return (
@@ -85,7 +85,7 @@ export default function ForYou() {
                     "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  Hardware that just works.
+                  Printing sucks.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function ForYou() {
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
             <div className={"flex-shrink-0"}>
-              <BookHeart className={"text-aurora-darkblue"} size={48} />
+              <ScrollText  className={"text-aurora-darkblue"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
@@ -106,21 +106,18 @@ export default function ForYou() {
                   "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
-                Help where you need it.
+                Helping you along the way.
               </h2>
               <div className={"text-xl leading-relaxed"}>
                 <p className={"mb-4"}>
-                  To make life easier for users, we have a easy to use way to
-                  switch image editions when you buy new hardware. We also have
-                  included a few common utilities to get started quickly with many
-                  common tasks.
+                  We include scripts and common utilities to help you get started quickly and set up some common pieces of software in an non intrusive way.
                 </p>
                 <p
                   className={
                     "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  Support when you need it.
+                  Nice.
                 </p>
               </div>
             </div>

@@ -27,12 +27,12 @@ export default function ForDevelopers() {
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
             <div className={"flex-shrink-0"}>
-              <BrainCircuit size={48} className={"text-aurora-purple"} />
+              <BrainCircuit size={48} className={"text-aurora-blue"} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-purple to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-gradient-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 Local AI Workflows
@@ -45,7 +45,7 @@ export default function ForDevelopers() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-purple to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-gradient-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   The robots are here to serve you.
@@ -158,7 +158,7 @@ export default function ForDevelopers() {
                     "bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  Package management made simple.
+                  Dev tooling has never been more convenient.
                 </p>
               </div>
             </div>

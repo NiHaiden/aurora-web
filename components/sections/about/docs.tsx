@@ -44,8 +44,7 @@ export default function AboutDocs() {
             <div className={"text-xl leading-relaxed flex-1"}>
               <p className={"mb-6"}>
                 Get help by reading the docs, or contribute to them if you want
-                to improve them. Our documentation covers everything from installation
-                to advanced configurations.
+                to improve them.
               </p>
               <p
                 className={
