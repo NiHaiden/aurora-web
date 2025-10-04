@@ -81,6 +81,20 @@ export default function Hero({
             >
               Dream about the stars.
             </span>
+            <span
+              className={
+                "bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-transparent"
+              }
+            >
+              Play hard, work hard.
+            </span>
+            <span
+              className={
+                "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
+              }
+            >
+              Engineer the next spaceship.
+            </span>
           </TextLoop>
         </div>
         <div className="flex w-2/3 flex-col-reverse items-center justify-center gap-5 lg:w-2/3 lg:flex-row lg:items-start lg:justify-start">
