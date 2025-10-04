@@ -70,11 +70,12 @@ const filterBotContributors = (
   );
 };
 
+
 function ContributorBadge({
-  img,
-  profileUrl,
-  name,
-}: {
+                            img,
+                            profileUrl,
+                            name,
+                          }: {
   img: string;
   profileUrl: string;
   name: string;
@@ -83,7 +84,7 @@ function ContributorBadge({
     <a
       href={profileUrl}
       className={
-        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 lg:px-4"
+        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 lg:px-4 transition-all duration-300 hover:scale-110"
       }
     >
       <img
