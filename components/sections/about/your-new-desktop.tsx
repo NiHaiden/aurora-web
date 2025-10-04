@@ -1,7 +1,5 @@
 import { GlowEffect } from "@/components/ui/glow";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MagicCard } from "@/components/magicui/magic-card";
-import { auroraColors } from "@/lib/aurora-colors";
+import SpotlightCard from "@/components/SpotlightCard";
 import KDELogo from "@/components/icons/kde";
 import { Trees } from "lucide-react";
 
@@ -31,94 +29,99 @@ export default function YourNewDesktop() {
           <div className="relative h-full w-full bg-black text-white dark:bg-white dark:text-black">
             <img
               className={"h-full w-full"}
-              src={"/fresh-desktop.png"}
+              src={"/newdesktop.png"}
               alt={"Desktop"}
             />
           </div>
-          <div className="text-white text-sm font-semibold mt-5">Art made by the awesome <a className={"underline underline-offset-2"} href={"https://ko-fi.com/chandeleer"}>@Chandeleer.</a></div>
         </div>
       </div>
-      <div className={"flex w-full max-w-screen-2xl flex-col gap-3"}>
-        <h1
-          className={
-            "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
-          }
-        >
-          Welcome, it's your new desktop.
-        </h1>
-        <p className="w-full text-2xl">
-          <div
-            className={"w-full text-xl font-semibold text-white lg:text-3xl"}
+
+      <div className={"flex w-full max-w-screen-2xl flex-col gap-8"}>
+        <div className="text-center">
+          <h1
+            className={
+              "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+            }
           >
+            Welcome, it's your new desktop.
+          </h1>
+          <p className="w-full text-xl lg:text-2xl mt-6 max-w-4xl mx-auto">
             Power on and feel right at home when using your computer, from the
-            first moment on.
-            <br />
-            Develop faster than ever before. Explore the galaxy. Write your next
+            first moment on. Develop faster than ever before. Explore the galaxy. Write your next
             novel.
-          </div>
-        </p>
-        <div className={"grid grid-cols-1 gap-10 lg:grid-cols-2"}>
-          <Card className={"border-none bg-black text-white"}>
-            <MagicCard
-              className={"border-none"}
-              gradientColor={auroraColors.blue}
-              gradientFrom={auroraColors.blue}
-              gradientTo={auroraColors.darkBlue}
-              gradientSize={100}
-              gradientOpacity={0.3}
-            >
-              <CardHeader>
-                <CardTitle className={"flex flex-row items-center gap-3"}>
-                  <KDELogo size={64} />
-                  <h1
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-3xl font-semibold text-transparent"
-                    }
-                  >
-                    Built with KDE Plasma.
-                  </h1>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  Aurora is built around the customizable and adaptable KDE
-                  Plasma Desktop Environment. <br />
-                  Customized by us to have the best experience out of the box.
-                  Feel right at home.
+          </p>
+        </div>
+
+        <div className={"grid grid-cols-1 gap-8 lg:grid-cols-2"}>
+          <SpotlightCard
+            className="text-white bg-black/20 border-zinc-500/40 backdrop-blur-md"
+            spotlightColor={`rgba(78, 103, 178, 0.2)`} // aurora-darkblue
+          >
+            <div className={"flex flex-col gap-6 h-full"}>
+              <div className={"flex items-center gap-4"}>
+                <div className={"flex-shrink-0"}>
+                  <KDELogo size={48} />
                 </div>
-              </CardContent>
-            </MagicCard>
-          </Card>
-          <Card className={"border-none bg-black text-white"}>
-            <MagicCard
-              className={"h-full border-none"}
-              gradientColor={auroraColors.blue}
-              gradientFrom={auroraColors.blue}
-              gradientTo={auroraColors.darkBlue}
-              gradientSize={100}
-              gradientOpacity={0.3}
-            >
-              <CardHeader>
-                <CardTitle className={"flex flex-row items-center gap-3"}>
-                  <Trees size={32} className={"text-aurora-blue"} />
-                  <h1
-                    className={
-                      "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-2xl text-3xl font-semibold text-transparent"
-                    }
-                  >
-                    Sensible defaults
-                  </h1>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
+                <h2
+                  className={
+                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
+                  }
+                >
+                  Built with KDE Plasma.
+                </h2>
+              </div>
+
+              <div className={"text-xl leading-relaxed flex-1"}>
+                <p className={"mb-4"}>
+                  Aurora is built around the customizable and adaptable KDE
+                  Plasma Desktop Environment, carefully customized by us to provide
+                  the best experience out of the box.
+                </p>
+                <p
+                  className={
+                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
+                  }
+                >
+                  Feel right at home from day one.
+                </p>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          <SpotlightCard
+            className="text-white bg-black/20 border-zinc-500/40 backdrop-blur-md"
+            spotlightColor={`rgba(236, 146, 161, 0.2)`} // aurora-lightorange
+          >
+            <div className={"flex flex-col gap-6 h-full"}>
+              <div className={"flex items-center gap-4"}>
+                <div className={"flex-shrink-0"}>
+                  <Trees size={48} className={"text-aurora-lightorange"} />
+                </div>
+                <h2
+                  className={
+                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                  }
+                >
+                  Sensible defaults
+                </h2>
+              </div>
+
+              <div className={"text-xl leading-relaxed flex-1"}>
+                <p className={"mb-4"}>
                   With a set of carefully selected applications and chosen
                   defaults, Aurora is built for daily usage and is easy, fun and
                   productive. It takes care of you and works alongside you.
-                </div>
-              </CardContent>
-            </MagicCard>
-          </Card>
+                </p>
+                <p
+                  className={
+                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
+                  }
+                >
+                  Everything configured, nothing to worry about.
+                </p>
+              </div>
+            </div>
+          </SpotlightCard>
         </div>
       </div>
     </div>

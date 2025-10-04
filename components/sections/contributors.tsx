@@ -30,6 +30,18 @@ export default function Contributors() {
 function ContributorsGrid() {
   const { data, error } = useSWR("/api/contributors", getContributors);
 
+
+  if(!data?.contributors) {
+    return (
+      <div
+        className={
+          "flex h-fit w-full max-w-screen-2xl flex-wrap justify-center gap-4"
+        }
+      >
+        Contributors could not be loaded. Please try again later.
+      </div>
+    )
+  }
   if (data) {
     return (
       <div
@@ -70,11 +82,12 @@ const filterBotContributors = (
   );
 };
 
+
 function ContributorBadge({
-  img,
-  profileUrl,
-  name,
-}: {
+                            img,
+                            profileUrl,
+                            name,
+                          }: {
   img: string;
   profileUrl: string;
   name: string;
@@ -83,7 +96,7 @@ function ContributorBadge({
     <a
       href={profileUrl}
       className={
-        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 lg:px-4"
+        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 lg:px-4 transition-all duration-300 hover:scale-110"
       }
     >
       <img
