@@ -30,6 +30,18 @@ export default function Contributors() {
 function ContributorsGrid() {
   const { data, error } = useSWR("/api/contributors", getContributors);
 
+
+  if(!data?.contributors) {
+    return (
+      <div
+        className={
+          "flex h-fit w-full max-w-screen-2xl flex-wrap justify-center gap-4"
+        }
+      >
+        Contributors could not be loaded. Please try again later.
+      </div>
+    )
+  }
   if (data) {
     return (
       <div
