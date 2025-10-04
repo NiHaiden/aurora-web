@@ -85,7 +85,7 @@ export default function ForYou() {
                     "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  Printing sucks.
+                  Game on, no problem.
                 </p>
               </div>
             </div>
