@@ -117,7 +117,7 @@ export default function ForYou() {
                     "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
-                  Nice.
+
                 </p>
               </div>
             </div>
