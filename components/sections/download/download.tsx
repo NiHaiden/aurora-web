@@ -34,6 +34,7 @@ export default function DownloadAurora({
     <div
       ref={downloadRef}
       className="flex min-h-dvh items-center justify-center p-6"
+      id={"download"}
     >
       <div className="w-full max-w-6xl space-y-12">
         {/* Header */}
