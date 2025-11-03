@@ -3,7 +3,8 @@
     "end-user": "Untuk Pengguna Akhir",
     "developer": "Untuk Pengembang",
     "faq": "FAQ",
-    "news": "Berita"
+    "news": "Berita",
+    "wallpapers": "Wallpaper"
   },
   "Download-Component": {
     "get-aurora": "Dapatkan Aurora",
@@ -78,6 +79,13 @@
     "link-icons": "sini.",
     "copyright": "© Copyright Project Aurora authors.",
     "not-affiliated": "Aurora tidak terafiliasi maupun dipromosikan oleh The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS maupun perusahaan yang tercantum diatas."
+  },
+  "Wallpapers": {
+    "title": "Wallpaper Aurora",
+    "description": "Wallpaper indah untuk menyesuaikan pengalaman desktop Aurora Anda.",
+    "view": "Lihat",
+    "download": "Unduh",
+    "note": "Klik pada wallpaper apa pun untuk melihatnya di galeri fullscreen atau mengunduhnya dalam resolusi tinggi. Wallpaper ini sempurna untuk desktop Aurora Anda atau distribusi Linux lainnya."
   },
   "FAQ": {
     "faq-title": "Aurora FAQ",

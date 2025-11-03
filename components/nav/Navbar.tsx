@@ -2,10 +2,10 @@
 
 import React, { RefObject, useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
-import { DownloadIcon, MenuIcon } from "lucide-react";
+import { DownloadIcon, MenuIcon, ImageIcon } from "lucide-react";
 import DownloadBtn from "@/components/download-btn";
 import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/routing";
+import { useRouter, Link } from "@/i18n/routing";
 
 const Navbar = ({
   introRef,
@@ -67,6 +67,12 @@ const Navbar = ({
             >
               {t("end-user")}
             </button>
+            <Link
+              href="/wallpapers"
+              className="hover:text-purple-300 transition-colors"
+            >
+              {t("wallpapers")}
+            </Link>
             <button
               onClick={() => {
                 newsRef.current.scrollIntoView({
@@ -189,6 +195,13 @@ function NavbarItems({introRef, newsRef, closeNavbar}: {introRef: any, newsRef: 
       >
         {t("end-user")}
       </button>
+      <Link
+        href="/wallpapers"
+        className="hover:text-purple-300 transition-colors"
+        onClick={closeNavbar}
+      >
+        {t("wallpapers")}
+      </Link>
       <button
         onClick={() => {
           newsRef.current.scrollIntoView({
