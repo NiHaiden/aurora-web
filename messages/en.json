@@ -3,7 +3,8 @@
     "end-user": "About Aurora",
     "developer": "For Developers",
     "faq": "FAQ",
-    "news": "News"
+    "news": "News",
+    "wallpapers": "Wallpapers"
   },
   "Download-Component": {
     "get-aurora": "Get Aurora",
@@ -79,6 +80,13 @@
     "link-icons": "here.",
     "copyright": "© Copyright Project Aurora authors.",
     "not-affiliated": "Aurora is not affiliated and or endorsed by The Fedora Project, KDE e.V., The KDE Project, Red Hat, Microsoft, ASUS or any other companies mentioned above."
+  },
+  "Wallpapers": {
+    "title": "Aurora Wallpapers",
+    "description": "Beautiful wallpapers to customize your Aurora desktop experience.",
+    "view": "View",
+    "download": "Download",
+    "note": "Click on any wallpaper to view it in fullscreen gallery or download it in high resolution. These wallpapers are perfect for your Aurora desktop or any other Linux distribution."
   },
   "FAQ": {
     "faq-title": "Aurora FAQ",
