@@ -12,7 +12,7 @@ export default function Contributors() {
       >
         <h1
           className={
-            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl"
           }
         >
           For the community, by the community.
@@ -28,10 +28,9 @@ export default function Contributors() {
 }
 
 function ContributorsGrid() {
-  const { data, error } = useSWR("/api/contributors", getContributors);
+  const { data } = useSWR("/api/contributors", getContributors);
 
-
-  if(!data?.contributors) {
+  if (!data?.contributors) {
     return (
       <div
         className={
@@ -40,7 +39,7 @@ function ContributorsGrid() {
       >
         Contributors could not be loaded. Please try again later.
       </div>
-    )
+    );
   }
   if (data) {
     return (
@@ -82,12 +81,11 @@ const filterBotContributors = (
   );
 };
 
-
 function ContributorBadge({
-                            img,
-                            profileUrl,
-                            name,
-                          }: {
+  img,
+  profileUrl,
+  name,
+}: {
   img: string;
   profileUrl: string;
   name: string;
@@ -96,7 +94,7 @@ function ContributorBadge({
     <a
       href={profileUrl}
       className={
-        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 lg:px-4 transition-all duration-300 hover:scale-110"
+        "flex h-fit w-fit flex-row items-center justify-center gap-5 rounded-full bg-gradient-to-r from-aurora-blue to-aurora-darkblue p-2 px-2 transition-all duration-300 hover:scale-110 lg:px-4"
       }
     >
       <img
@@ -131,15 +129,6 @@ async function getContributors() {
     error: undefined,
   };
 }
-
-type GetReturnType = {
-  contributors: GitHubContributor[] | undefined;
-  error:
-    | {
-        message: string;
-      }
-    | undefined;
-};
 
 type GitHubContributor = {
   login: string;
