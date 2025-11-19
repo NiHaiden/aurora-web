@@ -28,7 +28,7 @@ export default function AboutAuroraNew({
           <Contributors />
           <AboutDocs />
           <NewsFromBlog newsRef={newsRef} />
-          <DownloadAurora downloadRef={downloadRef} />
+          <h1 className="text-2xl text-white">Downloads are currently disabled due to a issue.</h1>
         </div>
       </div>
     </main>
