@@ -4,21 +4,21 @@ import AboutDocs from "@/components/sections/about/docs";
 import YourNewDesktop from "@/components/sections/about/your-new-desktop";
 import ForYou from "@/components/sections/about/for-you";
 import ForDevelopers from "@/components/sections/about/for-developers";
-import News from "@/components/sections/news";
-import { RefObject, useRef } from "react";
+import { RefObject } from "react";
 import DownloadAurora from "@/components/sections/download/download";
+import NewsFromBlog from "@/components/news-new";
 
 export default function AboutAuroraNew({
   aboutRef,
   downloadRef,
-  newsRef
+  newsRef,
 }: {
   aboutRef: RefObject<HTMLDivElement>;
   downloadRef: RefObject<HTMLDivElement>;
   newsRef: RefObject<HTMLDivElement>;
 }) {
   return (
-    <main className={"min-h-dvh p-10 bg-zinc-950 text-white"}>
+    <main className={"min-h-dvh bg-zinc-950 p-10 text-white"}>
       <div ref={aboutRef} className={"flex flex-row gap-10"}>
         <div className="flex w-full flex-col items-center justify-center gap-44">
           <YourNewDesktop />
@@ -27,7 +27,7 @@ export default function AboutAuroraNew({
           <ForDevelopers />
           <Contributors />
           <AboutDocs />
-          <News newsRef={newsRef} />
+          <NewsFromBlog newsRef={newsRef} />
           <DownloadAurora downloadRef={downloadRef} />
         </div>
       </div>
